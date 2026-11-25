@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos | GNEP Africa Knowledge Hub</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Sponge City Lagos, Rotterdam Benthemplein Water Square, Urban Flood Resilience Nigeria, Blue-Green Infrastructure, Tidal Locking Lagos, Wetland Protection, Mohammed Labaran Sani, GNEP Africa" name="keywords">
+    <meta content="Policy brief by Mohammed Labaran Sani assessing which elements of Rotterdam's Sponge City model (Benthemplein water square, blue-green infrastructure) can work in Lagos." name="description">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos | GNEP Africa">
+    <meta property="og:description" content="Policy brief by Mohammed Labaran Sani assessing which elements of Rotterdam's Sponge City model (Benthemplein water square, blue-green infrastructure) can work in Lagos.">
+    <meta property="og:image" content="assets/real/rotterdam-sponge-city-lagos-cover.webp">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://gnep-africa.pages.dev/adapting-rotterdam-sponge-city-lagos.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap & Site Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/design-tokens.css" rel="stylesheet">
+    <link href="css/gnep.css" rel="stylesheet">
+
+    <style>
+        .article-hero {
+            position: relative;
+            background: linear-gradient(135deg, #0B2516 0%, #153E26 60%, #1A4D2E 100%);
+            padding-top: 140px;
+            padding-bottom: 70px;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .article-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .article-meta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255, 255, 255, 0.12);
+            color: #E2E8F0;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .article-body-content {
+            font-size: 1.05rem;
+            line-height: 1.82;
+            color: #2D3748;
+        }
+        .article-body-content h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: #0B2516;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.55rem;
+            border-bottom: 2px solid #E2E8F0;
+            padding-bottom: 0.45rem;
+        }
+        .article-body-content h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: #153E26;
+            margin-top: 1.85rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.22rem;
+        }
+        .article-body-content p {
+            margin-bottom: 1.35rem;
+        }
+        .article-quote-box {
+            font-family: 'Newsreader', Georgia, serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.65;
+            color: #0B2516;
+            border-left: 4px solid #10B981;
+            padding: 1.35rem 1.75rem;
+            background: #F0FDF4;
+            border-radius: 0 12px 12px 0;
+            margin: 1.75rem 0 2.1rem 0;
+        }
+        .article-figure {
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            background: #F8FAFC;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .article-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .article-figure-caption {
+            padding: 0.85rem 1.15rem;
+            font-size: 0.86rem;
+            color: #475569;
+            background: #F8FAFC;
+            border-top: 1px solid #E2E8F0;
+        }
+        .policy-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            margin: 1.25rem 0 0.75rem 0;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .policy-data-table thead th {
+            background: #0B2516;
+            color: #FFFFFF;
+            font-weight: 600;
+            padding: 0.85rem 1rem;
+            text-align: left;
+        }
+        .policy-data-table tbody td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #E2E8F0;
+            vertical-align: top;
+        }
+        .policy-data-table tbody tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+        .recommendation-item {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-left: 4px solid #15803D;
+            border-radius: 8px;
+            padding: 1.25rem 1.4rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .recommendation-item h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0B2516;
+            margin-bottom: 0.45rem;
+        }
+        .recommendation-item p {
+            margin-bottom: 0;
+            font-size: 0.97rem;
+        }
+        .article-sidebar-box {
+            background: #FAFCF9;
+            border-radius: 12px;
+            padding: 1.75rem;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 2rem;
+        }
+        .article-sidebar-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            color: #718096;
+            margin-bottom: 1rem;
+        }
+        .article-key-fact {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.92rem;
+        }
+        .article-key-fact:last-child {
+            margin-bottom: 0;
+        }
+        .article-key-fact i {
+            color: #15803D;
+            margin-top: 4px;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <!-- Topbar & Navigation -->
+    <header class="fixed-top">
+        <aside class="gnep-topbar d-none d-md-block" aria-label="Quick Links">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <a href="knowledge-hub.html" class="fw-bold"><i class="fas fa-book-reader me-1" aria-hidden="true"></i> Knowledge Hub</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="events.html"><i class="fas fa-file-alt me-1" aria-hidden="true"></i> Research and Insights</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="contact.html"><i class="fas fa-envelope me-1" aria-hidden="true"></i> Contact</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
+                </div>
+                <div class="d-flex align-items-center text-white-50 small">
+                    <span class="me-3"><i class="fas fa-map-marker-alt text-white me-1" aria-hidden="true"></i> Katsina State, Nigeria</span>
+                    <a href="mailto:gnep.partnership@gmail.com" class="text-white"><i class="fas fa-paper-plane me-1" aria-hidden="true"></i> gnep.partnership@gmail.com</a>
+                </div>
+            </div>
+        </aside>
+
+        <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
+            <div class="container">
+                <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
+                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="160" height="48">
+                    <div class="gnep-brand-text d-none d-sm-block">
+                        <span class="gnep-brand-title">GNEP Africa</span>
+                        <span class="gnep-brand-sub">Global Nature &amp; Environmental Partnership</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="fa fa-bars text-dark fs-5"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a href="about.html" class="nav-link">About GNEP</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="index.html#focus-areas" class="nav-link dropdown-toggle" id="workDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Work</a>
+                            <ul class="dropdown-menu" aria-labelledby="workDropdown">
+                                <li><a class="dropdown-item" href="index.html#focus-areas">1. Climate Action &amp; Resilience</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">2. Nature &amp; Ecosystem Restoration</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">3. Environmental Governance &amp; Policy</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">4. Youth Leadership &amp; Participation</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">5. WEFE Nexus</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">6. Research &amp; Capacity Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="knowledge-hub.html" class="nav-link active fw-bold text-success">Knowledge Hub</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="events.html" class="nav-link dropdown-toggle" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Updates</a>
+                            <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
+                                <li><a class="dropdown-item" href="events.html">Events &amp; Workshops</a></li>
+                                <li><a class="dropdown-item" href="events.html">Research &amp; Insights</a></li>
+                                <li><a class="dropdown-item" href="gallery.html">Field Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Get Involved</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                        <a href="contact.html" class="btn-partner-nav text-center w-100 w-lg-auto">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="article-hero" aria-label="Article Header">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" style="background: none; padding: 0; margin-bottom: 1.5rem;">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item"><a href="knowledge-hub.html" class="text-white-50 text-decoration-none">Knowledge Hub</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos</li>
+                    </ol>
+                </nav>
+
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="article-meta-badge"><i class="fas fa-water text-info me-1"></i> URBAN RESILIENCE BRIEF</span><span class="article-meta-badge"><i class="fas fa-leaf text-success me-1"></i> Nature-Based Solutions</span><span class="article-meta-badge"><i class="fas fa-calendar-alt text-warning me-1"></i> October 13, 2026</span>
+                </div>
+
+                <h1 class="display-5 fw-bold text-white mb-3" style="max-width: 920px; line-height: 1.25;">
+                    Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos
+                </h1>
+                
+                <p class="lead text-white-50 mb-4" style="max-width: 820px; font-size: 1.18rem;">
+                    A nature-based approach to urban flood resilience and climate adaptation — evaluating water squares, blue-green drainage, tidal locking, and wetland protection in Lagos.
+                </p>
+
+                <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
+                    <a href="assets/publications/adapting-rotterdam-sponge-city-lagos.pdf" download class="btn btn-success rounded-pill px-4 py-2 fw-bold">
+                        <i class="fas fa-file-pdf me-2"></i>Download Official PDF
+                    </a>
+                    <a href="publication.html?id=adapting-rotterdam-sponge-city-lagos" class="btn btn-outline-light rounded-pill px-4 py-2">
+                        <i class="fas fa-university me-2"></i>View in Knowledge Hub
+                    </a>
+                    <a href="https://www.linkedin.com/pulse/adapting-rotterdams-sponge-city-model-urban-flood-labaran-sani-zxt1f/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light rounded-pill px-4 py-2">
+                        <i class="fab fa-linkedin me-2"></i>Read on LinkedIn Pulse
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Body Content -->
+        <section class="py-5 bg-white" aria-label="Article Body">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- Article Column -->
+                    <div class="col-lg-8">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 mb-4 rounded-3 bg-light border">
+                            <div>
+                                <div class="fw-bold text-dark">Mohammed Labaran Sani</div>
+                                <div class="small text-muted">Climate Policy Researcher | Founder & Lead, GNEP Africa</div>
+                            </div>
+                            <div class="text-md-end small text-muted">
+                                <div><i class="far fa-calendar-alt text-success me-1"></i> Published: <strong>October 13, 2026</strong></div>
+                                <div><i class="fas fa-check-circle text-success me-1"></i> GNEP Knowledge Hub Verified</div>
+                            </div>
+                        </div>
+
+                        <div class="article-body-content">
+                            
+<div class="article-figure">
+    <img src="assets/real/rotterdam-sponge-city-lagos-cover.webp" alt="Water square storm-water drainage system in Rotterdam by de Urbanisten">
+    <div class="article-figure-caption"><i class="fas fa-camera text-success me-1"></i> Image by de Urbanisten, reproduced in Next City (n.d.), &ldquo;A Storm-Water Drainage System Cleverly Disguised as a Park.&rdquo;</div>
+</div>
+
+<div class="article-quote-box">
+    A nature-based approach to urban flood resilience and climate adaptation &mdash; evaluating which elements of Rotterdam's Sponge City water squares and blue-green corridors can be replicated in Lagos, and where tidal locking, wetland enforcement, and basic drain maintenance must take precedence.
+</div>
+
+<h2>1. Introduction</h2>
+<p>The month of July 2026 saw parts of Lagos suffer from flash flooding after NEMA had issued a flood alert for 15 Lagos communities for the July to September period. The state government has recently suspended its land reclamation program and initiated a blue-green drainage project. This brief aims to identify which ideas from Rotterdam's experience can be replicated in Lagos and which would be inefficient spending.</p>
+
+<h2>2. Problem Statement</h2>
+<p>The population of Lagos grew from 7.28 million people in 1995&ndash;2000 to 17.15 million in 2020&ndash;2025, <strong>2.4 times the national growth rate</strong>. In 2012, flooding displaced an estimated 2 million people. Lagos is especially prone to pluvial flooding, where rain exceeds drainage capacity.</p>
+<p>A satellite study conducted from 1984 to 2023 shows that there has been a severe lowering of natural buffers: an increase in built-up areas of <strong>38%</strong>, a decrease in forests of <strong>32%</strong>, and a reduction in water bodies of <strong>11%</strong>. According to this study, more than 60% of urban Lagos could face extreme flooding by 2050. In Lekki, vegetation cover has fallen by 13% from 2015 to 2025.</p>
+<p>About a third of Lagos is made up of geographical land that includes lagoons, rivers, swamps, and streams; parts of Lagos Island are below sea level. In July 2026, the Environment Commissioner said a lagoon rise of about one metre was blocking drains from discharging, a problem called <strong>tidal locking</strong>. Some causes include siltation in the channels, plastic dumped in the drains, building in the floodplains, and the urban poor in low-lying informal settlements bearing the heaviest burden.</p>
+<p>The problem is national. The National Emergency Management Agency (NEMA) reported that flooding in 2024 affected 29 states, killed over 259 people and directly affected nearly 1.05 million, including more than 400,000 displaced by the Alau Dam breach in Borno.</p>
+
+<div class="article-figure">
+    <img src="assets/real/rotterdam-sponge-city-lagos-flood.webp" alt="Flooded street in Lagos, Nigeria">
+    <div class="article-figure-caption"><i class="fas fa-camera text-success me-1"></i> Bart Fouche, via Wikimedia Commons. Photograph dated 14 November 2010. CC BY-SA 4.0.</div>
+</div>
+
+<div class="article-figure">
+    <img src="assets/real/rotterdam-sponge-city-lagos-fig-01.webp" alt="Figure 1. Where flooding is recorded and where reclamation has been suspended in Lagos">
+    <div class="article-figure-caption"><strong>Figure 1.</strong> Where flooding is recorded and where reclamation has been suspended in Lagos. Note: Schematic, not a survey map. Event counts are from Dossa et al. (2025), who recorded 35 flood events in Lagos; 2026 areas from Nairametrics; suspension zones from allAfrica.</div>
+</div>
+
+<h2>3. Lessons from Comparable Cases: What Rotterdam Does</h2>
+<p>The &ldquo;sponge city&rdquo; idea comes from China: a 2015 State Council guideline set 30 pilot cities and a target that at least 70% of rainwater should soak in rather than run off. Rotterdam's idea of a sponge city is different in this case. Its best-known measure is the <strong>Benthemplein water square</strong>, opened in 2013, which can hold about 1.7 million litres of roof and street runoff and doubles as a sports field, skate park, and amphitheatre when dry. The city also counted 360,000 square metres of green roofs and aims to put 1 square kilometre of its flat roofs to use by 2030, and residents helped design Benthemplein.</p>
+<p>Two crucial learnings that Lagos must adopt from Rotterdam:</p>
+<ol>
+    <li class="mb-2"><strong>Resident engagement is non-negotiable:</strong> Rotterdam's first trial square, Bloemhofplein, was cancelled after residents objected, and the same source stresses early engagement and notes that Benthemplein was costly because of the piling needed.</li>
+    <li class="mb-3"><strong>Sponges complement, rather than replace, primary flood defences:</strong> While the use of sponges is vital in reducing storm impact, sponges do not make for an ideal replacement for traditional ways of flood control since experts have observed that although they can reduce the effect of low-level storms, there is no way they can replace flood control structures, as seen in the Zhengzhou Storm, 2021.</li>
+</ol>
+
+<div class="article-figure">
+    <img src="assets/real/rotterdam-sponge-city-benthemplein.webp" alt="De Urbanisten, Water Square Benthemplein, Rotterdam (2013)">
+    <div class="article-figure-caption"><i class="fas fa-camera text-success me-1"></i> De Urbanisten, Water Square Benthemplein, Rotterdam (2013). Photograph by Pallesh + Azarfane.</div>
+</div>
+
+<h2>4. Analysis: What Works, What Does Not, and the Trade-Offs</h2>
+<p>These Rotterdam solutions were assessed on three factors: one, whether the project needs land and maintenance that Lagos is unable to provide at the moment; two, whether the solution reduces both tide and rainfall flooding; and three, whether the government has started the process of implementation.</p>
+<ul>
+    <li class="mb-2"><strong>Pilot approach on water squares and detention basins:</strong> The success of the Benthemplein example is based on the fact that the site is dry and useful for most of the year, thanks to its properly functioning drainage system. However, land scarcity in Lagos makes the idea less promising, as well as its maintenance. Storage capacity will be ineffective when the lagoon is at a higher level and the outfall is protected, which means that there must be pumps and gates near the squares.</li>
+    <li class="mb-2"><strong>Green roofs (limited priority):</strong> The implementation process is costly and requires a lot of structural load capacity, and they provide minimal benefits in fighting tidal flooding. Thus, green roofs need to be mandated only in large commercial structures.</li>
+    <li class="mb-2"><strong>Retention and permeability:</strong> Lagos already requires major developments to include on-site retention. The gap is enforcement at the permit stage.</li>
+    <li class="mb-2"><strong>Blue-green infrastructure network:</strong> The Lekki masterplan makes use of estate lakes, canals, and greenways for storage and controlled water release. The next step will be the mainland, which experiences frequent flooding problems.</li>
+    <li class="mb-2"><strong>Resident co-design:</strong> Low trust and weak community engagement already limit current measures, and Rotterdam's cancelled trial shows the cost of skipping it.</li>
+</ul>
+<p><strong>Trade-offs:</strong> The use of land for water storage has to compete with provision for housing and commercial activities. Enforcing rules about wetlands and draining also risks displacing poor people if done without safeguards. Although pumps and gates provide an immediate solution, they do not solve the natural buffer function. The recommended solution focuses on protecting wetlands and enforcing rules due to its low cost and root-cause prevention.</p>
+
+<h2>5. Recommendations</h2>
+<div class="recommendation-item">
+    <h4>1. Make wetland and floodplain protection a permanent law</h4>
+    <p>In September 2025, the state suspended all reclamation statewide and required full environmental impact assessments and drainage clearance. Convert this into a gazetted map of protected wetlands and a public register of approvals and prosecution of violators. As a conservation expert quoted in Mongabay put it plainly: move &ldquo;from lip service to action.&rdquo;</p>
+</div>
+<div class="recommendation-item">
+    <h4>2. Prioritize maintenance of the basic system rather than prestige improvements</h4>
+    <p>Maintenance efforts currently include about 579 km of secondary collectors and 309 km of main channels, along with the contracting of 218 other channels which would provide approximately 1,500 km. Publish annual performance on the efficiency of desilting, provide filters for culverts, and expand waste collection to informal settlements, since drain blockages preclude upstream storage.</p>
+</div>
+<div class="recommendation-item">
+    <h4>3. Mitigate tidal locking by means of a public schedule</h4>
+    <p>Flap gates and pilot pumps should be put in place in tide-locked sensitive areas.</p>
+</div>
+<div class="recommendation-item">
+    <h4>4. Pilot three water squares in three mainland neighbourhoods</h4>
+    <p>Choose flood-prone mainland areas such as Kosofe, Ikeja or Agege; co-design with residents from the start; fund maintenance before building; and measure litres stored and hours of standing water.</p>
+</div>
+<div class="recommendation-item">
+    <h4>5. Put people at the centre</h4>
+    <p>Fund community early-warning systems and consult residents before any relocation, since the poorest households face the greatest exposure and weak trust undermines current measures.</p>
+</div>
+
+<h2>6. Risks and Gaps</h2>
+<ul>
+    <li class="mb-2"><strong>Maintenance:</strong> Nature-based assets have a tendency to fill up with sediment and become neglected without an initial pledge to allocate funding for maintenance on day one.</li>
+    <li class="mb-2"><strong>Evictions:</strong> Enforcement of drainage easements and wetland preservation can lead to evictions from poor communities, and thus consultations and proper resettlement must take place.</li>
+    <li class="mb-2"><strong>Limitations of the sponge:</strong> Water squares will not, by themselves, solve the problem of extreme weather events or high levels in the lagoon. The employment of pumps, gates, and defences against the sea is essential.</li>
+    <li class="mb-2"><strong>Cost estimates:</strong> The literature assessed does not give cost estimates specifically for Lagos' water squares. However, an estimate given by LSE researchers suggests that grey-green infrastructure is potentially much less expensive than grey infrastructure alone.</li>
+</ul>
+
+
+                            <div class="mt-5 pt-4 border-top d-flex flex-wrap gap-3">
+                                <a href="assets/publications/adapting-rotterdam-sponge-city-lagos.pdf" download class="btn btn-success"><i class="fas fa-file-pdf me-2"></i>Download PDF</a>
+                                <a href="knowledge-hub.html" class="btn btn-outline-success"><i class="fas fa-book-reader me-2"></i>Back to Knowledge Hub</a>
+                                <a href="https://www.linkedin.com/pulse/adapting-rotterdams-sponge-city-model-urban-flood-labaran-sani-zxt1f/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary"><i class="fab fa-linkedin me-2"></i>Original LinkedIn Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-4">
+                        <div class="article-sidebar-box">
+                            <div class="article-sidebar-title">Publication Metadata</div>
+                            
+                            <div class="article-key-fact">
+                                <i class="fas fa-user-edit"></i>
+                                <div><strong>Author:</strong><br><span class="text-muted small">Mohammed Labaran Sani</span></div>
+                            </div>
+                            <div class="article-key-fact">
+                                <i class="fas fa-file-signature"></i>
+                                <div><strong>Document Code:</strong><br><span class="text-muted small">GNEP-CS-2026-012</span></div>
+                            </div>
+                            <div class="article-key-fact">
+                                <i class="fas fa-city"></i>
+                                <div><strong>Geographic Focus:</strong><br><span class="text-muted small">Lagos Metropolis (Mainland & Lekki) & Rotterdam Comparative Case</span></div>
+                            </div>
+                            <div class="article-key-fact">
+                                <i class="fas fa-chart-area"></i>
+                                <div><strong>Buffer Loss (1984–2023):</strong><br><span class="text-muted small">+38% built-up area, -32% forest cover, -11% water bodies</span></div>
+                            </div>
+                            <div class="article-key-fact">
+                                <i class="fas fa-water"></i>
+                                <div><strong>Drainage Network:</strong><br><span class="text-muted small">579 km secondary collectors, 309 km main channels, ~1,500 km total</span></div>
+                            </div>
+                        </div>
+
+                        <div class="article-sidebar-box">
+                            <div class="article-sidebar-title">Suggested Citation (APA)</div>
+                            <p class="small text-muted mb-2" id="apa-cite-box" style="line-height: 1.55;">
+                                Sani, M. L. (2026). Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos (Case Study & Policy Brief No. GNEP-CS-2026-012). Global Nature and Environmental Partnership (GNEP Africa).
+                            </p>
+                            <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="navigator.clipboard.writeText(document.getElementById('apa-cite-box').innerText); this.innerHTML='<i class=\'fas fa-check me-1\'></i> Copied Citation';">
+                                <i class="fas fa-copy me-1"></i> Copy Citation
+                            </button>
+                        </div>
+
+                        <div class="article-sidebar-box">
+                            <div class="article-sidebar-title">More in Knowledge Hub</div>
+                            <ul class="list-unstyled small mb-0">
+                                <li class="mb-3">
+                                    <a href="subsidy-removal-public-accountability-policy-brief.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-balance-scale text-success me-1"></i> From Subsidy Removal to Public Accountability
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; Muhammad Garba Isah (Oct 2026)</span>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="nigeria-heat-emergency-policy-brief.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-exclamation-triangle text-warning me-1"></i> 31,400 Lives at Risk? Nigeria's Heat Emergency
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Urgent Policy Brief &bull; Super El Ni&ntilde;o Preparedness</span>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="rethinking-climate-finance-africa.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-coins text-success me-1"></i> Rethinking Climate Finance for Africa
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; Mohammed Labaran Sani &amp; Amina Baala</span>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="adapting-rotterdam-sponge-city-lagos.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-water text-primary me-1"></i> Adapting Rotterdam's Sponge City Model in Lagos
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Urban Flood Resilience Brief &bull; Mohammed Labaran Sani</span>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lingua-franca-hausa-into-climate.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-language text-success me-1"></i> Lingua Franca&mdash;Ing Hausa into Climate
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Climate Communication &amp; Governance &bull; GNEP Africa</span>
+                                </li>
+                                <li class="mb-0">
+                                    <a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-globe-africa text-success me-1"></i> EL NI&Ntilde;O: Me Ya Kamata Kowane &#394;an Najeriya Ya Sani?
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Hausa Climate Advisory &bull; GNEP Africa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Standard GNEP Footer -->
+    <footer class="gnep-footer" id="contact" aria-label="Footer and Contact Information">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="bg-white p-1 rounded" width="130" height="40" style="object-fit: contain;">
+                    </div>
+                    <p class="small text-light-50 mb-3" style="color: #BFD3C7;">
+                        Global Nature and Environmental Partnership (GNEP Africa) is a youth-led initiative connecting climate research, policy, and education with practical community action across Africa.
+                    </p>
+                    <div class="small" style="color: #9EBAAB;">
+                        <div><strong>Founded:</strong> 2025</div>
+                        <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
+                    </div>
+                    <div class="gnep-footer-approach mt-3">
+                        <strong>Our Approach:</strong> We are committed to evidence-informed action, strictly verified data reporting, and transparently crediting all community and institutional partners.
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Our Work</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Action &amp; Resilience</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Nature &amp; Ecosystem Restoration</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Environmental Governance &amp; Policy</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Youth Leadership &amp; Participation</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>WEFE Nexus (Strategic Direction)</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research &amp; Capacity Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="knowledge-hub.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Knowledge Hub</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Our Mission &amp; Values</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Us</h4>
+                    <div class="mb-3 small" style="color: #BFD3C7;">
+                        <p class="mb-2"><i class="fas fa-envelope text-success me-2" aria-hidden="true"></i><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></p>
+                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2" aria-hidden="true"></i><a href="tel:+2347065885070">+234 706 588 5070</a></p>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt text-success me-2" aria-hidden="true"></i>Katsina State, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
+        <div class="container">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-6 text-center text-md-start">
+                    &copy; 2026 Global Nature and Environmental Partnership (GNEP Africa). All rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="me-3 text-white-50">Photography &amp; Research &copy; GNEP Africa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

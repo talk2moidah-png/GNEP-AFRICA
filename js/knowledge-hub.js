@@ -1020,6 +1020,11 @@
                                             <i class="fas fa-download me-1"></i> Download PDF (${pub.file_size || 'N/A'})
                                         </a>
                                     ` : ''}
+                                    ${pub.external_url && !pub.is_external ? `
+                                        <a href="${this.escapeHtml(pub.external_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                                            <i class="fab fa-linkedin me-1"></i> LinkedIn Pulse
+                                        </a>
+                                    ` : ''}
                                     <button class="btn btn-outline-dark btn-sm rounded-pill px-3" onclick="GNEPKnowledgeHub.copyCitation('${pub.id}')">
                                         <i class="fas fa-quote-right me-1"></i> Copy Citation (APA)
                                     </button>
@@ -1825,166 +1830,963 @@
         // --- Embedded Fallback Dataset ---
         getEmbeddedFallbackData() {
             return {
+                "version": "1.0.0",
+                "updated_at": "2026-11-25T16:35:00Z",
                 "categories": [
-                    "Climate Change and Resilience",
-                    "Environmental Governance and Policy",
-                    "Nature-Based Solutions and Ecosystem Restoration",
-                    "Biodiversity and Conservation",
-                    "Water, Food and Energy Nexus",
-                    "Renewable Energy and Sustainable Development",
-                    "Environmental Education and Youth Leadership",
-                    "Climate Finance and Development",
-                    "Research Methods and Technical Resources",
-                    "African Environmental Case Studies"
+                                "Climate Change and Resilience",
+                                "Environmental Governance and Policy",
+                                "Nature-Based Solutions and Ecosystem Restoration",
+                                "Biodiversity and Conservation",
+                                "Water, Food and Energy Nexus",
+                                "Renewable Energy and Sustainable Development",
+                                "Environmental Education and Youth Leadership",
+                                "Climate Finance and Development",
+                                "Research Methods and Technical Resources",
+                                "African Environmental Case Studies"
                 ],
                 "publication_types": [
-                    "Research papers",
-                    "Policy briefs",
-                    "Technical reports",
-                    "Working papers",
-                    "Books and chapters",
-                    "Case studies",
-                    "Educational resources",
-                    "Datasets and technical documents"
+                                "Research papers",
+                                "Policy briefs",
+                                "Technical reports",
+                                "Working papers",
+                                "Books and chapters",
+                                "Case studies",
+                                "Educational resources",
+                                "Datasets and technical documents"
                 ],
                 "source_categories": [
-                    "GNEP-authored publications",
-                    "Collaborative research",
-                    "External publications recommended for learning",
-                    "Official government or institutional documents"
+                                "GNEP-authored publications",
+                                "Collaborative research",
+                                "External publications recommended for learning",
+                                "Official government or institutional documents"
                 ],
                 "collections": [
-                    {
-                        "id": "african-climate-policy",
-                        "title": "African Climate Policy",
-                        "description": "Evidence-based policy frameworks, national commitments, and sub-national climate governance models shaping climate action across the African continent.",
-                        "icon": "fas fa-landmark"
-                    },
-                    {
-                        "id": "environmental-governance-nigeria",
-                        "title": "Environmental Governance in Nigeria",
-                        "description": "Legislative analyses, institutional capacity reviews, and civil society advocacy strategies advancing environmental justice and compliance in Nigeria.",
-                        "icon": "fas fa-balance-scale"
-                    },
-                    {
-                        "id": "community-led-ecosystem-restoration",
-                        "title": "Community-Led Ecosystem Restoration",
-                        "description": "Grassroots agroforestry models, native species regeneration, and youth custodianship paradigms driving verified Sahelian land reclamation.",
-                        "icon": "fas fa-seedling"
-                    },
-                    {
-                        "id": "climate-adaptation-arid-regions",
-                        "title": "Climate Adaptation in Arid and Semi-Arid Regions",
-                        "description": "Early warning telemetry, drought risk mitigation, extreme heat adaptation protocols, and desertification containment across dryland frontiers.",
-                        "icon": "fas fa-sun"
-                    },
-                    {
-                        "id": "biodiversity-forest-governance",
-                        "title": "Biodiversity and Forest Governance",
-                        "description": "Conservation science, indigenous ecological knowledge preservation, community woodland stewardship, and ecological corridor management.",
-                        "icon": "fas fa-tree"
-                    },
-                    {
-                        "id": "water-food-energy-nexus",
-                        "title": "Water-Food-Energy Nexus",
-                        "description": "Integrated systems solutions connecting clean solar power, groundwater recharge, climate-resilient agriculture, and livelihood security.",
-                        "icon": "fas fa-tint"
-                    },
-                    {
-                        "id": "youth-leadership-climate-justice",
-                        "title": "Youth Leadership and Climate Justice",
-                        "description": "Empirical studies and toolkits documenting youth-driven environmental advocacy, citizen science, and grassroots institutional transformation.",
-                        "icon": "fas fa-users"
-                    }
+                                {
+                                                "id": "african-climate-policy",
+                                                "title": "African Climate Policy",
+                                                "description": "Evidence-based policy frameworks, national commitments, and sub-national climate governance models shaping climate action across the African continent.",
+                                                "icon": "fas fa-landmark"
+                                },
+                                {
+                                                "id": "environmental-governance-nigeria",
+                                                "title": "Environmental Governance in Nigeria",
+                                                "description": "Legislative analyses, institutional capacity reviews, and civil society advocacy strategies advancing environmental justice and compliance in Nigeria.",
+                                                "icon": "fas fa-balance-scale"
+                                },
+                                {
+                                                "id": "community-led-ecosystem-restoration",
+                                                "title": "Community-Led Ecosystem Restoration",
+                                                "description": "Grassroots agroforestry models, native species regeneration, and youth custodianship paradigms driving verified Sahelian land reclamation.",
+                                                "icon": "fas fa-seedling"
+                                },
+                                {
+                                                "id": "climate-adaptation-arid-regions",
+                                                "title": "Climate Adaptation in Arid and Semi-Arid Regions",
+                                                "description": "Early warning telemetry, drought risk mitigation, extreme heat adaptation protocols, and desertification containment across dryland frontiers.",
+                                                "icon": "fas fa-sun"
+                                },
+                                {
+                                                "id": "biodiversity-forest-governance",
+                                                "title": "Biodiversity and Forest Governance",
+                                                "description": "Conservation science, indigenous ecological knowledge preservation, community woodland stewardship, and ecological corridor management.",
+                                                "icon": "fas fa-tree"
+                                },
+                                {
+                                                "id": "water-food-energy-nexus",
+                                                "title": "Water-Food-Energy Nexus",
+                                                "description": "Integrated systems solutions connecting clean solar power, groundwater recharge, climate-resilient agriculture, and livelihood security.",
+                                                "icon": "fas fa-tint"
+                                },
+                                {
+                                                "id": "youth-leadership-climate-justice",
+                                                "title": "Youth Leadership and Climate Justice",
+                                                "description": "Empirical studies and toolkits documenting youth-driven environmental advocacy, citizen science, and grassroots institutional transformation.",
+                                                "icon": "fas fa-users"
+                                }
                 ],
                 "publications": [
-                    {
-                    "id": "subsidy-removal-public-accountability-policy-brief",
-                    "slug": "subsidy-removal-public-accountability-policy-brief",
-                    "title": "From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030",
-                    "abstract": "Nigeria's May 2023 subsidy removal and FX unification mobilised ₦15.8 trillion for the Federation by December 2025, yet only ₦5.43 trillion reached the Federal Government while new borrowing supplied 58% of incremental resources. By mid-2027, the Ministry of Finance and National Cash Transfer Office should publish quarterly, disaggregated fiscal and social reports reconciled to audited accounts under Section 30 of the Fiscal Responsibility Act 2007.",
-                    "full_description": "Independent policy analysis examining the fiscal, regional price, and household social-protection outcomes of Nigeria's May 2023 petrol subsidy removal and foreign-exchange unification. Drawing on the Federal Ministry of Finance's August 2026 Reform Scorecard, World Bank Nigeria Development Updates, Auditor-General findings, and National Bureau of Statistics PMS Price Watch series through 2026, this brief sets out four statutory accountability milestones and a 2027–2030 minimum reporting standard across federal, state, and local governments.",
-                    "authors": [
-                                        "Muhammad Garba Isah (Department of International Relations, Umaru Musa Yar'Adua University, Katsina)"
-                    ],
-                    "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa) — Independent Policy Analysis",
-                    "source_category": "GNEP-authored publications",
-                    "publication_date": "2026-10-28",
-                    "year": 2026,
-                    "doc_type": "Policy briefs",
-                    "doc_code": "GNEP-PB-2026-008",
-                    "categories": [
-                                        "Environmental Governance and Policy",
-                                        "Climate Finance and Development",
-                                        "Renewable Energy and Sustainable Development",
-                                        "African Environmental Case Studies"
-                    ],
-                    "collections": [
-                                        "Environmental Governance in Nigeria",
-                                        "African Climate Policy"
-                    ],
-                    "keywords": [
-                                        "Fossil-Fuel Subsidy Reform",
-                                        "Public Accountability",
-                                        "Fiscal Responsibility Act 2007",
-                                        "Nigeria",
-                                        "Social Protection",
-                                        "Muhammad Garba Isah",
-                                        "Energy Transition",
-                                        "FAAC"
-                    ],
-                    "cover_image": "assets/real/subsidy-removal-policy-brief-cover.webp",
-                    "file_url": "assets/publications/subsidy-removal-public-accountability-policy-brief.pdf",
-                    "article_url": "subsidy-removal-public-accountability-policy-brief.html",
-                    "file_format": "PDF",
-                    "file_size": "314 KB",
-                    "page_count": 12,
-                    "language": "English",
-                    "doi": "10.5281/zenodo.gnep.pb2026.008",
-                    "citation_apa": "Isah, M. G. (2026). From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030 (Policy Brief No. GNEP-PB-2026-008). Global Nature and Environmental Partnership (GNEP Africa).",
-                    "citation_chicago": "Isah, Muhammad Garba. \"From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030.\" Policy Brief No. GNEP-PB-2026-008. Katsina: Global Nature and Environmental Partnership, 2026.",
-                    "is_featured": true,
-                    "is_external": false,
-                    "external_url": "",
-                    "status": "published",
-                    "related_ids": [
-                                        "nigeria-heat-emergency-policy-brief",
-                                        "cso-policy-brief-workshop",
-                                        "turning-research-into-action"
-                    ]
-},
-                    {
-                        "id": "nigeria-heat-emergency-policy-brief",
-                        "slug": "nigeria-heat-emergency-policy-brief",
-                        "title": "URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño",
-                        "abstract": "Comprehensive heat-health vulnerability assessment and sub-national early warning policy directives ahead of the projected 2026–2027 Super El Niño cycle across Northern Nigeria.",
-                        "full_description": "Between September 2026 and February 2027, predictive ocean-atmospheric telemetry indicates a severe Super El Niño phase coinciding with dry season ambient temperature spikes across the West African Sahel. Without proactive, community-anchored heat-health adaptation protocols, epidemiological models project up to 31,400 excess heat-vulnerability events across urban and peri-urban settlements in Northern Nigeria.",
-                        "authors": ["GNEP Directorate of Climate Policy & Risk Analysis"],
-                        "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
-                        "source_category": "GNEP-authored publications",
-                        "publication_date": "2026-09-15",
-                        "year": 2026,
-                        "doc_type": "Policy briefs",
-                        "doc_code": "GNEP-PB-2026-001",
-                        "categories": ["Climate Change and Resilience", "African Environmental Case Studies"],
-                        "collections": ["African Climate Policy", "Climate Adaptation in Arid and Semi-Arid Regions"],
-                        "keywords": ["Super El Niño", "Extreme Heat", "Northern Nigeria", "Katsina", "Early Warning"],
-                        "cover_image": "assets/real/nigeria-heat-emergency-crisis.webp",
-                        "file_url": "assets/publications/nigeria-heat-emergency-policy-brief.pdf",
-                        "file_format": "PDF",
-                        "file_size": "173 KB",
-                        "page_count": 6,
-                        "language": "English",
-                        "doi": "10.5281/zenodo.gnep.pb2026.001",
-                        "citation_apa": "GNEP Climate Policy Directorate. (2026). URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño (Policy Brief No. GNEP-PB-2026-001). Global Nature and Environmental Partnership.",
-                        "citation_chicago": "GNEP Climate Policy Directorate. \"URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño.\" Katsina, 2026.",
-                        "is_featured": false,
-                        "is_external": false,
-                        "status": "published",
-                        "related_ids": ["cso-policy-brief-workshop", "turning-research-into-action"]
-                    }
+                                {
+                                                "id": "lingua-franca-hausa-into-climate",
+                                                "slug": "lingua-franca-hausa-into-climate",
+                                                "title": "Lingua Franca—Ing Hausa into Climate: Linguistic Accessibility and Inclusive Climate Governance",
+                                                "abstract": "Nearly 90% of global scientific publications are in English, creating a two-tier system in Northern Nigeria between those who can read climate science and those who live with its consequences. Drawing on Afrobarometer awareness data (only 30% awareness in Nigeria; 26% rural; 23% women) and evaluations of Hausa farm radio (In Kidi ya Chanza) and voice advisories reaching 97% farmer trust, this brief proposes six policy actions to institutionalize Hausa climate terminology, translation, and education across 94 million speakers.",
+                                                "full_description": "Examines how linguistic exclusion breaks the chain of climate governance at its very first link. Despite ₦200.6 million allocated to federal climate awareness over four years under Nigeria's National Climate Change Policy (2021–2030), rural Hausa-speaking communities remain underserved by uncontextualized English messaging. Sets out a six-part roadmap: establishing a standard Hausa climate glossary panel, translating policies and early warnings, integrating Hausa into school/university curricula, strengthening vernacular media, piloting participatory community communication, and building cross-border West African partnerships.",
+                                                "authors": [
+                                                                "Global Nature and Environmental Partnership (GNEP Africa)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-11-11",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-011",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Change and Resilience",
+                                                                "Research Methods and Technical Resources"
+                                                ],
+                                                "collections": [
+                                                                "Environmental Governance in Nigeria",
+                                                                "Youth Leadership and Climate Justice",
+                                                                "African Climate Policy"
+                                                ],
+                                                "keywords": [
+                                                                "Hausa Language",
+                                                                "Climate Communication",
+                                                                "Linguistic Inclusion",
+                                                                "Afrobarometer",
+                                                                "Northern Nigeria",
+                                                                "Farm Radio",
+                                                                "Indigenous Knowledge",
+                                                                "Climate Governance"
+                                                ],
+                                                "cover_image": "assets/real/lingua-franca-hausa-cover.webp",
+                                                "file_url": "assets/publications/lingua-franca-hausa-into-climate.pdf",
+                                                "article_url": "lingua-franca-hausa-into-climate.html",
+                                                "file_format": "PDF",
+                                                "file_size": "502 KB",
+                                                "page_count": 6,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.011",
+                                                "citation_apa": "GNEP Africa. (2026). Lingua Franca—Ing Hausa into Climate: Linguistic Accessibility and Inclusive Climate Governance (Policy Brief No. GNEP-PB-2026-011). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Global Nature and Environmental Partnership (GNEP Africa). \"Lingua Franca—Ing Hausa into Climate.\" Policy Brief No. GNEP-PB-2026-011. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "https://www.linkedin.com/pulse/lingua-francaing-hausa-climate-global-nature-environmental-partne-5kidf/",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani",
+                                                                "communicating-environmental-issues",
+                                                                "turning-research-into-action"
+                                                ]
+                                },
+                                {
+                                                "id": "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani",
+                                                "slug": "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani",
+                                                "title": "EL NIÑO: Me Ya Kamata Kowane Ɗan Najeriya Ya Sani? (Hausa Super El Niño Public Advisory)",
+                                                "abstract": "Abin da ke faruwa a Tekun Pacific na iya shafar rayuwarmu a Najeriya. Wannan takardar bayani cikin harshen Hausa tana fassara kimiyyar guguwar yanayi ta Super El Niño (+3.3°C Niño 3.4 a Oktoba 2026), hasashen NiMet kan ambaliya a jihohin Arewa da ƙarancin ruwa a Kudu, haɗarin tsananin zafi (31,400), da matakan kariya ga manoma, iyalai, al'umma da hukumomin lafiya.",
+                                                "full_description": "Published entirely in Hausa to bridge the climate science communication gap across Northern Nigeria and the Sahel, this public educational brief explains the ocean-atmospheric mechanics of the 2026–2027 Super El Niño. It synthesizes WMO, NOAA, Columbia University CCSR/IRI (+3.3°C anomaly), NiMet state-by-state rainfall projections, and NEMA's October 25, 2026 preparedness directives into actionable guidance for farmers, households, communities, and local governments.",
+                                                "authors": [
+                                                                "Global Nature and Environmental Partnership (GNEP Africa)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-10-30",
+                                                "year": 2026,
+                                                "doc_type": "Educational resources",
+                                                "doc_code": "GNEP-ER-2026-010",
+                                                "categories": [
+                                                                "Climate Change and Resilience",
+                                                                "Environmental Education and Youth Leadership",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions",
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "El Niño",
+                                                                "Hausa Climate Science",
+                                                                "NiMet",
+                                                                "NEMA",
+                                                                "Northern Nigeria",
+                                                                "Extreme Heat",
+                                                                "Flood Preparedness",
+                                                                "Climate Literacy"
+                                                ],
+                                                "cover_image": "assets/real/el-nino-hausa-cover.webp",
+                                                "file_url": "assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf",
+                                                "article_url": "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html",
+                                                "file_format": "PDF",
+                                                "file_size": "576 KB",
+                                                "page_count": 5,
+                                                "language": "Hausa",
+                                                "doi": "10.5281/zenodo.gnep.er2026.010",
+                                                "citation_apa": "GNEP Africa. (2026). EL NIÑO: Me Ya Kamata Kowane Ɗan Najeriya Ya Sani? (Educational Resource No. GNEP-ER-2026-010). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Global Nature and Environmental Partnership (GNEP Africa). \"EL NIÑO: Me Ya Kamata Kowane Ɗan Najeriya Ya Sani?\" Educational Resource No. GNEP-ER-2026-010. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "https://www.linkedin.com/pulse/el-ni%C3%B1o-me-ya-kamata-kowane-%C9%97an-najeriya-2wk0f/",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "nigeria-heat-emergency-policy-brief",
+                                                                "lingua-franca-hausa-into-climate",
+                                                                "communicating-environmental-issues"
+                                                ]
+                                },
+                                {
+                                                "id": "subsidy-removal-public-accountability-policy-brief",
+                                                "slug": "subsidy-removal-public-accountability-policy-brief",
+                                                "title": "From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030",
+                                                "abstract": "Nigeria's May 2023 subsidy removal and FX unification mobilised ₦15.8 trillion for the Federation by December 2025, yet only ₦5.43 trillion reached the Federal Government while new borrowing supplied 58% of incremental resources. By mid-2027, the Ministry of Finance and National Cash Transfer Office should publish quarterly, disaggregated fiscal and social reports reconciled to audited accounts under Section 30 of the Fiscal Responsibility Act 2007.",
+                                                "full_description": "Independent policy analysis examining the fiscal, regional price, and household social-protection outcomes of Nigeria's May 2023 petrol subsidy removal and foreign-exchange unification. Drawing on the Federal Ministry of Finance's August 2026 Reform Scorecard, World Bank Nigeria Development Updates, Auditor-General findings, and National Bureau of Statistics PMS Price Watch series through 2026, this brief sets out four statutory accountability milestones and a 2027–2030 minimum reporting standard across federal, state, and local governments.",
+                                                "authors": [
+                                                                "Muhammad Garba Isah (Department of International Relations, Umaru Musa Yar'Adua University, Katsina)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa) — Independent Policy Analysis",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-10-28",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-008",
+                                                "categories": [
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Finance and Development",
+                                                                "Renewable Energy and Sustainable Development",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "Environmental Governance in Nigeria",
+                                                                "African Climate Policy"
+                                                ],
+                                                "keywords": [
+                                                                "Fossil-Fuel Subsidy Reform",
+                                                                "Public Accountability",
+                                                                "Fiscal Responsibility Act 2007",
+                                                                "Nigeria",
+                                                                "Social Protection",
+                                                                "Muhammad Garba Isah",
+                                                                "Energy Transition",
+                                                                "FAAC"
+                                                ],
+                                                "cover_image": "assets/real/subsidy-removal-policy-brief-cover.webp",
+                                                "file_url": "assets/publications/subsidy-removal-public-accountability-policy-brief.pdf",
+                                                "article_url": "subsidy-removal-public-accountability-policy-brief.html",
+                                                "file_format": "PDF",
+                                                "file_size": "314 KB",
+                                                "page_count": 12,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.008",
+                                                "citation_apa": "Isah, M. G. (2026). From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030 (Policy Brief No. GNEP-PB-2026-008). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Isah, Muhammad Garba. \"From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030.\" Policy Brief No. GNEP-PB-2026-008. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": true,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "nigeria-heat-emergency-policy-brief",
+                                                                "cso-policy-brief-workshop",
+                                                                "turning-research-into-action"
+                                                ]
+                                },
+                                {
+                                                "id": "rethinking-climate-finance-africa",
+                                                "slug": "rethinking-climate-finance-africa",
+                                                "title": "Rethinking Climate Finance for Africa",
+                                                "abstract": "Africa requires approximately USD 2.8 trillion between 2020 and 2030 to implement 51 Nationally Determined Contributions (NDCs), yet climate finance flows reached only $44 billion in 2021/22 (23% of annual need), with more than half arriving as debt. Co-authored with Amina Baala, this brief evaluates debt-for-nature swaps, concessional capital guarantees, and the Second Africa Climate Summit's Addis Ababa Declaration to propose seven grant-equivalent delivery reforms.",
+                                                "full_description": "Examines why the structure of African climate finance—not just its volume—is the binding constraint on resilience. Against US$865 billion in decadal African external debt service and borrowing costs two to three times higher than in advanced economies, the brief analyzes Gabon's $500M Blue Bond, IEA concessional leverage multipliers, the African Climate Facility, and the Loss and Damage Fund, setting out seven concrete benchmarks for negotiators through 2035.",
+                                                "authors": [
+                                                                "Mohammed Labaran Sani (Founder & Lead, GNEP Africa)",
+                                                                "Amina Baala"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-10-15",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-009",
+                                                "categories": [
+                                                                "Climate Finance and Development",
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Change and Resilience",
+                                                                "Renewable Energy and Sustainable Development"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy"
+                                                ],
+                                                "keywords": [
+                                                                "Climate Finance",
+                                                                "NDCs",
+                                                                "Debt-for-Nature Swaps",
+                                                                "Addis Ababa Declaration",
+                                                                "COP29",
+                                                                "COP30",
+                                                                "Adaptation Grants",
+                                                                "Mohammed Labaran Sani",
+                                                                "Amina Baala"
+                                                ],
+                                                "cover_image": "assets/real/rethinking-climate-finance-cover.webp",
+                                                "file_url": "assets/publications/rethinking-climate-finance-africa.pdf",
+                                                "article_url": "rethinking-climate-finance-africa.html",
+                                                "file_format": "PDF",
+                                                "file_size": "502 KB",
+                                                "page_count": 6,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.009",
+                                                "citation_apa": "Sani, M. L., & Baala, A. (2026). Rethinking Climate Finance for Africa (Policy Brief No. GNEP-PB-2026-009). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Sani, Mohammed Labaran, and Amina Baala. \"Rethinking Climate Finance for Africa.\" Policy Brief No. GNEP-PB-2026-009. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "https://www.linkedin.com/pulse/rethinking-climate-finance-africa-mohammed-labaran-sani-brxef/",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "subsidy-removal-public-accountability-policy-brief",
+                                                                "turning-research-into-action",
+                                                                "wefe-nexus-strategic-framework"
+                                                ]
+                                },
+                                {
+                                                "id": "adapting-rotterdam-sponge-city-lagos",
+                                                "slug": "adapting-rotterdam-sponge-city-lagos",
+                                                "title": "Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos",
+                                                "abstract": "Following July 2026 flash floods across 15 Lagos communities, state suspension of land reclamation, and tidal locking caused by a one-metre lagoon rise, this brief evaluates which elements of Rotterdam's Sponge City model (such as the 1.7-million-litre Benthemplein water square) can be adapted to Lagos. It recommends permanent statutory wetland protection, desilting maintenance across 1,500 km of channels, flap gates/pumps for tidal locking, and three resident-co-designed mainland pilot water squares in Kosofe, Ikeja, or Agege.",
+                                                "full_description": "Satellite analysis from 1984 to 2023 reveals a 38% expansion in Lagos' built-up area alongside a 32% loss of forests and 11% reduction in water bodies, placing over 60% of urban Lagos at risk of extreme flooding by 2050. Comparing Rotterdam's Benthemplein water square and cancelled Bloemhofplein trial against Lagos' land scarcity, informal settlement vulnerability, and tidal locking, this policy brief distinguishes cost-effective grey-green infrastructure and statutory floodplain protection from prestige spending.",
+                                                "authors": [
+                                                                "Mohammed Labaran Sani (Founder & Lead, GNEP Africa)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-10-13",
+                                                "year": 2026,
+                                                "doc_type": "Case studies",
+                                                "doc_code": "GNEP-CS-2026-012",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "Climate Change and Resilience",
+                                                                "Environmental Governance and Policy",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Environmental Governance in Nigeria"
+                                                ],
+                                                "keywords": [
+                                                                "Sponge City",
+                                                                "Rotterdam",
+                                                                "Lagos Flooding",
+                                                                "Blue-Green Infrastructure",
+                                                                "Water Squares",
+                                                                "Tidal Locking",
+                                                                "Wetland Protection",
+                                                                "Mohammed Labaran Sani"
+                                                ],
+                                                "cover_image": "assets/real/rotterdam-sponge-city-lagos-cover.webp",
+                                                "file_url": "assets/publications/adapting-rotterdam-sponge-city-lagos.pdf",
+                                                "article_url": "adapting-rotterdam-sponge-city-lagos.html",
+                                                "file_format": "PDF",
+                                                "file_size": "505 KB",
+                                                "page_count": 5,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.cs2026.012",
+                                                "citation_apa": "Sani, M. L. (2026). Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos (Case Study & Policy Brief No. GNEP-CS-2026-012). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Sani, Mohammed Labaran. \"Adapting Rotterdam’s Sponge City Model for Urban Flood Resilience in Lagos.\" Case Study & Policy Brief No. GNEP-CS-2026-012. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "https://www.linkedin.com/pulse/adapting-rotterdams-sponge-city-model-urban-flood-labaran-sani-zxt1f/",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "nigeria-heat-emergency-policy-brief",
+                                                                "rethinking-climate-finance-africa",
+                                                                "turning-research-into-action"
+                                                ]
+                                },
+                                {
+                                                "id": "nigeria-heat-emergency-policy-brief",
+                                                "slug": "nigeria-heat-emergency-policy-brief",
+                                                "title": "URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño",
+                                                "abstract": "Comprehensive heat-health vulnerability assessment and sub-national early warning policy directives ahead of the projected 2026–2027 Super El Niño cycle across Northern Nigeria.",
+                                                "full_description": "Between September 2026 and February 2027, predictive ocean-atmospheric telemetry indicates a severe Super El Niño phase coinciding with dry season ambient temperature spikes across the West African Sahel. Without proactive, community-anchored heat-health adaptation protocols, epidemiological models project up to 31,400 excess heat-vulnerability events across urban and peri-urban settlements in Northern Nigeria. This policy brief provides urgent, actionable directives for state ministries of health, environment, and local emergency management agencies.",
+                                                "authors": [
+                                                                "GNEP Directorate of Climate Policy & Risk Analysis"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-09-15",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-001",
+                                                "categories": [
+                                                                "Climate Change and Resilience",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "Super El Niño",
+                                                                "Extreme Heat",
+                                                                "Northern Nigeria",
+                                                                "Katsina",
+                                                                "Early Warning",
+                                                                "Public Health",
+                                                                "Sahel"
+                                                ],
+                                                "cover_image": "assets/real/nigeria-heat-emergency-crisis.webp",
+                                                "file_url": "assets/publications/nigeria-heat-emergency-policy-brief.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "173 KB",
+                                                "page_count": 6,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.001",
+                                                "citation_apa": "GNEP Climate Policy Directorate. (2026). URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño (Policy Brief No. GNEP-PB-2026-001). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Climate Policy Directorate. \"URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño.\" Policy Brief No. GNEP-PB-2026-001. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "cso-policy-brief-workshop",
+                                                                "turning-research-into-action",
+                                                                "wefe-nexus-strategic-framework"
+                                                ],
+                                                "article_url": "nigeria-heat-emergency-policy-brief.html"
+                                },
+                                {
+                                                "id": "cso-policy-brief-workshop",
+                                                "slug": "cso-policy-brief-workshop",
+                                                "title": "Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop",
+                                                "abstract": "Official proceedings, pedagogical framework, and legislative pitching toolkit deployed during the training of 20 grassroots civil society leaders in Northern Nigeria.",
+                                                "full_description": "In August 2026, GNEP Africa and The Green Minds Space convened an intensive policy brief drafting and legislative advocacy workshop for 20 leaders of community-based organizations. This technical report details the curriculum, evidence translation methodologies, stakeholder power mapping, and the resulting policy briefs produced on flood mitigation, desertification, and youth livelihoods.",
+                                                "authors": [
+                                                                "Global Nature and Environmental Partnership",
+                                                                "The Green Minds Space"
+                                                ],
+                                                "publishing_org": "GNEP Africa & The Green Minds Space",
+                                                "source_category": "Collaborative research",
+                                                "publication_date": "2026-08-20",
+                                                "year": 2026,
+                                                "doc_type": "Technical reports",
+                                                "doc_code": "GNEP-TR-2026-002",
+                                                "categories": [
+                                                                "Environmental Governance and Policy",
+                                                                "Environmental Education and Youth Leadership"
+                                                ],
+                                                "collections": [
+                                                                "Environmental Governance in Nigeria",
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "CSO Capacity",
+                                                                "Policy Briefs",
+                                                                "Legislative Advocacy",
+                                                                "Katsina State",
+                                                                "Environmental Governance",
+                                                                "Green Minds Space"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-delegates-discussion.webp",
+                                                "file_url": "assets/publications/cso-policy-brief-workshop.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "161 KB",
+                                                "page_count": 10,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.tr2026.002",
+                                                "citation_apa": "GNEP Africa, & The Green Minds Space. (2026). Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop (Technical Report No. GNEP-TR-2026-002). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "Global Nature and Environmental Partnership, and The Green Minds Space. Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop. Technical Report No. GNEP-TR-2026-002. Katsina, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "turning-research-into-action",
+                                                                "communicating-environmental-issues",
+                                                                "nigeria-heat-emergency-policy-brief"
+                                                ],
+                                                "article_url": "cso-policy-workshop.html"
+                                },
+                                {
+                                                "id": "sahelian-tree-planting-field-report",
+                                                "slug": "sahelian-tree-planting-field-report",
+                                                "title": "Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Pilot in Katsina State",
+                                                "abstract": "Field evaluation, 90-day survivability metrics, and community co-custodianship models from a targeted 150 economic tree planting initiative in semi-arid Katsina.",
+                                                "full_description": "Conducted in collaboration with the African Youth Initiative on Natural Environment and Technology (AYINET), this field study assesses the survivability of Azadirachta indica (Neem), Moringa oleifera, and Faidherbia albida planted across semi-arid school and community tracts. Using localized mulch basins and youth custodianship contracts, the pilot achieved an 89.3% 90-day survivability rate, validating participatory restoration over traditional passive afforestation.",
+                                                "authors": [
+                                                                "GNEP Africa",
+                                                                "African Youth Initiative on Natural Environment and Technology (AYINET)"
+                                                ],
+                                                "publishing_org": "GNEP Africa & AYINET",
+                                                "source_category": "Collaborative research",
+                                                "publication_date": "2026-07-10",
+                                                "year": 2026,
+                                                "doc_type": "Case studies",
+                                                "doc_code": "GNEP-CS-2026-003",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "Community-Led Ecosystem Restoration",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "Economic Trees",
+                                                                "Afforestation",
+                                                                "Katsina State",
+                                                                "AYINET",
+                                                                "Neem",
+                                                                "Moringa",
+                                                                "Youth Stewards"
+                                                ],
+                                                "cover_image": "assets/real/tree-planting-field-action.webp",
+                                                "file_url": "assets/publications/sahelian-tree-planting-field-report.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "165 KB",
+                                                "page_count": 8,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.cs2026.003",
+                                                "citation_apa": "GNEP Africa, & AYINET. (2026). Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Pilot in Katsina State (Case Study No. GNEP-CS-2026-003). Katsina: GNEP Africa.",
+                                                "citation_chicago": "GNEP Africa, and AYINET. Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Pilot in Katsina State. Case Study No. GNEP-CS-2026-003. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "youth-led-environmental-action",
+                                                                "wefe-nexus-strategic-framework"
+                                                ],
+                                                "article_url": "tree-planting-150-seedlings.html"
+                                },
+                                {
+                                                "id": "turning-research-into-action",
+                                                "slug": "turning-research-into-action",
+                                                "title": "Turning Research into Action: A Practitioner's Framework for Environmental Policy Engagement in Sub-Saharan Africa",
+                                                "abstract": "A 5-stage methodological framework guiding African environmental researchers and youth advocates to translate empirical datasets into legislative and community action.",
+                                                "full_description": "Academic environmental findings across Africa frequently remain siloed within institutional libraries. This working paper introduces an operational 5-stage framework covering problem formulation with frontline communities, participatory citizen telemetry, 2-page legislative drafting, legislative budgetary alignment, and post-enactment community monitoring.",
+                                                "authors": [
+                                                                "GNEP Research & Capacity Development Division"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-06-05",
+                                                "year": 2026,
+                                                "doc_type": "Working papers",
+                                                "doc_code": "GNEP-WP-2026-004",
+                                                "categories": [
+                                                                "Research Methods and Technical Resources",
+                                                                "Environmental Governance and Policy"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Environmental Governance in Nigeria"
+                                                ],
+                                                "keywords": [
+                                                                "Research Methods",
+                                                                "Evidence-Based Policy",
+                                                                "Policy Translation",
+                                                                "Sub-Saharan Africa",
+                                                                "Advocacy Framework"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-labaran-presenting.webp",
+                                                "file_url": "assets/publications/turning-research-into-action.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "163 KB",
+                                                "page_count": 12,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.wp2026.004",
+                                                "citation_apa": "GNEP Research Division. (2026). Turning Research into Action: A Practitioner's Framework for Environmental Policy Engagement in Sub-Saharan Africa (Working Paper No. GNEP-WP-2026-004). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Research Division. Turning Research into Action: A Practitioner's Framework for Environmental Policy Engagement in Sub-Saharan Africa. Working Paper No. GNEP-WP-2026-004. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "cso-policy-brief-workshop",
+                                                                "communicating-environmental-issues"
+                                                ],
+                                                "article_url": "turning-research-into-action.html"
+                                },
+                                {
+                                                "id": "communicating-environmental-issues",
+                                                "slug": "communicating-environmental-issues",
+                                                "title": "Communicating Environmental Issues: Storytelling Methodologies for African Civil Society",
+                                                "abstract": "Strategic communications and community narrative toolkit detailing ethical storytelling, audio-visual advocacy, and grassroots messaging across diverse linguistic landscapes.",
+                                                "full_description": "Data alone rarely moves hearts or parliaments. This practical educational resource provides grassroots environmental organizations with concrete storytelling methodologies. It details the protagonist-solution narrative arc, ethical documentation protocols, vernacular radio dissemination, and techniques for countering climate fatalism with tangible community restoration narratives.",
+                                                "authors": [
+                                                                "Maryam Dauda (GNEP Communications Unit)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-05-18",
+                                                "year": 2026,
+                                                "doc_type": "Educational resources",
+                                                "doc_code": "GNEP-ER-2026-005",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "Research Methods and Technical Resources"
+                                                ],
+                                                "collections": [
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "Storytelling",
+                                                                "Communications",
+                                                                "Civil Society",
+                                                                "Environmental Journalism",
+                                                                "Youth Voice",
+                                                                "Advocacy"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-speaker-maryam.webp",
+                                                "file_url": "assets/publications/communicating-environmental-issues.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "155 KB",
+                                                "page_count": 8,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.er2026.005",
+                                                "citation_apa": "Dauda, M. (2026). Communicating Environmental Issues: Storytelling Methodologies for African Civil Society (Educational Resource No. GNEP-ER-2026-005). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "Dauda, Maryam. Communicating Environmental Issues: Storytelling Methodologies for African Civil Society. Educational Resource No. GNEP-ER-2026-005. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "turning-research-into-action",
+                                                                "youth-led-environmental-action"
+                                                ],
+                                                "article_url": "communicating-environmental-issues.html"
+                                },
+                                {
+                                                "id": "youth-led-environmental-action",
+                                                "slug": "youth-led-environmental-action",
+                                                "title": "Youth-Led Environmental Action: Building Local Capacity for Sustainable Development in Arid Frontiers",
+                                                "abstract": "Empirical survey and participatory action research documenting youth mobilization, community restoration clubs, and green enterprise incubation across the Nigerian Sahel.",
+                                                "full_description": "Investigates the catalytic role of African youth in executing tangible environmental adaptation. With field data collected across Katsina State, this paper demonstrates how combining youth volunteer networks with micro-enterprise incentives (such as tree nurseries and organic compost production) yields higher retention and measurable ecological regeneration.",
+                                                "authors": [
+                                                                "GNEP Youth Leadership & Policy Directorate"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-03-24",
+                                                "year": 2026,
+                                                "doc_type": "Research papers",
+                                                "doc_code": "GNEP-RP-2026-006",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "African Environmental Case Studies",
+                                                                "Climate Change and Resilience"
+                                                ],
+                                                "collections": [
+                                                                "Youth Leadership and Climate Justice",
+                                                                "Community-Led Ecosystem Restoration"
+                                                ],
+                                                "keywords": [
+                                                                "Youth Leadership",
+                                                                "Sahelian Resilience",
+                                                                "Green Entrepreneurship",
+                                                                "Action Research",
+                                                                "Katsina State"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-group-interactive.webp",
+                                                "file_url": "assets/publications/youth-led-environmental-action.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "156 KB",
+                                                "page_count": 14,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.rp2026.006",
+                                                "citation_apa": "GNEP Youth Directorate. (2026). Youth-Led Environmental Action: Building Local Capacity for Sustainable Development in Arid Frontiers (Research Paper No. GNEP-RP-2026-006). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Youth Directorate. Youth-Led Environmental Action: Building Local Capacity for Sustainable Development in Arid Frontiers. Research Paper No. GNEP-RP-2026-006. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "wefe-nexus-strategic-framework"
+                                                ],
+                                                "article_url": "youth-environmental-action.html"
+                                },
+                                {
+                                                "id": "wefe-nexus-strategic-framework",
+                                                "slug": "wefe-nexus-strategic-framework",
+                                                "title": "The Water-Energy-Food-Ecosystem (WEFE) Nexus in the Nigerian Sahel: Strategic Framework for Youth Action",
+                                                "abstract": "An integrated systems framework addressing the tri-lemma of water scarcity, clean energy deficits, and food insecurity across the Sudano-Sahelian ecological corridor.",
+                                                "full_description": "Examines the interdependencies between groundwater extraction, renewable solar mini-grids, drought-resistant agriculture, and ecological buffer restoration. Outlines concrete interventions suitable for sub-national deployment in Northern Nigeria and the Lake Chad Basin.",
+                                                "authors": [
+                                                                "Mohammed Labaran Sani (Founder & Executive Director, GNEP Africa)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2025-11-12",
+                                                "year": 2025,
+                                                "doc_type": "Working papers",
+                                                "doc_code": "GNEP-WP-2025-007",
+                                                "categories": [
+                                                                "Water, Food and Energy Nexus",
+                                                                "Renewable Energy and Sustainable Development",
+                                                                "Climate Change and Resilience"
+                                                ],
+                                                "collections": [
+                                                                "Water-Food-Energy Nexus",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "WEFE Nexus",
+                                                                "Solar Irrigation",
+                                                                "Groundwater",
+                                                                "Sahel",
+                                                                "Systems Thinking",
+                                                                "Mohammed Labaran Sani"
+                                                ],
+                                                "cover_image": "assets/real/labaran-field-inspection.webp",
+                                                "file_url": "assets/publications/wefe-nexus-strategic-framework.pdf",
+                                                "file_format": "PDF",
+                                                "file_size": "162 KB",
+                                                "page_count": 16,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.wp2025.007",
+                                                "citation_apa": "Sani, M. L. (2025). The Water-Energy-Food-Ecosystem (WEFE) Nexus in the Nigerian Sahel: Strategic Framework for Youth Action (Working Paper No. GNEP-WP-2025-007). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "Sani, Mohammed Labaran. The Water-Energy-Food-Ecosystem (WEFE) Nexus in the Nigerian Sahel: Strategic Framework for Youth Action. Working Paper No. GNEP-WP-2025-007. Katsina: GNEP Africa, 2025.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "nigeria-heat-emergency-policy-brief"
+                                                ]
+                                },
+                                {
+                                                "id": "cifor-icraf-sahel-fmnr-agroforestry",
+                                                "slug": "cifor-icraf-sahel-fmnr-agroforestry",
+                                                "title": "Farmer-Managed Natural Regeneration and Agroforestry in the West African Sahel",
+                                                "abstract": "Technical synthesis of indigenous re-greening techniques, Faidherbia albida parkland systems, and microclimate stabilization in semi-arid West Africa.",
+                                                "full_description": "Synthesizes decades of empirical field trials across Niger, Mali, Burkina Faso, and Northern Nigeria. Outlines low-cost silvopastoral management practices that enhance topsoil organic carbon, recharge shallow aquifers, and boost cereal yields without synthetic fertilizers.",
+                                                "authors": [
+                                                                "Center for International Forestry Research and World Agroforestry (CIFOR-ICRAF)"
+                                                ],
+                                                "publishing_org": "CIFOR-ICRAF",
+                                                "source_category": "External publications recommended for learning",
+                                                "publication_date": "2024-04-18",
+                                                "year": 2024,
+                                                "doc_type": "Books and chapters",
+                                                "doc_code": "ICRAF-OP-2024-11",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "Biodiversity and Conservation",
+                                                                "Water, Food and Energy Nexus"
+                                                ],
+                                                "collections": [
+                                                                "Community-Led Ecosystem Restoration",
+                                                                "Biodiversity and Forest Governance"
+                                                ],
+                                                "keywords": [
+                                                                "Agroforestry",
+                                                                "FMNR",
+                                                                "CIFOR-ICRAF",
+                                                                "Sahel",
+                                                                "Regeneration",
+                                                                "Soil Carbon",
+                                                                "Faidherbia"
+                                                ],
+                                                "cover_image": "assets/real/tree-planting-field-action.webp",
+                                                "file_url": "",
+                                                "file_format": "External Research Monograph",
+                                                "file_size": "Official ICRAF Portal",
+                                                "page_count": 112,
+                                                "language": "English",
+                                                "doi": "10.5716/WP24011.PDF",
+                                                "citation_apa": "CIFOR-ICRAF. (2024). Farmer-Managed Natural Regeneration and Agroforestry in the West African Sahel (Occasional Paper No. 11). Nairobi: World Agroforestry.",
+                                                "citation_chicago": "CIFOR-ICRAF. Farmer-Managed Natural Regeneration and Agroforestry in the West African Sahel. Nairobi: World Agroforestry, 2024.",
+                                                "is_featured": false,
+                                                "is_external": true,
+                                                "external_url": "https://www.worldagroforestry.org/output/publications",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "wefe-nexus-strategic-framework"
+                                                ]
+                                },
+                                {
+                                                "id": "great-green-wall-progress-report",
+                                                "slug": "great-green-wall-progress-report",
+                                                "title": "The Great Green Wall Initiative: Implementation Status, Land Restoration, and Strategic Priorities",
+                                                "abstract": "Comprehensive intergovernmental progress report documenting hectares restored, cross-border corridors, and community livelihood mobilization across the 11 Sahel-Sahara member states.",
+                                                "full_description": "The Pan-African Agency of the Great Green Wall and UNCCD present an exhaustive appraisal of landscape restoration progress. Highlights key bottlenecks in climate finance absorption and showcases community-led afforestation pilots that combine economic species with local custodial governance.",
+                                                "authors": [
+                                                                "Pan-African Agency of the Great Green Wall & UNCCD"
+                                                ],
+                                                "publishing_org": "United Nations Convention to Combat Desertification (UNCCD)",
+                                                "source_category": "Official government or institutional documents",
+                                                "publication_date": "2023-11-20",
+                                                "year": 2023,
+                                                "doc_type": "Technical reports",
+                                                "doc_code": "UNCCD-GGW-2023-REP",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Finance and Development"
+                                                ],
+                                                "collections": [
+                                                                "Community-Led Ecosystem Restoration",
+                                                                "African Climate Policy"
+                                                ],
+                                                "keywords": [
+                                                                "Great Green Wall",
+                                                                "UNCCD",
+                                                                "Land Degradation Neutrality",
+                                                                "Pan-African",
+                                                                "Sahel Restoration"
+                                                ],
+                                                "cover_image": "assets/real/sahel-landscape.webp",
+                                                "file_url": "",
+                                                "file_format": "Official Multilateral Document",
+                                                "file_size": "Official UNCCD Portal",
+                                                "page_count": 96,
+                                                "language": "English",
+                                                "doi": "UNCCD Official Document Portal",
+                                                "citation_apa": "UNCCD, & Pan-African Agency of the Great Green Wall. (2023). The Great Green Wall: Implementation Status and Strategic Priorities. Bonn: UNCCD.",
+                                                "citation_chicago": "UNCCD, and Pan-African Agency of the Great Green Wall. The Great Green Wall: Implementation Status and Strategic Priorities. Bonn: UNCCD, 2023.",
+                                                "is_featured": false,
+                                                "is_external": true,
+                                                "external_url": "https://www.unccd.int/our-work/ggwi",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "nigeria-national-climate-change-policy"
+                                                ]
+                                },
+                                {
+                                                "id": "unep-sahel-climate-fragility-report",
+                                                "slug": "unep-sahel-climate-fragility-report",
+                                                "title": "Addressing Climate-Fragility Risks in the Sahel: Nature-Based Solutions and Regional Stability",
+                                                "abstract": "Institutional report analyzing the compound risks of desertification, water stress, transhumance conflicts, and ecological restoration along the Great Green Wall.",
+                                                "full_description": "Published by UNEP in partnership with regional peacebuilding bodies, this report examines how environmental degradation exacerbates resource competition in the Sahel. It advocates for integrated landscape restoration and community land tenure as essential peace dividends.",
+                                                "authors": [
+                                                                "United Nations Environment Programme (UNEP) & UNOWAS"
+                                                ],
+                                                "publishing_org": "United Nations Environment Programme",
+                                                "source_category": "External publications recommended for learning",
+                                                "publication_date": "2023-09-14",
+                                                "year": 2023,
+                                                "doc_type": "Technical reports",
+                                                "doc_code": "UNEP-DEWA-2023-04",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Change and Resilience"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "UNEP",
+                                                                "Sahel",
+                                                                "Climate Fragility",
+                                                                "Great Green Wall",
+                                                                "Land Degradation",
+                                                                "Resource Governance"
+                                                ],
+                                                "cover_image": "assets/real/sahel-landscape.webp",
+                                                "file_url": "",
+                                                "file_format": "External UN Publication",
+                                                "file_size": "Official UN Portal",
+                                                "page_count": 68,
+                                                "language": "English",
+                                                "doi": "10.59117/20.500.11822/43491",
+                                                "citation_apa": "United Nations Environment Programme. (2023). Addressing Climate-Fragility Risks in the Sahel. Nairobi: UNEP.",
+                                                "citation_chicago": "United Nations Environment Programme. Addressing Climate-Fragility Risks in the Sahel. Nairobi: UNEP, 2023.",
+                                                "is_featured": false,
+                                                "is_external": true,
+                                                "external_url": "https://www.unep.org/resources/report/addressing-climate-fragility-risks-sahel",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "cso-policy-brief-workshop"
+                                                ]
+                                },
+                                {
+                                                "id": "ipcc-ar6-wg2-africa-chapter",
+                                                "slug": "ipcc-ar6-wg2-africa-chapter",
+                                                "title": "IPCC Sixth Assessment Report (AR6): Working Group II Chapter 9 — Africa",
+                                                "abstract": "The definitive peer-reviewed global scientific assessment of observed and projected climate impacts, vulnerabilities, and adaptation options across the African continent.",
+                                                "full_description": "Chapter 9 of the IPCC Working Group II report provides comprehensive empirical synthesis of climate risk across African biomes. It highlights severe vulnerability across the Sahel, compounding water and food security crises, and the transformative potential of nature-based solutions, indigenous knowledge, and youth-led climate governance.",
+                                                "authors": [
+                                                                "Intergovernmental Panel on Climate Change (IPCC)"
+                                                ],
+                                                "publishing_org": "IPCC / World Meteorological Organization & UNEP",
+                                                "source_category": "External publications recommended for learning",
+                                                "publication_date": "2022-02-28",
+                                                "year": 2022,
+                                                "doc_type": "Research papers",
+                                                "doc_code": "IPCC-AR6-WGII-CH09",
+                                                "categories": [
+                                                                "Climate Change and Resilience",
+                                                                "Biodiversity and Conservation",
+                                                                "Water, Food and Energy Nexus"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "IPCC",
+                                                                "AR6",
+                                                                "Africa Chapter",
+                                                                "Vulnerability",
+                                                                "Adaptation",
+                                                                "Sahelian Climate",
+                                                                "UNEP"
+                                                ],
+                                                "cover_image": "assets/real/sahel-landscape.webp",
+                                                "file_url": "",
+                                                "file_format": "External Peer-Reviewed Source",
+                                                "file_size": "Official UN Portal",
+                                                "page_count": 172,
+                                                "language": "English",
+                                                "doi": "10.1017/9781009325844.011",
+                                                "citation_apa": "Trisos, C. H., et al. (2022). Africa. In Climate Change 2022: Impacts, Adaptation and Vulnerability. Contribution of Working Group II to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change. Cambridge University Press.",
+                                                "citation_chicago": "Trisos, Christopher H., et al. \"Africa.\" In Climate Change 2022: Impacts, Adaptation and Vulnerability. Cambridge University Press, 2022.",
+                                                "is_featured": false,
+                                                "is_external": true,
+                                                "external_url": "https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-9/",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "nigeria-heat-emergency-policy-brief",
+                                                                "wefe-nexus-strategic-framework"
+                                                ]
+                                },
+                                {
+                                                "id": "nigeria-national-climate-change-policy",
+                                                "slug": "nigeria-national-climate-change-policy",
+                                                "title": "National Climate Change Policy for Nigeria (2021–2030): Strategic Framework for Low-Carbon Development",
+                                                "abstract": "Official statutory climate policy framework adopted by the Federal Republic of Nigeria establishing sectoral mitigation targets, adaptation priorities, and institutional responsibilities.",
+                                                "full_description": "The National Climate Change Policy (NCCP) outlines Nigeria's overarching strategy to mitigate emissions while strengthening economic and ecological resilience to severe climate impacts. Recommended reading for researchers, policymakers, and civil society actors seeking alignment with national climate priorities and Nationally Determined Contributions (NDCs).",
+                                                "authors": [
+                                                                "Department of Climate Change, Federal Ministry of Environment, Nigeria"
+                                                ],
+                                                "publishing_org": "Federal Ministry of Environment (FME), Federal Republic of Nigeria",
+                                                "source_category": "Official government or institutional documents",
+                                                "publication_date": "2021-06-01",
+                                                "year": 2021,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "FME-NCCP-2021-2030",
+                                                "categories": [
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Change and Resilience",
+                                                                "Climate Finance and Development"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Environmental Governance in Nigeria"
+                                                ],
+                                                "keywords": [
+                                                                "National Policy",
+                                                                "Nigeria",
+                                                                "NDC",
+                                                                "Climate Change Policy",
+                                                                "Federal Ministry of Environment"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-delegates-discussion.webp",
+                                                "file_url": "",
+                                                "file_format": "External Research Document",
+                                                "file_size": "Official Web Portal",
+                                                "page_count": 84,
+                                                "language": "English",
+                                                "doi": "Official Statutory Document",
+                                                "citation_apa": "Federal Ministry of Environment. (2021). National Climate Change Policy for Nigeria (2021–2030). Abuja: Federal Republic of Nigeria.",
+                                                "citation_chicago": "Federal Ministry of Environment. National Climate Change Policy for Nigeria (2021–2030). Abuja: Federal Republic of Nigeria, 2021.",
+                                                "is_featured": false,
+                                                "is_external": true,
+                                                "external_url": "https://climatechange.gov.ng",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "nigeria-heat-emergency-policy-brief",
+                                                                "turning-research-into-action"
+                                                ]
+                                }
                 ]
-            };
+};
         }
     };
 
