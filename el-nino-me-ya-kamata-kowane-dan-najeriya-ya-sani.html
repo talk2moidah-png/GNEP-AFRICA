@@ -62,9 +62,9 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .article-body-content {
-            font-size: 1.05rem;
-            line-height: 1.82;
-            color: #2D3748;
+            font-size: 1.06rem;
+            line-height: 1.84;
+            color: #1E293B;
         }
         .article-body-content h2 {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -106,6 +106,7 @@
             border: 1px solid #E2E8F0;
             background: #F8FAFC;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            page-break-inside: avoid;
         }
         .article-figure img {
             width: 100%;
@@ -127,6 +128,7 @@
             border: 1px solid #CBD5E1;
             border-radius: 8px;
             overflow: hidden;
+            page-break-inside: avoid;
         }
         .policy-data-table thead th {
             background: #0B2516;
@@ -151,6 +153,7 @@
             padding: 1.25rem 1.4rem;
             margin-bottom: 1rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+            page-break-inside: avoid;
         }
         .recommendation-item h4 {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -194,14 +197,36 @@
             font-size: 1rem;
             flex-shrink: 0;
         }
+        .pdf-download-banner {
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border: 1px solid #86EFAC;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+        @media print {
+            header.fixed-top, footer.gnep-footer, .gnep-legal-bar, .no-print, .col-lg-4 {
+                display: none !important;
+            }
+            .col-lg-8 {
+                width: 100% !important;
+            }
+            .article-hero {
+                padding-top: 30px !important;
+                padding-bottom: 30px !important;
+                background: #0B2516 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <a class="skip-to-content no-print" href="#main-content">Skip to main content</a>
 
     <!-- Topbar & Navigation -->
-    <header class="fixed-top">
+    <header class="fixed-top no-print">
         <aside class="gnep-topbar d-none d-md-block" aria-label="Quick Links">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
@@ -269,7 +294,7 @@
         <!-- Hero Section -->
         <section class="article-hero" aria-label="Article Header">
             <div class="container">
-                <nav aria-label="breadcrumb">
+                <nav aria-label="breadcrumb" class="no-print">
                     <ol class="breadcrumb" style="background: none; padding: 0; margin-bottom: 1.5rem;">
                         <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
                         <li class="breadcrumb-item"><a href="knowledge-hub.html" class="text-white-50 text-decoration-none">Knowledge Hub</a></li>
@@ -279,6 +304,7 @@
 
                 <div class="d-flex flex-wrap gap-2 mb-3">
                     <span class="article-meta-badge"><i class="fas fa-language text-warning me-1"></i> HAUSA CLIMATE BRIEF</span><span class="article-meta-badge"><i class="fas fa-sun text-danger me-1"></i> Super El Ni&ntilde;o 2026/2027</span><span class="article-meta-badge"><i class="fas fa-calendar-alt text-success me-1"></i> October 30, 2026</span>
+                    <span class="article-meta-badge"><i class="fas fa-hashtag text-success me-1"></i> GNEP-ER-2026-010</span>
                 </div>
 
                 <h1 class="display-5 fw-bold text-white mb-3" style="max-width: 920px; line-height: 1.25;">
@@ -289,15 +315,12 @@
                     Abin da ke faruwa a Tekun Pacific na iya shafar rayuwarmu a Najeriya — Binciken kimiyya da shawarwarin kariya cikin harshen Hausa kan guguwar yanayi ta Super El Niño (2026–2027).
                 </p>
 
-                <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
+                <div class="d-flex flex-wrap align-items-center gap-3 pt-2 no-print">
                     <a href="assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf" download class="btn btn-success rounded-pill px-4 py-2 fw-bold">
-                        <i class="fas fa-file-pdf me-2"></i>Download Official PDF
+                        <i class="fas fa-file-pdf me-2"></i>Download PDF Material
                     </a>
-                    <a href="publication.html?id=el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani" class="btn btn-outline-light rounded-pill px-4 py-2">
-                        <i class="fas fa-university me-2"></i>View in Knowledge Hub
-                    </a>
-                    <a href="https://www.linkedin.com/pulse/el-ni%C3%B1o-me-ya-kamata-kowane-%C9%97an-najeriya-2wk0f/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light rounded-pill px-4 py-2">
-                        <i class="fab fa-linkedin me-2"></i>Read on LinkedIn Pulse
+                    <a href="knowledge-hub.html" class="btn btn-outline-light rounded-pill px-4 py-2">
+                        <i class="fas fa-arrow-left me-2"></i>All Knowledge Hub Articles
                     </a>
                 </div>
             </div>
@@ -309,6 +332,7 @@
                 <div class="row g-5">
                     <!-- Article Column -->
                     <div class="col-lg-8">
+                        <!-- Author & Publication Strip -->
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 p-3 mb-4 rounded-3 bg-light border">
                             <div>
                                 <div class="fw-bold text-dark">GNEP Africa (Global Nature & Environmental Partnership)</div>
@@ -316,7 +340,7 @@
                             </div>
                             <div class="text-md-end small text-muted">
                                 <div><i class="far fa-calendar-alt text-success me-1"></i> Published: <strong>October 30, 2026</strong></div>
-                                <div><i class="fas fa-check-circle text-success me-1"></i> GNEP Knowledge Hub Verified</div>
+                                <div><i class="fas fa-university text-success me-1"></i> GNEP Africa Knowledge Hub</div>
                             </div>
                         </div>
 
@@ -453,16 +477,35 @@
 <p>El Ni&ntilde;o ba abin tsoro kawai ba ne, garga&#599;i ne da ya kamata mu &#599;auka da muhimmanci. Fahimta, shiri da &#599;aukar mataki tun da wuri za su taimaka wajen rage asarar rayuka da dukiyoyi.</p>
 
 
-                            <div class="mt-5 pt-4 border-top d-flex flex-wrap gap-3">
-                                <a href="assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf" download class="btn btn-success"><i class="fas fa-file-pdf me-2"></i>Download PDF</a>
+                            <!-- Downloadable PDF Material Box at Footer of Article -->
+                            <div class="pdf-download-banner mt-5 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 no-print">
+                                <div>
+                                    <h4 class="h6 fw-bold text-dark mb-1"><i class="fas fa-file-pdf text-danger me-2"></i>Offline Reading &amp; Reference Material</h4>
+                                    <p class="small text-muted mb-0">Download the formatted PDF edition of this publication for offline reference, printing, or academic citation.</p>
+                                </div>
+                                <a href="assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf" download class="btn btn-success rounded-pill px-4 py-2 fw-bold text-nowrap">
+                                    <i class="fas fa-download me-2"></i>Download PDF
+                                </a>
+                            </div>
+
+                            <div class="mt-4 pt-3 border-top d-flex flex-wrap gap-3 no-print">
                                 <a href="knowledge-hub.html" class="btn btn-outline-success"><i class="fas fa-book-reader me-2"></i>Back to Knowledge Hub</a>
-                                <a href="https://www.linkedin.com/pulse/el-ni%C3%B1o-me-ya-kamata-kowane-%C9%97an-najeriya-2wk0f/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary"><i class="fab fa-linkedin me-2"></i>Original LinkedIn Article</a>
+                                <a href="events.html" class="btn btn-outline-dark"><i class="fas fa-newspaper me-2"></i>All Research &amp; Updates</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Sidebar Column -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 no-print">
+                        <!-- PDF Download Material Card -->
+                        <div class="article-sidebar-box" style="background: #F0FDF4; border-color: #BBF7D0;">
+                            <div class="article-sidebar-title text-success"><i class="fas fa-file-download me-1"></i> Downloadable Material</div>
+                            <p class="small text-dark mb-3">Get the complete standalone PDF version of this article with all figures and policy tables.</p>
+                            <a href="assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf" download class="btn btn-success w-100 fw-bold rounded-pill">
+                                <i class="fas fa-file-pdf me-2"></i>Download PDF Edition
+                            </a>
+                        </div>
+
                         <div class="article-sidebar-box">
                             <div class="article-sidebar-title">Publication Metadata</div>
                             
@@ -499,8 +542,20 @@
                         </div>
 
                         <div class="article-sidebar-box">
-                            <div class="article-sidebar-title">More in Knowledge Hub</div>
+                            <div class="article-sidebar-title">Published Articles in Knowledge Hub</div>
                             <ul class="list-unstyled small mb-0">
+                                <li class="mb-3">
+                                    <a href="lingua-franca-hausa-into-climate.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-language text-success me-1"></i> Lingua Franca&mdash;Ing Hausa into Climate
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; Nov 11, 2026</span>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-globe-africa text-success me-1"></i> EL NI&Ntilde;O: Me Ya Kamata Kowane &#394;an Najeriya Ya Sani?
+                                    </a>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Hausa Climate Advisory &bull; Oct 30, 2026</span>
+                                </li>
                                 <li class="mb-3">
                                     <a href="subsidy-removal-public-accountability-policy-brief.html" class="text-decoration-none fw-bold text-dark d-block">
                                         <i class="fas fa-balance-scale text-success me-1"></i> From Subsidy Removal to Public Accountability
@@ -508,34 +563,22 @@
                                     <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; Muhammad Garba Isah (Oct 2026)</span>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="nigeria-heat-emergency-policy-brief.html" class="text-decoration-none fw-bold text-dark d-block">
-                                        <i class="fas fa-exclamation-triangle text-warning me-1"></i> 31,400 Lives at Risk? Nigeria's Heat Emergency
-                                    </a>
-                                    <span class="text-muted" style="font-size: 0.8rem;">Urgent Policy Brief &bull; Super El Ni&ntilde;o Preparedness</span>
-                                </li>
-                                <li class="mb-3">
                                     <a href="rethinking-climate-finance-africa.html" class="text-decoration-none fw-bold text-dark d-block">
                                         <i class="fas fa-coins text-success me-1"></i> Rethinking Climate Finance for Africa
                                     </a>
-                                    <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; Mohammed Labaran Sani &amp; Amina Baala</span>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Policy Brief &bull; M. L. Sani &amp; Amina Baala (Oct 15, 2026)</span>
                                 </li>
                                 <li class="mb-3">
                                     <a href="adapting-rotterdam-sponge-city-lagos.html" class="text-decoration-none fw-bold text-dark d-block">
                                         <i class="fas fa-water text-primary me-1"></i> Adapting Rotterdam's Sponge City Model in Lagos
                                     </a>
-                                    <span class="text-muted" style="font-size: 0.8rem;">Urban Flood Resilience Brief &bull; Mohammed Labaran Sani</span>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="lingua-franca-hausa-into-climate.html" class="text-decoration-none fw-bold text-dark d-block">
-                                        <i class="fas fa-language text-success me-1"></i> Lingua Franca&mdash;Ing Hausa into Climate
-                                    </a>
-                                    <span class="text-muted" style="font-size: 0.8rem;">Climate Communication &amp; Governance &bull; GNEP Africa</span>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Urban Resilience Brief &bull; M. L. Sani (Oct 13, 2026)</span>
                                 </li>
                                 <li class="mb-0">
-                                    <a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html" class="text-decoration-none fw-bold text-dark d-block">
-                                        <i class="fas fa-globe-africa text-success me-1"></i> EL NI&Ntilde;O: Me Ya Kamata Kowane &#394;an Najeriya Ya Sani?
+                                    <a href="nigeria-heat-emergency-policy-brief.html" class="text-decoration-none fw-bold text-dark d-block">
+                                        <i class="fas fa-exclamation-triangle text-warning me-1"></i> 31,400 Lives at Risk? Nigeria's Heat Emergency
                                     </a>
-                                    <span class="text-muted" style="font-size: 0.8rem;">Hausa Climate Advisory &bull; GNEP Africa</span>
+                                    <span class="text-muted" style="font-size: 0.8rem;">Urgent Policy Brief &bull; Super El Ni&ntilde;o Preparedness</span>
                                 </li>
                             </ul>
                         </div>
@@ -546,7 +589,7 @@
     </main>
 
     <!-- Standard GNEP Footer -->
-    <footer class="gnep-footer" id="contact" aria-label="Footer and Contact Information">
+    <footer class="gnep-footer no-print" id="contact" aria-label="Footer and Contact Information">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
@@ -560,9 +603,6 @@
                         <div><strong>Founded:</strong> 2025</div>
                         <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
                     </div>
-                    <div class="gnep-footer-approach mt-3">
-                        <strong>Our Approach:</strong> We are committed to evidence-informed action, strictly verified data reporting, and transparently crediting all community and institutional partners.
-                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4>Our Work</h4>
@@ -571,8 +611,6 @@
                         <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Nature &amp; Ecosystem Restoration</a></li>
                         <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Environmental Governance &amp; Policy</a></li>
                         <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Youth Leadership &amp; Participation</a></li>
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>WEFE Nexus (Strategic Direction)</a></li>
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research &amp; Capacity Development</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -596,7 +634,7 @@
         </div>
     </footer>
 
-    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
+    <div class="gnep-legal-bar no-print" aria-label="Legal and Copyright">
         <div class="container">
             <div class="row align-items-center gy-2">
                 <div class="col-md-6 text-center text-md-start">
