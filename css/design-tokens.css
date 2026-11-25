@@ -1,52 +1,93 @@
-/* Design Tokens CSS – custom properties for GNEP site */
+/* ==========================================================================
+   GNEP AFRICA — Canonical Design System Tokens (css/design-tokens.css)
+   Loaded across all pages in canonical order:
+   1. css/bootstrap.min.css -> 2. css/style.css -> 3. css/design-tokens.css -> 4. css/gnep.css
+   ========================================================================== */
+
 :root {
-  --color-primary: #0B2516; /* deep forest */
-  --color-secondary: #10B981; /* emerald */
-  --color-light: #f8f9fa;
-  --color-dark: #212529;
-  --gray-100: #f8f9fa;
-  --gray-200: #e9ecef;
-  --gray-300: #dee2e6;
-  --gray-400: #ced4da;
-  --gray-500: #adb5bd;
-  --gray-600: #6c757d;
-  --gray-700: #495057;
-  --gray-800: #343a40;
-  --gray-900: #212529;
-  --font-base: 'Inter', sans-serif;
-  --font-headings: 'Plus Jakarta Sans', sans-serif;
-  --font-size-base: 1rem;
-  --spacer: 1rem;
-  --border-radius: 0;
+    /* 5.1 Official GNEP Brand & Visual Language Palette */
+    --gnep-forest-deep: #0B2516;      /* Primary forest */
+    --gnep-forest: #113821;           /* Supporting institutional forest */
+    --gnep-forest-mid: #1A4D2E;       /* Mid-canopy green */
+    --gnep-green-accent: #15803D;     /* Green accent */
+    --gnep-green-vibrant: #15803D;    /* Active green accent alias */
+    --gnep-green-soft: #DCFCE7;       /* Soft foliage tint */
+    --gnep-navy: #0A3258;             /* GNEP brand navy */
+    --gnep-blue: #0284C7;             /* GNEP logo blue */
+    --gnep-blue-tint: #E0F2FE;        /* Informational sky blue tint */
+    --gnep-amber: #D97706;            /* Sahelian amber for in-development badges */
+    --gnep-amber-soft: #FEF3C7;       /* Soft amber surface */
+
+    /* Restrained Neutral Surfaces & High-Contrast Text */
+    --gnep-surface-base: #FFFFFF;
+    --gnep-surface-subtle: #F8FAF7;
+    --gnep-surface-warm: #F4F6F1;
+    --gnep-surface-card: #FFFFFF;
+    --gnep-text-main: #0F172A;        /* 17.4:1 contrast on white */
+    --gnep-text-muted: #475569;       /* 7.5:1 contrast on white (WCAG AA/AAA) */
+    --gnep-text-light: #94A3B8;
+    --gnep-border: #E2E8F0;
+    --gnep-border-subtle: #EDF2F7;
+    --gnep-focus: #0284C7;            /* High-visibility focus ring */
+
+    /* Canonical Typography Stacks */
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-editorial: 'Newsreader', Georgia, serif;
+    --font-editorial-serif: 'Newsreader', Georgia, serif;
+
+    /* Spacing, Radius, Content Width & Elevation Tokens */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --content-max-width: 1280px;
+    --reading-measure: 72ch;
+    --header-offset: 96px;
+
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --shadow-card: 0 4px 10px -2px rgba(11, 37, 22, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 14px 28px -4px rgba(11, 37, 22, 0.10), 0 6px 12px -4px rgba(0, 0, 0, 0.04);
+    --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    /* Bootstrap Variable Harmonization */
+    --bs-primary: #113821;
+    --bs-secondary: #0A3258;
+    --bs-success: #15803D;
+    --bs-info: #0284C7;
 }
-.dark-mode {
-  --color-primary: #F8F8F8;
-  --color-secondary: #A3E7B1;
-  --color-light: #212529;
-  --color-dark: #f8f9fa;
-  --gray-100: #212529;
-  --gray-200: #343a40;
-  --gray-300: #495057;
-  --gray-400: #6c757d;
-  --gray-500: #adb5bd;
-  --gray-600: #ced4da;
-  --gray-700: #dee2e6;
-  --gray-800: #e9ecef;
-  --gray-900: #f8f9fa;
+
+/* Global Responsive Guardrails & Fixed Header Anchor Offsets */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset);
+    overflow-x: hidden;
 }
-/* Example overrides using variables */
+
 body {
-  color: var(--color-dark);
-  background-color: var(--color-light);
+    font-family: var(--font-body);
+    color: var(--gnep-text-main);
+    background-color: var(--gnep-surface-base);
+    overflow-x: hidden;
 }
-.gnep-brand-text {
-  color: var(--color-primary);
+
+section[id],
+div[id],
+article[id],
+main[id] {
+    scroll-margin-top: var(--header-offset);
 }
-.btn-primary {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-.btn-secondary {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
+
+/* Reduced Motion Respect (WCAG 2.2 AA) */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

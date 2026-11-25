@@ -169,110 +169,125 @@ h1, h2, h3, h4, h5, h6,
 /* --------------------------------------------------------------------------
    Navbar & Brand Header
    -------------------------------------------------------------------------- */
-/* 3D Navigation Adaptive Architecture */
+/* --------------------------------------------------------------------------
+   Navbar & Brand Header (Unified Compact Sticky Header & WCAG 2.2 AA Dropdowns)
+   -------------------------------------------------------------------------- */
 header.fixed-top {
-    background: rgba(11, 37, 22, 0.65);
+    background: rgba(11, 37, 22, 0.92);
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    transition: background 0.25s ease, box-shadow 0.25s ease;
     z-index: 1030;
 }
 
 .gnep-topbar {
-    background: rgba(6, 20, 12, 0.75);
+    background: #07190F;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 6px 0;
-    font-size: 0.82rem;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-    max-height: 40px;
+    padding: 4px 0;
+    font-size: 0.78rem;
+    transition: max-height 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+    max-height: 32px;
     opacity: 1;
 }
 
 .gnep-navbar {
     background: transparent !important;
     box-shadow: none;
-    padding: 12px 0;
-    transition: padding 0.3s ease;
+    padding: 8px 0;
+    transition: padding 0.25s ease;
+}
+
+.gnep-brand-wrap {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.gnep-brand-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    background: #FFFFFF;
+    padding: 3px 9px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease;
+}
+
+.gnep-brand-wrap:hover .gnep-brand-logo {
+    transform: scale(1.02);
+}
+
+.gnep-brand-text {
+    margin-left: 14px;
+    line-height: 1.15;
+    border-left: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    padding-left: 14px;
 }
 
 .gnep-brand-title {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 1.04rem;
     font-weight: 800;
     color: #FFFFFF !important;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     display: block;
     letter-spacing: -0.02em;
 }
 
 .gnep-brand-sub {
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.82) !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     display: block;
-    letter-spacing: 0.01em;
-}
-
-.gnep-brand-text {
-    border-left: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+    font-weight: 600;
 }
 
 .gnep-navbar .navbar-nav .nav-link,
 .navbar.gnep-navbar .navbar-nav .nav-link,
 .gnep-navbar .nav-link {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #FFFFFF !important;
-    padding: 10px 16px !important;
+    padding: 8px 13px !important;
     border-radius: 6px;
-    transition: all 0.2s ease;
+    transition: background-color 0.18s ease, color 0.18s ease;
     letter-spacing: -0.01em;
-    opacity: 0.95;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .gnep-navbar .navbar-nav .nav-link:hover,
 .gnep-navbar .navbar-nav .nav-link:focus,
+.gnep-navbar .navbar-nav .nav-link:focus-visible,
 .navbar.gnep-navbar .navbar-nav .nav-link:hover {
-    color: #4ADE80 !important;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    opacity: 1;
+    color: #86EFAC !important;
+    background-color: rgba(255, 255, 255, 0.14) !important;
 }
 
 .gnep-navbar .navbar-nav .nav-link.active,
 .navbar.gnep-navbar .navbar-nav .nav-link.active {
-    color: #4ADE80 !important;
-    background-color: rgba(255, 255, 255, 0.16) !important;
-    opacity: 1;
-}
-
-.gnep-navbar .nav-link:hover,
-.gnep-navbar .navbar-nav .nav-link:focus {
-    color: #4ADE80 !important;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-.gnep-navbar .nav-link.active {
-    color: #4ADE80 !important;
-    background-color: rgba(255, 255, 255, 0.16) !important;
+    color: #86EFAC !important;
+    background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
 .navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    min-width: 44px;
+    min-height: 44px;
 }
+
 .navbar-toggler .fa-bars {
     color: #FFFFFF !important;
 }
 
-/* Scrolled 3D Institutional Header */
+/* Scrolled Compact Institutional Header */
 header.fixed-top.nav-scrolled-3d {
-    background: rgba(8, 26, 16, 0.96) !important;
-    backdrop-filter: blur(20px) saturate(160%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.38) !important;
-    border-bottom: 1px solid rgba(34, 197, 94, 0.2) !important;
+    background: rgba(8, 26, 16, 0.98) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+    border-bottom: 1px solid rgba(34, 197, 94, 0.22) !important;
 }
 
 header.fixed-top.nav-scrolled-3d .gnep-topbar {
@@ -284,106 +299,77 @@ header.fixed-top.nav-scrolled-3d .gnep-topbar {
 }
 
 header.fixed-top.nav-scrolled-3d .gnep-navbar {
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
-.gnep-brand-wrap {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.gnep-brand-logo {
-    height: 42px;
-    width: auto;
-    object-fit: contain;
-    background: #FFFFFF;
-    padding: 3px 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-    transition: transform 0.2s ease;
-}
-
-.gnep-brand-wrap:hover .gnep-brand-logo {
-    transform: scale(1.02);
-}
-
-.gnep-brand-text {
-    margin-left: 16px;
-    line-height: 1.15;
-    border-left: 1.5px solid var(--gnep-border);
-    padding-left: 16px;
-}
-
-.gnep-brand-title {
-    font-family: var(--font-heading);
-    font-size: 1.08rem;
-    font-weight: 800;
-    color: var(--gnep-forest);
-    margin-bottom: 2px;
-    display: block;
-    letter-spacing: -0.02em;
-}
-
-.gnep-brand-sub {
-    font-size: 0.72rem;
-    color: var(--gnep-text-muted);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-}
-
-.navbar-nav .nav-link {
-    font-family: var(--font-heading);
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: #1E293B !important;
-    padding: 10px 16px !important;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-    letter-spacing: -0.01em;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    color: var(--gnep-forest) !important;
-    background-color: var(--gnep-surface-subtle);
-}
-
-.navbar-nav .nav-link.active {
-    color: var(--gnep-forest) !important;
-    background-color: var(--gnep-surface-warm);
-}
-
-.navbar .dropdown-menu {
+/* High-Contrast Dropdown Menus (Fixes P1 Dark-on-Dark Contrast Defect) */
+.navbar .dropdown-menu,
+.gnep-navbar .dropdown-menu {
+    background-color: #FFFFFF !important;
     border-radius: 10px;
-    border: 1px solid var(--gnep-border);
-    box-shadow: 0 12px 32px rgba(11, 37, 22, 0.1);
-    padding: 10px 8px;
-    margin-top: 8px;
-    min-width: 280px;
-    animation: fadeInDropdown 0.2s ease;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 14px 32px rgba(11, 37, 22, 0.16);
+    padding: 8px;
+    margin-top: 6px;
+    min-width: 270px;
 }
 
-@keyframes fadeInDropdown {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.navbar .dropdown-item {
+.navbar .dropdown-item,
+.gnep-navbar .dropdown-item {
+    font-family: var(--font-body);
     font-size: 0.88rem;
     padding: 9px 14px;
     font-weight: 500;
-    color: #334155;
+    color: #0F172A !important;
+    background-color: transparent !important;
     border-radius: 6px;
-    transition: all 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
 }
 
-.navbar .dropdown-item:hover {
-    background-color: var(--gnep-surface-subtle);
-    color: var(--gnep-forest);
-    padding-left: 18px;
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus,
+.navbar .dropdown-item:focus-visible,
+.gnep-navbar .dropdown-item:hover,
+.gnep-navbar .dropdown-item:focus,
+.gnep-navbar .dropdown-item:focus-visible {
+    background-color: #ECFDF5 !important;
+    color: #0B2516 !important;
+    font-weight: 600;
+}
+
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active,
+.gnep-navbar .dropdown-item.active,
+.gnep-navbar .dropdown-item:active {
+    background-color: #0B2516 !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+.navbar .dropdown-item.active .badge,
+.navbar .dropdown-item:active .badge {
+    background-color: #FEF3C7 !important;
+    color: #92400E !important;
+}
+
+@media (max-width: 991.98px) {
+    .gnep-navbar .navbar-collapse {
+        background: #0B2516;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-top: 8px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+    .gnep-navbar .dropdown-menu {
+        box-shadow: none;
+        margin-top: 4px;
+        margin-bottom: 6px;
+    }
 }
 
 /* Call-to-action button */

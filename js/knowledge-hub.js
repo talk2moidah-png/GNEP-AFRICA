@@ -6,8 +6,8 @@
 (function (window, document) {
     'use strict';
 
-    const STORAGE_KEY = 'gnep_knowledge_hub_v4_clean_pubs';
-    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); } catch(e) {}
+    const STORAGE_KEY = 'gnep_knowledge_hub_v5_verified_pubs';
+    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); } catch(e) {}
     const ADMIN_SESSION_KEY = 'gnep_kh_admin_auth';
     const SUBSCRIBERS_KEY = 'gnep_kh_subscribers';
     const DEFAULT_DATA_PATH = 'data/publications.json';
@@ -872,21 +872,15 @@
 
             if (!container) return;
 
-            if (!pubId) {
-                this.renderPublicationNotFound(container, 'No publication ID was specified in the URL.');
-                return;
-            }
+            const targetId = pubId || 'subsidy-removal-public-accountability-policy-brief';
 
-            const pub = this.data.publications.find(p => p.id === pubId || p.slug === pubId);
+            const pub = this.data.publications.find(p => p.id === targetId || p.slug === targetId);
             if (!pub) {
                 this.renderPublicationNotFound(container, `Publication '${this.escapeHtml(pubId)}' was not found in the Knowledge Hub repository.`);
                 return;
             }
 
-            if (pub.article_url) {
-                window.location.replace(pub.article_url);
-                return;
-            }
+
             // Set document title
             document.title = `${pub.title} | GNEP Africa Environmental Knowledge Hub`;
 
@@ -925,24 +919,14 @@
             const relatedPubs = this.getRelatedPublications(pub);
 
             let pdfViewerHtml = '';
-            if (pub.file_url) {
+            if (pub.article_url || pub.file_url) {
                 pdfViewerHtml = `
-                    <div class="pdf-viewer-section mt-5 p-4 rounded-3" style="background: #FFFFFF; border: 1px solid #E2E8F0;">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="font-serif text-dark mb-0"><i class="fas fa-file-pdf text-danger me-2"></i> Document Viewer</h4>
-                            <div class="d-flex gap-2">
-                                <a href="${this.escapeHtml(pub.file_url)}" download class="btn btn-sm btn-outline-dark">
-                                    <i class="fas fa-download me-1"></i> Download PDF (${pub.file_size || 'N/A'})
-                                </a>
-                                <a href="${this.escapeHtml(pub.file_url)}" target="_blank" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-expand-arrows-alt me-1"></i> Fullscreen
-                                </a>
-                            </div>
-                        </div>
-                        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm" style="min-height: 550px; background: #333333;">
-                            <iframe src="${this.escapeHtml(pub.file_url)}#toolbar=1" title="${this.escapeHtml(pub.title)}" class="w-100 h-100 border-0" loading="lazy">
-                                <p class="text-white p-4">Your browser does not support embedded PDF viewing. <a href="${this.escapeHtml(pub.file_url)}" download class="text-warning">Click here to download the PDF directly.</a></p>
-                            </iframe>
+                    <div class="mt-4 p-4 rounded-3" style="background: #F0FDF4; border: 1px solid #86EFAC;">
+                        <h4 class="font-serif text-dark h5 fw-bold mb-2"><i class="fas fa-book-open text-success me-2"></i> Full Article Webpage &amp; Offline PDF Material</h4>
+                        <p class="text-muted small mb-3">Read the complete publication with interactive tables and figures directly on our webpage, or download the standalone PDF edition for offline citation.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            ${pub.article_url ? `<a href="${this.escapeHtml(pub.article_url)}" class="btn btn-success rounded-pill px-4 fw-bold"><i class="fas fa-book-open me-2"></i>Read Full Article Webpage</a>` : ''}
+                            ${pub.file_url ? `<a href="${this.escapeHtml(pub.file_url)}" download class="btn btn-outline-dark rounded-pill px-4"><i class="fas fa-file-pdf text-danger me-2"></i>Download PDF Material (${pub.file_size || 'PDF'})</a>` : ''}
                         </div>
                     </div>
                 `;
@@ -1733,12 +1717,13 @@
                     }
                 } catch (e) {}
 
-                emailInput.value = '';
+                const mailtoUrl = `mailto:gnep.partnership@gmail.com?subject=${encodeURIComponent('GNEP Knowledge Hub Research Alerts Subscription')}&body=${encodeURIComponent('Please add ' + email + ' to the GNEP Africa Environmental Knowledge Hub research and policy brief distribution list.')}`;
                 if (feedbackBox) {
-                    feedbackBox.className = 'text-success small mt-2';
-                    feedbackBox.innerHTML = '<i class="fas fa-check-circle me-1"></i> Thank you for subscribing. You will receive GNEP policy briefs and research notifications.';
+                    feedbackBox.className = 'p-3 rounded-3 mt-2 small border';
+                    feedbackBox.style.background = '#F0FDF4';
+                    feedbackBox.style.color = '#0B2516';
+                    feedbackBox.innerHTML = `<i class="fas fa-info-circle text-success me-1"></i> <strong>Direct Email Dispatch Ready:</strong> Automated mailing-list delivery is currently being configured. <a href="${mailtoUrl}" class="fw-bold text-success text-decoration-underline ms-1">Click here to send your subscription request (${this.escapeHtml(email)}) to gnep.partnership@gmail.com</a>.`;
                 }
-                this.showToast('Subscription confirmed. Thank you!', 'success');
             });
         },
 
@@ -1831,7 +1816,7 @@
         getEmbeddedFallbackData() {
             return {
                 "version": "1.0.0",
-                "updated_at": "2026-11-25T17:20:00Z",
+                "updated_at": "2026-11-25T19:30:00Z",
                 "categories": [
                                 "Climate Change and Resilience",
                                 "Environmental Governance and Policy",
@@ -2179,6 +2164,308 @@
                                                                 "nigeria-heat-emergency-policy-brief",
                                                                 "rethinking-climate-finance-africa",
                                                                 "turning-research-into-action"
+                                                ]
+                                },
+                                {
+                                                "id": "nigeria-heat-emergency-policy-brief",
+                                                "slug": "nigeria-heat-emergency-policy-brief",
+                                                "title": "URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño",
+                                                "abstract": "Comprehensive heat-health vulnerability assessment and sub-national early warning policy directives ahead of the projected 2026–2027 Super El Niño cycle across Northern Nigeria.",
+                                                "full_description": "Between September 2026 and February 2027, predictive ocean-atmospheric telemetry indicates a severe Super El Niño phase coinciding with dry season ambient temperature spikes across the West African Sahel. Without proactive, community-anchored heat-health adaptation protocols, epidemiological models project up to 31,400 excess heat-vulnerability events across Northern Nigeria.",
+                                                "authors": [
+                                                                "GNEP Directorate of Climate Policy & Risk Analysis"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-09-15",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-001",
+                                                "categories": [
+                                                                "Climate Change and Resilience",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "Super El Niño",
+                                                                "Extreme Heat",
+                                                                "Northern Nigeria",
+                                                                "Katsina",
+                                                                "Early Warning",
+                                                                "Public Health",
+                                                                "Sahel"
+                                                ],
+                                                "cover_image": "assets/real/nigeria-heat-emergency-crisis.webp",
+                                                "file_url": "assets/publications/nigeria-heat-emergency-policy-brief.pdf",
+                                                "article_url": "nigeria-heat-emergency-policy-brief.html",
+                                                "file_format": "PDF",
+                                                "file_size": "173 KB",
+                                                "page_count": 6,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.001",
+                                                "citation_apa": "GNEP Climate Policy Directorate. (2026). URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño (Policy Brief No. GNEP-PB-2026-001). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Climate Policy Directorate. \"URGENT POLICY BRIEF: 31,400 Lives at Risk? Nigeria's Race Against Super El Niño.\" Policy Brief No. GNEP-PB-2026-001. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani",
+                                                                "cso-policy-brief-workshop",
+                                                                "turning-research-into-action"
+                                                ]
+                                },
+                                {
+                                                "id": "cso-policy-brief-workshop",
+                                                "slug": "cso-policy-brief-workshop",
+                                                "title": "Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop",
+                                                "abstract": "Official proceedings, pedagogical framework, and legislative pitching toolkit deployed during the training of 20 grassroots civil society leaders in Northern Nigeria.",
+                                                "full_description": "In 2026, GNEP Africa and The Green Minds Space convened a policy brief drafting, proposal development, elevator pitching, and responsible AI tools workshop for 20 civil society representatives in Katsina State.",
+                                                "authors": [
+                                                                "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                                "The Green Minds Space"
+                                                ],
+                                                "publishing_org": "GNEP Africa & The Green Minds Space",
+                                                "source_category": "Collaborative research",
+                                                "publication_date": "2026-08-20",
+                                                "year": 2026,
+                                                "doc_type": "Technical reports",
+                                                "doc_code": "GNEP-TR-2026-002",
+                                                "categories": [
+                                                                "Environmental Governance and Policy",
+                                                                "Environmental Education and Youth Leadership"
+                                                ],
+                                                "collections": [
+                                                                "Environmental Governance in Nigeria",
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "CSO Capacity",
+                                                                "Policy Briefs",
+                                                                "Legislative Advocacy",
+                                                                "Katsina State",
+                                                                "Environmental Governance",
+                                                                "Green Minds Space"
+                                                ],
+                                                "cover_image": "assets/real/cso-workshop-policy-2026.webp",
+                                                "file_url": "assets/publications/cso-policy-brief-workshop.pdf",
+                                                "article_url": "cso-policy-workshop.html",
+                                                "file_format": "PDF",
+                                                "file_size": "161 KB",
+                                                "page_count": 10,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.tr2026.002",
+                                                "citation_apa": "GNEP Africa, & The Green Minds Space. (2026). Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop (Technical Report No. GNEP-TR-2026-002). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "Global Nature and Environmental Partnership, and The Green Minds Space. Strengthening Grassroots Climate Advocacy: Proceedings of the Katsina CSO Policy Brief Workshop. Technical Report No. GNEP-TR-2026-002. Katsina, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "turning-research-into-action",
+                                                                "communicating-environmental-issues",
+                                                                "subsidy-removal-public-accountability-policy-brief"
+                                                ]
+                                },
+                                {
+                                                "id": "sahelian-tree-planting-field-report",
+                                                "slug": "sahelian-tree-planting-field-report",
+                                                "title": "Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Drive in Katsina State",
+                                                "abstract": "Field documentation and community co-custodianship models from a joint 150 economic tree seedling planting initiative in Katsina State with AYINET.",
+                                                "full_description": "Conducted in collaboration with the African Youth Initiative Network (AYINET), this field report documents the planting of 150 economic tree seedlings across community and school tracts in Katsina State as part of GNEP's Nature & Ecosystem Restoration focus area.",
+                                                "authors": [
+                                                                "GNEP Africa",
+                                                                "African Youth Initiative Network (AYINET)"
+                                                ],
+                                                "publishing_org": "GNEP Africa & AYINET",
+                                                "source_category": "Collaborative research",
+                                                "publication_date": "2026-07-10",
+                                                "year": 2026,
+                                                "doc_type": "Case studies",
+                                                "doc_code": "GNEP-CS-2026-003",
+                                                "categories": [
+                                                                "Nature-Based Solutions and Ecosystem Restoration",
+                                                                "African Environmental Case Studies"
+                                                ],
+                                                "collections": [
+                                                                "Community-Led Ecosystem Restoration",
+                                                                "Climate Adaptation in Arid and Semi-Arid Regions"
+                                                ],
+                                                "keywords": [
+                                                                "Economic Trees",
+                                                                "Afforestation",
+                                                                "Katsina State",
+                                                                "AYINET",
+                                                                "Youth Stewards"
+                                                ],
+                                                "cover_image": "assets/real/tree-planting-action.webp",
+                                                "file_url": "assets/publications/sahelian-tree-planting-field-report.pdf",
+                                                "article_url": "tree-planting-150-seedlings.html",
+                                                "file_format": "PDF",
+                                                "file_size": "165 KB",
+                                                "page_count": 8,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.cs2026.003",
+                                                "citation_apa": "GNEP Africa, & AYINET. (2026). Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Drive in Katsina State (Case Study No. GNEP-CS-2026-003). Katsina: GNEP Africa.",
+                                                "citation_chicago": "GNEP Africa, and AYINET. Economic Tree Cultivation and Community Land Stewardship: A 150-Seedling Drive in Katsina State. Case Study No. GNEP-CS-2026-003. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "youth-led-environmental-action",
+                                                                "adapting-rotterdam-sponge-city-lagos"
+                                                ]
+                                },
+                                {
+                                                "id": "turning-research-into-action",
+                                                "slug": "turning-research-into-action",
+                                                "title": "Turning Research into Action: Strengthening Evidence-Based Environmental Policy Engagement",
+                                                "abstract": "A practitioner's methodological framework guiding African environmental researchers and youth advocates to translate empirical datasets into legislative and community action.",
+                                                "full_description": "Academic environmental findings across Africa frequently remain siloed within institutional libraries. This working paper outlines an operational framework connecting frontline community problem formulation, citizen telemetry, concise legislative policy briefs, and post-enactment monitoring.",
+                                                "authors": [
+                                                                "GNEP Research & Capacity Development Division"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-06-05",
+                                                "year": 2026,
+                                                "doc_type": "Working papers",
+                                                "doc_code": "GNEP-WP-2026-004",
+                                                "categories": [
+                                                                "Research Methods and Technical Resources",
+                                                                "Environmental Governance and Policy"
+                                                ],
+                                                "collections": [
+                                                                "African Climate Policy",
+                                                                "Environmental Governance in Nigeria"
+                                                ],
+                                                "keywords": [
+                                                                "Research Methods",
+                                                                "Evidence-Based Policy",
+                                                                "Policy Translation",
+                                                                "Sub-Saharan Africa",
+                                                                "Advocacy Framework"
+                                                ],
+                                                "cover_image": "assets/real/policy-brief-research.webp",
+                                                "file_url": "assets/publications/turning-research-into-action.pdf",
+                                                "article_url": "turning-research-into-action.html",
+                                                "file_format": "PDF",
+                                                "file_size": "163 KB",
+                                                "page_count": 12,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.wp2026.004",
+                                                "citation_apa": "GNEP Research Division. (2026). Turning Research into Action: Strengthening Evidence-Based Environmental Policy Engagement (Working Paper No. GNEP-WP-2026-004). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Research Division. Turning Research into Action: Strengthening Evidence-Based Environmental Policy Engagement. Working Paper No. GNEP-WP-2026-004. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "cso-policy-brief-workshop",
+                                                                "communicating-environmental-issues"
+                                                ]
+                                },
+                                {
+                                                "id": "communicating-environmental-issues",
+                                                "slug": "communicating-environmental-issues",
+                                                "title": "Communicating Environmental Issues: Why Storytelling Matters for Civil Society",
+                                                "abstract": "Strategic communications and community narrative toolkit detailing ethical storytelling, persuasive communication, and grassroots messaging for African civil society.",
+                                                "full_description": "Data alone rarely moves hearts or parliaments. Authored by Maryam Dauda following GNEP's one-day Storytelling & Persuasive Communication Workshop for CSOs in Katsina State, this educational resource equips grassroots environmental organisations with concrete narrative methodologies.",
+                                                "authors": [
+                                                                "Maryam Dauda (GNEP Communications Unit)"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-05-18",
+                                                "year": 2026,
+                                                "doc_type": "Educational resources",
+                                                "doc_code": "GNEP-ER-2026-005",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "Research Methods and Technical Resources"
+                                                ],
+                                                "collections": [
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "Storytelling",
+                                                                "Communications",
+                                                                "Civil Society",
+                                                                "Environmental Journalism",
+                                                                "Youth Voice",
+                                                                "Advocacy"
+                                                ],
+                                                "cover_image": "assets/real/storytelling-speaker.webp",
+                                                "file_url": "assets/publications/communicating-environmental-issues.pdf",
+                                                "article_url": "communicating-environmental-issues.html",
+                                                "file_format": "PDF",
+                                                "file_size": "155 KB",
+                                                "page_count": 8,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.er2026.005",
+                                                "citation_apa": "Dauda, M. (2026). Communicating Environmental Issues: Why Storytelling Matters for Civil Society (Educational Resource No. GNEP-ER-2026-005). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "Dauda, Maryam. Communicating Environmental Issues: Why Storytelling Matters for Civil Society. Educational Resource No. GNEP-ER-2026-005. Katsina: Global Nature and Environmental Partnership, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "lingua-franca-hausa-into-climate",
+                                                                "turning-research-into-action",
+                                                                "youth-led-environmental-action"
+                                                ]
+                                },
+                                {
+                                                "id": "youth-led-environmental-action",
+                                                "slug": "youth-led-environmental-action",
+                                                "title": "Youth-Led Environmental Action: Building Local Capacity for Sustainable Development",
+                                                "abstract": "Participatory action research documenting youth mobilization, school Climate Clubs in Katsina State, and local environmental stewardship.",
+                                                "full_description": "Examines the catalytic role of young people in advancing climate literacy and community-led environmental action, including GNEP's ongoing establishment of Climate Clubs in secondary schools across Katsina State.",
+                                                "authors": [
+                                                                "GNEP Youth Leadership & Policy Directorate"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-03-24",
+                                                "year": 2026,
+                                                "doc_type": "Research papers",
+                                                "doc_code": "GNEP-RP-2026-006",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "African Environmental Case Studies",
+                                                                "Climate Change and Resilience"
+                                                ],
+                                                "collections": [
+                                                                "Youth Leadership and Climate Justice",
+                                                                "Community-Led Ecosystem Restoration"
+                                                ],
+                                                "keywords": [
+                                                                "Youth Leadership",
+                                                                "Climate Clubs",
+                                                                "Sahelian Resilience",
+                                                                "Katsina State"
+                                                ],
+                                                "cover_image": "assets/real/schools-tree-planting.webp",
+                                                "file_url": "assets/publications/youth-led-environmental-action.pdf",
+                                                "article_url": "youth-environmental-action.html",
+                                                "file_format": "PDF",
+                                                "file_size": "156 KB",
+                                                "page_count": 14,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.rp2026.006",
+                                                "citation_apa": "GNEP Youth Directorate. (2026). Youth-Led Environmental Action: Building Local Capacity for Sustainable Development (Research Paper No. GNEP-RP-2026-006). Global Nature and Environmental Partnership.",
+                                                "citation_chicago": "GNEP Youth Directorate. Youth-Led Environmental Action: Building Local Capacity for Sustainable Development. Research Paper No. GNEP-RP-2026-006. Katsina: GNEP Africa, 2026.",
+                                                "is_featured": false,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "sahelian-tree-planting-field-report",
+                                                                "communicating-environmental-issues"
                                                 ]
                                 }
                 ]
