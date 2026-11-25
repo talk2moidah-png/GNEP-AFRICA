@@ -1,0 +1,52 @@
+/* Design Tokens CSS – custom properties for GNEP site */
+:root {
+  --color-primary: #0B2516; /* deep forest */
+  --color-secondary: #10B981; /* emerald */
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --font-base: 'Inter', sans-serif;
+  --font-headings: 'Plus Jakarta Sans', sans-serif;
+  --font-size-base: 1rem;
+  --spacer: 1rem;
+  --border-radius: 0;
+}
+.dark-mode {
+  --color-primary: #F8F8F8;
+  --color-secondary: #A3E7B1;
+  --color-light: #212529;
+  --color-dark: #f8f9fa;
+  --gray-100: #212529;
+  --gray-200: #343a40;
+  --gray-300: #495057;
+  --gray-400: #6c757d;
+  --gray-500: #adb5bd;
+  --gray-600: #ced4da;
+  --gray-700: #dee2e6;
+  --gray-800: #e9ecef;
+  --gray-900: #f8f9fa;
+}
+/* Example overrides using variables */
+body {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+.gnep-brand-text {
+  color: var(--color-primary);
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-secondary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Updates &amp; Field Work | GNEP Africa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="GNEP updates, workshops, field work, climate events, Katsina, Nigeria" name="keywords">
+    <meta content="Documented activities, field updates, workshops, and programme news from GNEP Africa — a youth-led environmental initiative in Katsina State, Nigeria." name="description">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/gnep.css" rel="stylesheet">
+    <style>
+        /* Inner hero */
+        .gnep-inner-hero {
+            position: relative; min-height: 300px; display: flex; align-items: flex-end;
+            padding-top: 120px;
+            background: url('assets/real/cso-workshop-group.webp') center/cover no-repeat;
+        }
+        .gnep-inner-hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(11,37,22,0.78) 0%, rgba(11,37,22,0.65) 100%);
+        }
+        .gnep-inner-hero-content { position: relative; z-index: 2; padding-bottom: 2.5rem; }
+        .gnep-inner-hero-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem;
+        }
+        .gnep-inner-hero-sub { color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 640px; margin-bottom: 0; }
+        .gnep-breadcrumb { background: none; padding: 0; margin-bottom: 1rem; }
+        .gnep-breadcrumb .breadcrumb-item a { color: rgba(255,255,255,0.75); text-decoration: none; }
+        .gnep-breadcrumb .breadcrumb-item.active { color: rgba(255,255,255,0.55); }
+        .gnep-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.45); }
+
+        /* Filter tabs */
+        .gnep-filter-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+        .btn-ev-filter {
+            padding: 0.45rem 1.1rem; border-radius: 2rem; border: 2px solid #1A4D2E;
+            background: transparent; color: #1A4D2E; font-weight: 600; font-size: 0.85rem;
+            cursor: pointer; transition: all 0.2s ease;
+        }
+        .btn-ev-filter:hover, .btn-ev-filter.active {
+            background: #1A4D2E; color: #fff;
+        }
+
+        /* Activity cards */
+        .gnep-activity-card {
+            background: #fff; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 2px 16px rgba(11,37,22,0.07); border: 1px solid #E8F0EA;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex; flex-direction: column; height: 100%;
+        }
+        .gnep-activity-card:hover {
+            transform: translateY(-4px); box-shadow: 0 10px 32px rgba(11,37,22,0.13);
+        }
+        .gnep-activity-img {
+            width: 100%; height: 220px; object-fit: cover; display: block;
+        }
+        .gnep-activity-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .gnep-activity-meta { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+        .gnep-activity-tag {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.2rem 0.65rem; border-radius: 3px;
+        }
+        .tag-workshop { background: #DBEAFE; color: #1D4ED8; }
+        .tag-field { background: #D1FAE5; color: #065F46; }
+        .tag-participation { background: #FEF3C7; color: #92400E; }
+        .tag-programme { background: #F3E8FF; color: #6B21A8; }
+        .tag-coming-soon { background: #F1F5F9; color: #475569; }
+        .gnep-activity-date { font-size: 0.78rem; color: #64748B; }
+        .gnep-activity-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: #0B2516; margin-bottom: 0.5rem; }
+        .gnep-activity-excerpt { font-size: 0.9rem; color: #555; flex: 1; }
+        .gnep-activity-footer { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #F0F0F0; font-size: 0.78rem; color: #888; }
+        .gnep-photo-credit { font-size: 0.72rem; color: #999; margin-top: 0.25rem; }
+        .gnep-participated-badge {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            background: #FEF3C7; color: #92400E; border-radius: 4px;
+            padding: 0.25rem 0.6rem; font-size: 0.72rem; font-weight: 600; margin-bottom: 0.5rem;
+        }
+
+        /* Coming soon section */
+        .gnep-coming-soon-card {
+            background: #F8F9FA; border: 1px dashed #C3D9C8; border-radius: 10px;
+            padding: 1.5rem; text-align: center;
+        }
+        .gnep-coming-soon-icon { font-size: 1.75rem; color: #6B7280; margin-bottom: 0.75rem; }
+
+        /* CTA band */
+        .gnep-cta-band { background: #0B2516; padding: 4rem 0; }
+        .gnep-cta-band h2 { color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+        .gnep-cta-band p { color: rgba(255,255,255,0.75); }
+    </style>
+</head>
+<body>
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center" aria-hidden="true">
+        <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <header class="fixed-top">
+        <aside class="gnep-topbar d-none d-md-block" aria-label="Quick Links">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <a href="knowledge-hub.html" class="fw-bold"><i class="fas fa-book-reader me-1" aria-hidden="true"></i> Knowledge Hub</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="events.html"><i class="fas fa-file-alt me-1" aria-hidden="true"></i> Research and Insights</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="contact.html"><i class="fas fa-envelope me-1" aria-hidden="true"></i> Contact</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
+                </div>
+                <div class="d-flex align-items-center text-white-50 small">
+                    <span class="me-3"><i class="fas fa-map-marker-alt text-white me-1" aria-hidden="true"></i> Katsina State, Nigeria</span>
+                    <a href="mailto:gnep.partnership@gmail.com" class="text-white"><i class="fas fa-paper-plane me-1" aria-hidden="true"></i> gnep.partnership@gmail.com</a>
+                </div>
+            </div>
+        </aside>
+        <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
+            <div class="container">
+                <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
+                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="160" height="48">
+                    <div class="gnep-brand-text d-none d-sm-block">
+                        <span class="gnep-brand-title">GNEP Africa</span>
+                        <span class="gnep-brand-sub">Global Nature &amp; Environmental Partnership</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="fa fa-bars text-dark fs-5"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a href="about.html" class="nav-link">About GNEP</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="index.html#focus-areas" class="nav-link dropdown-toggle" id="workDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Work</a>
+                            <ul class="dropdown-menu" aria-labelledby="workDropdown">
+                                <li><a class="dropdown-item" href="index.html#focus-areas">1. Climate Action &amp; Resilience</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">2. Nature &amp; Ecosystem Restoration</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">3. Environmental Governance &amp; Policy</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">4. Youth Leadership &amp; Participation</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">5. WEFE Nexus <span class="badge bg-secondary ms-1 text-dark">Strategic Direction</span></a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">6. Research &amp; Capacity Development</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="events.html" class="nav-link dropdown-toggle active" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">Updates</a>
+                            <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
+                                <li><a class="dropdown-item" href="events.html">Events &amp; Workshops</a></li>
+                                <li><a class="dropdown-item" href="events.html">Research &amp; Insights</a></li>
+                                <li><a class="dropdown-item" href="gallery.html">Field Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Get Involved</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                        <a href="contact.html" class="btn-partner-nav text-center w-100 w-lg-auto">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="gnep-inner-hero" aria-label="Page Header">
+            <div class="gnep-inner-hero-overlay"></div>
+            <div class="container gnep-inner-hero-content">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb gnep-breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Updates &amp; Field Work</li>
+                    </ol>
+                </nav>
+                <h1 class="gnep-inner-hero-title">Updates &amp; Field Work</h1>
+                <p class="gnep-inner-hero-sub">Documented activities, workshops, and field programmes from GNEP Africa and its partners.</p>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="activities" aria-label="Activities and Updates">
+            <div class="container">
+                <!-- Filter row -->
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
+                    <div>
+                        <span class="gnep-section-tag">Documented Activities</span>
+                        <h2 class="h3 fw-bold text-dark mb-0">What we have been doing</h2>
+                    </div>
+                    <div class="gnep-filter-group" role="group" aria-label="Filter activities by type">
+                        <button class="btn-ev-filter active" data-filter="all">All</button>
+                        <button class="btn-ev-filter" data-filter="workshop">Workshops</button>
+                        <button class="btn-ev-filter" data-filter="field">Field Updates</button>
+                        <button class="btn-ev-filter" data-filter="participation">Participations</button>
+                    </div>
+                </div>
+                <p class="text-muted small mb-5">All activities below are verified and accurately described. GNEP only reports on work it has directly conducted or participated in.</p>
+
+                <div class="row g-4" id="activityGrid">
+
+                    <!-- Card 0: Fuel Subsidy Removal & Public Accountability Policy Brief -->
+                    <div class="col-lg-4 col-md-6 activity-item" data-category="workshop">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <a href="subsidy-removal-public-accountability-policy-brief.html">
+                                <img src="assets/real/subsidy-removal-policy-brief-cover.webp"
+                                     alt="Policy Brief: From Subsidy Removal to Public Accountability by Muhammad Garba Isah"
+                                     class="gnep-activity-img" loading="lazy" style="object-fit: cover; object-position: top; height: 230px;">
+                            </a>
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-activity-tag tag-workshop" style="background:#FEF3C7; color:#92400E;">Policy Brief</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>Oct 2026</span>
+                                </div>
+                                <h3 class="gnep-activity-title"><a href="subsidy-removal-public-accountability-policy-brief.html" class="text-dark text-decoration-none">From Subsidy Removal to Public Accountability: Making Nigeria's Fuel Reform Work for Households by 2030</a></h3>
+                                <p class="gnep-activity-excerpt">Independent Policy Analysis examining the ₦15.8 trillion mobilised from Nigeria's May 2023 subsidy removal and FX unification, subnational FAAC accountability, cash-transfer delivery gaps, and enforcement of Section 30 of the Fiscal Responsibility Act 2007.</p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3">
+                                    <li><i class="fas fa-user-edit me-2 text-success" aria-hidden="true"></i><strong>Author:</strong> Muhammad Garba Isah (UMYU Katsina)</li>
+                                    <li><i class="fas fa-balance-scale me-2 text-success" aria-hidden="true"></i>Fossil-Fuel Subsidy Reform &amp; Public Accountability</li>
+                                    <li><i class="fas fa-file-pdf me-2 text-danger" aria-hidden="true"></i><a href="assets/publications/subsidy-removal-public-accountability-policy-brief.pdf" download class="text-decoration-none text-success fw-bold">Download Official PDF (12 Pages)</a></li>
+                                </ul>
+                                <a href="subsidy-removal-public-accountability-policy-brief.html" class="btn btn-sm btn-success w-100">
+                                    <i class="fas fa-book-open me-1"></i> Read Full Policy Brief
+                                </a>
+                                <div class="gnep-activity-footer">
+                                    <span class="gnep-photo-credit">Independent Policy Analysis &bull; Hosted by GNEP Africa</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <!-- Card 1: Policy Brief Workshop (Official Press Release) -->
+                    <div class="col-lg-4 col-md-6 activity-item" data-category="workshop">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <a href="cso-policy-workshop.html">
+                                <img src="assets/real/cso-workshop-policy-2026.webp"
+                                     alt="GNEP Trains 20 Civil Society Representatives in Policy Brief Writing, Katsina State"
+                                     class="gnep-activity-img" loading="lazy" style="object-fit: cover; height: 230px;">
+                            </a>
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-activity-tag tag-workshop">Workshop</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>2026</span>
+                                </div>
+                                <h3 class="gnep-activity-title"><a href="cso-policy-workshop.html" class="text-dark text-decoration-none">Policy Brief, Proposal Development &amp; Elevator Pitch Workshop</a></h3>
+                                <p class="gnep-activity-excerpt">A capacity-building workshop for 20 civil society representatives in Katsina State. Topics included writing effective policy briefs and proposals, delivering elevator pitches, and using AI tools for research and productivity. Co-hosted with The Green Minds Space.</p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-3">
+                                    <li><i class="fas fa-users me-2 text-success" aria-hidden="true"></i><strong>20</strong> civil society representatives</li>
+                                    <li><i class="fas fa-map-marker-alt me-2 text-success" aria-hidden="true"></i>Katsina State, Nigeria &bull; 2026</li>
+                                    <li><i class="fas fa-handshake me-2 text-success" aria-hidden="true"></i>Co-hosted with The Green Minds Space</li>
+                                </ul>
+                                <a href="cso-policy-workshop.html" class="btn btn-sm btn-outline-success w-100">
+                                    <i class="fas fa-newspaper me-1"></i> Read Full Press Release &amp; Report
+                                </a>
+                                <div class="gnep-activity-footer">
+                                    <span class="gnep-photo-credit">Photo credit: GNEP / The Green Minds Space</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 2: Tree Planting -->
+                    <div class="col-lg-4 col-md-6 activity-item" data-category="field">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <img src="assets/real/tree-planting-action.webp"
+                                 alt="Youth planting 150 economic tree seedlings in Katsina State in collaboration with AYINET"
+                                 class="gnep-activity-img" loading="lazy">
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-activity-tag tag-field">Field Update</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>2025</span>
+                                </div>
+                                <h3 class="gnep-activity-title"><a href="tree-planting-150-seedlings.html" class="text-dark text-decoration-none">150 Economic Tree Seedlings Planted in Katsina State</a></h3>
+                                <p class="gnep-activity-excerpt">A joint tree-planting drive with the African Youth Initiative Network (AYINET) across Katsina State. 150 economic tree seedlings were planted as part of GNEP's nature and ecosystem restoration focus area.</p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-0">
+                                    <li><i class="fas fa-seedling me-2 text-success" aria-hidden="true"></i><strong>150</strong> economic tree seedlings planted</li>
+                                    <li><i class="fas fa-map-marker-alt me-2 text-success" aria-hidden="true"></i>Katsina State, Nigeria</li>
+                                    <li><i class="fas fa-handshake me-2 text-success" aria-hidden="true"></i>Joint with AYINET</li>
+                                </ul>
+                                <div class="gnep-activity-footer">
+                                    <a href="tree-planting-150-seedlings.html" class="btn btn-sm btn-outline-success w-100 mb-2">
+                                    <i class="fas fa-seedling me-1"></i> Read Full Restoration Story
+                                </a>
+                                    <span class="gnep-photo-credit">Photo credit: GNEP / AYINET</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 3: Storytelling Workshop -->
+                    <div class="col-lg-4 col-md-6 activity-item" data-category="workshop">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <img src="assets/real/storytelling-speaker.webp"
+                                 alt="Speaker presenting at the Storytelling and Persuasive Communication Workshop for CSOs"
+                                 class="gnep-activity-img" loading="lazy">
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-activity-tag tag-workshop">Workshop</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>2025</span>
+                                </div>
+                                <h3 class="gnep-activity-title"><a href="communicating-environmental-issues.html" class="text-dark text-decoration-none">Storytelling &amp; Persuasive Communication Workshop for CSOs</a></h3>
+                                <p class="gnep-activity-excerpt">A one-day capacity-building session for civil society organisations on storytelling techniques and persuasive communication for environmental advocacy. Participants developed skills to communicate environmental issues more effectively to diverse audiences.</p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-0">
+                                    <li><i class="fas fa-clock me-2 text-success" aria-hidden="true"></i>One-day session</li>
+                                    <li><i class="fas fa-map-marker-alt me-2 text-success" aria-hidden="true"></i>Katsina State, Nigeria</li>
+                                    <li><i class="fas fa-users me-2 text-success" aria-hidden="true"></i>Civil society organisations</li>
+                                </ul>
+                                <div class="gnep-activity-footer">
+                                    <a href="communicating-environmental-issues.html" class="btn btn-sm btn-outline-success w-100 mb-2">
+                                    <i class="fas fa-bullhorn me-1"></i> Read Article: Why Storytelling Matters
+                                </a>
+                                    <span class="gnep-photo-credit">Photo credit: GNEP</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 4: SUBEB/UNICEF Institutional Workshop (Participated In) -->
+                    <div class="col-lg-6 col-md-6 activity-item" data-category="participation">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <img src="assets/real/policy-brief-research.webp"
+                                 alt="Participants at the Institutional and Policy Workshop on Field Work for Climate Change and Green Skills, Katsina"
+                                 class="gnep-activity-img" loading="lazy">
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-participated-badge"><i class="fas fa-handshake me-1" aria-hidden="true"></i> GNEP Participated In</span>
+                                    <span class="gnep-activity-tag tag-participation">Institutional Event</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>19 August 2026</span>
+                                </div>
+                                <h3 class="gnep-activity-title">Institutional &amp; Policy Workshop on Field Work for Climate Change and Green Skills</h3>
+                                <p class="gnep-activity-excerpt">GNEP participated in this institutional workshop convened by the State Universal Basic Education Board (SUBEB), Katsina, in collaboration with UNICEF. The event focused on field work approaches for climate change education and green skills development. <strong>Note:</strong> This event was organised by SUBEB and UNICEF. GNEP attended as a participant.</p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-0">
+                                    <li><i class="fas fa-calendar-alt me-2 text-warning" aria-hidden="true"></i>19 August 2026, Katsina State</li>
+                                    <li><i class="fas fa-building me-2 text-warning" aria-hidden="true"></i>Convened by: SUBEB Katsina &amp; UNICEF</li>
+                                    <li><i class="fas fa-info-circle me-2 text-warning" aria-hidden="true"></i>GNEP role: Participant (not organiser)</li>
+                                </ul>
+                                <div class="gnep-activity-footer">
+                                    <span class="gnep-photo-credit">Photo credit: SUBEB / UNICEF (event organisers)</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 5: Climate Clubs -->
+                    <div class="col-lg-6 col-md-6 activity-item" data-category="field">
+                        <article class="gnep-activity-card spatial-tilt-card">
+                            <img src="assets/real/schools-tree-planting.webp"
+                                 alt="Youth and students in GNEP's Climate Clubs establishment effort across Katsina State schools"
+                                 class="gnep-activity-img" loading="lazy">
+                            <div class="gnep-activity-body">
+                                <div class="gnep-activity-meta">
+                                    <span class="gnep-activity-tag tag-field">Field Programme</span>
+                                    <span class="gnep-activity-date"><i class="fas fa-calendar me-1" aria-hidden="true"></i>Ongoing • 2025–</span>
+                                </div>
+                                <h3 class="gnep-activity-title"><a href="youth-environmental-action.html" class="text-dark text-decoration-none">Climate Clubs in Schools — Katsina State</a></h3>
+                                <p class="gnep-activity-excerpt">GNEP is establishing Climate Clubs in schools across Katsina State to embed environmental awareness and climate literacy among young people. This effort creates structured platforms for students to engage with climate science, sustainability, and environmental action.</p>
+                                <p class="small text-muted"><em>More detail on reach and outcomes will be shared as the programme is documented.</em></p>
+                                <ul class="list-unstyled small text-muted mt-2 mb-0">
+                                    <li><i class="fas fa-map-marker-alt me-2 text-success" aria-hidden="true"></i>Katsina State, Nigeria</li>
+                                    <li><i class="fas fa-graduation-cap me-2 text-success" aria-hidden="true"></i>Target: Schools and youth</li>
+                                </ul>
+                                <div class="gnep-activity-footer">
+                                    <a href="youth-environmental-action.html" class="btn btn-sm btn-outline-success w-100 mb-2">
+                                    <i class="fas fa-users me-1"></i> Read Youth-Led Action Article
+                                </a>
+                                    <span class="gnep-photo-credit">Photo credit: GNEP / AYINET</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+                <!-- End activity grid -->
+
+                <!-- Climate Literacy Programme note -->
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="p-4 bg-white rounded-3 border border-success border-opacity-25">
+                            <div class="d-flex gap-3 align-items-start">
+                                <div class="flex-shrink-0 text-success fs-4"><i class="fas fa-book-open" aria-hidden="true"></i></div>
+                                <div>
+                                    <h3 class="h6 fw-bold text-dark mb-1">Climate Literacy Training Programme</h3>
+                                    <p class="small text-muted mb-0">GNEP runs a Climate Literacy Training Programme focused on climate and clean-energy awareness for communities in Katsina State. This programme is ongoing; results will be documented and reported as they are verified.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white" id="in-development" aria-label="Programmes in Development">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="gnep-section-tag">Coming Soon</span>
+                    <h2 class="h3 fw-bold text-dark">Programmes in Development</h2>
+                    <p class="text-muted">These initiatives are in active planning. They are not yet operating. We will report on them when they launch.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gnep-coming-soon-card spatial-tilt-card">
+                            <div class="gnep-coming-soon-icon"><i class="fas fa-school" aria-hidden="true"></i></div>
+                            <span class="badge bg-secondary mb-2">In Development</span>
+                            <h3 class="h6 fw-bold text-dark mb-2">Green Schools Initiative</h3>
+                            <p class="small text-muted mb-0">Embedding sustainability and climate education into school environments across Katsina State.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gnep-coming-soon-card spatial-tilt-card">
+                            <div class="gnep-coming-soon-icon"><i class="fas fa-user-graduate" aria-hidden="true"></i></div>
+                            <span class="badge bg-secondary mb-2">In Development</span>
+                            <h3 class="h6 fw-bold text-dark mb-2">Youth Climate Leadership Programme</h3>
+                            <p class="small text-muted mb-0">A structured programme to develop the next generation of African youth environmental leaders.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gnep-coming-soon-card spatial-tilt-card">
+                            <div class="gnep-coming-soon-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+                            <span class="badge bg-secondary mb-2">In Development</span>
+                            <h3 class="h6 fw-bold text-dark mb-2">Research &amp; Policy Initiative</h3>
+                            <p class="small text-muted mb-0">Building a research and policy analysis capacity to support evidence-based environmental governance in Nigeria and beyond.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gnep-coming-soon-card spatial-tilt-card">
+                            <div class="gnep-coming-soon-icon"><i class="fas fa-tools" aria-hidden="true"></i></div>
+                            <span class="badge bg-secondary mb-2">In Development</span>
+                            <h3 class="h6 fw-bold text-dark mb-2">Green Skills Initiative</h3>
+                            <p class="small text-muted mb-0">Equipping youth and communities with practical skills for green economy participation and sustainable livelihoods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gnep-cta-band" aria-label="Call to action">
+            <div class="container text-center">
+                <h2 class="mb-3">See our work in the field</h2>
+                <p class="mb-4">Browse the Field Documentation Gallery — 28 verified photographs from tree-planting drives, capacity-building workshops, and community engagement sessions.</p>
+                <a href="gallery.html" class="btn btn-success btn-lg me-3">
+                    <i class="fas fa-images me-2" aria-hidden="true"></i>View Field Gallery
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-handshake me-2" aria-hidden="true"></i>Partner With Us
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gnep-footer" id="contact" aria-label="Footer and Contact Information">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="bg-white p-1 rounded" width="130" height="40" style="object-fit: contain;">
+                    </div>
+                    <p class="small text-light-50 mb-3" style="color: #BFD3C7;">Global Nature and Environmental Partnership (GNEP Africa) is a youth-led initiative connecting climate research, policy, and education with practical community action across Africa.</p>
+                    <div class="small" style="color: #9EBAAB;">
+                        <div><strong>Founded:</strong> 2025</div>
+                        <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
+                    </div>
+                    <div class="gnep-footer-approach">
+                        <strong>Our Approach:</strong> We are committed to evidence-informed action, strictly verified data reporting, and transparently crediting all community and institutional partners.
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Our Work</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Action &amp; Resilience</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Nature &amp; Ecosystem Restoration</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Environmental Governance &amp; Policy</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Youth Leadership &amp; Participation</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>WEFE Nexus (Strategic Direction)</a></li>
+                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research &amp; Capacity Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Get Involved</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Join Our Team</a></li>
+                        <li><a href="index.html#hero"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Subscribe to Updates</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Our Mission &amp; Values</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4>Contact Us</h4>
+                    <div class="mb-3 small" style="color: #BFD3C7;">
+                        <p class="mb-2"><i class="fas fa-envelope text-success me-2" aria-hidden="true"></i><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></p>
+                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2" aria-hidden="true"></i><a href="tel:+2347065885070">+234 706 588 5070</a></p>
+                        <p class="mb-0"><i class="fas fa-map-marker-alt text-success me-2" aria-hidden="true"></i>Katsina State, Nigeria</p>
+                    </div>
+                    <div class="mt-4 pt-2 border-top border-secondary">
+                        <span class="small d-block text-muted mb-2">Connect With GNEP Africa:</span>
+                        <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light me-2" aria-label="LinkedIn - GNEP Africa"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
+                        <a href="mailto:gnep.partnership@gmail.com" class="btn btn-sm btn-outline-light" aria-label="Email GNEP"><i class="fas fa-envelope me-1" aria-hidden="true"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
+        <div class="container">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-6 text-center text-md-start">&copy; 2026 Global Nature and Environmental Partnership (GNEP Africa). All rights reserved.</div>
+                <div class="col-md-6 text-center text-md-end">
+                    <span class="me-3 text-white-50">Photography &copy; GNEP &amp; AYINET</span>
+                    <a href="#" class="text-decoration-none text-muted me-2">Privacy</a>&bull;
+                    <a href="#" class="text-decoration-none text-muted mx-2">Terms</a>&bull;
+                    <a href="#" class="text-decoration-none text-muted ms-2">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- 3D WebGL & Motion Libraries (Local Zero-Latency Bundles) -->
+    <script src="lib/three/three.min.js"></script>
+    <script src="lib/gsap/gsap.min.js"></script>
+    <script src="lib/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/gnep-3d.js"></script>
+    <script>
+    // Activity filter tabs
+    document.querySelectorAll('.btn-ev-filter').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.btn-ev-filter').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            var filter = this.getAttribute('data-filter');
+            document.querySelectorAll('.activity-item').forEach(function(item) {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
