@@ -1,29 +1,43 @@
-# GNEP Africa — Quality Assurance & Verification Report (`QA_REPORT.md`)
+# GNEP Africa 2.0 — Quality Assurance & Verification Report
 
-**Date:** 25 November 2026  
-**Deployment Target:** Cloudflare Pages (`https://gnep-africa.pages.dev/`) & GitHub (`talk2moidah-png/gnep-africa`)  
-
----
-
-## 1. Automated & Structural Verification Results (All 23 HTML Pages)
-
-| Check Category | Target Standard | Result | Evidence / Notes |
-|---|---|---|---|
-| **Internal Link & Asset Integrity** | Zero broken internal `href` or `src` attributes across all 23 HTML files | **PASSED (0 missing)** | Verified every local HTML, CSS, JS, WebP/PNG image, and PDF path resolves on disk and in the deployed bundle. |
-| **Placeholder Dead Links (`href="#"`)** | Zero `href="#"` links across all 23 HTML files | **PASSED (0 remaining)** | Replaced all footer `Privacy`, `Terms`, and `Accessibility` links with `privacy.html`, `terms.html`, and `accessibility.html`, and all `back-to-top` links with `#main-content`. |
-| **Single Descriptive `<h1>` Per Page** | Exactly 1 `<h1>` per HTML document | **PASSED (23 / 23 pages)** | Confirmed `H1=1` across all 23 pages, including static `<h1>` fallback on `publication.html`. |
-| **Skip-to-Content Landmark** | First focusable element in `<body>` on every page | **PASSED (23 / 23 pages)** | Verified `.skip-to-content` link targeting `#main-content` on all 23 pages. |
-| **Canonical Design Token Loading** | `css/design-tokens.css` loaded before `css/gnep.css` on every page | **PASSED (23 / 23 pages)** | Confirmed `tokens=True` on all 23 pages. |
-| **Canonical URL & Favicon Tags** | Unique `<link rel="canonical">` and `<link rel="icon">` on every page | **PASSED (23 / 23 pages)** | Confirmed `canon=True` and favicon link on all 23 pages. |
-| **Dropdown Menu Contrast (WCAG 2.2 AA)** | $\ge 4.5:1$ contrast across default, hover, focus-visible, and active states | **PASSED (>14:1)** | Default: `#0F172A` on `#FFFFFF` (17.4:1); Hover/Focus: `#0B2516` on `#ECFDF5` (14.2:1); Active: `#FFFFFF` on `#0B2516` (16.1:1). |
-| **Knowledge Hub Search, Filters & PDF Downloads** | All 11 verified GNEP publications searchable, filterable, with webpage & PDF links | **PASSED** | All 11 items in `data/publications.json` and `js/knowledge-hub.js` link directly to their `.html` article webpage and downloadable `.pdf` in `assets/publications/`. |
-| **Script Execution & Reduced Motion Guards** | Zero unguarded plugin calls or infinite timers | **PASSED** | `js/main.js`, `js/dark-mode.js`, and `js/data-layers.js` guarded against missing DOM elements, missing jQuery plugins, and `prefers-reduced-motion: reduce`. |
-| **Live HTTP 200 Verification** | Key live routes on `https://gnep-africa.pages.dev/` return HTTP 200 | **PASSED** | Verified live responses on Cloudflare Pages deployment. |
+**QA Execution Date:** November 25, 2026  
+**Automated Verifier Script:** `run_phase1_audit.py`  
+**Total HTML Pages Tested:** 26 / 26  
+**Overall Result:** **PASS (0 Broken Links, 0 Unresolved Assets, 100% Landmark & Metadata Compliance)**
 
 ---
 
-## 2. Unconfigured External Services Requiring Owner Credentials
-Per the Non-Negotiable Preservation Rules (Rule 7), the following services are transparently handled without false server-success claims until the owner provides external provider credentials:
-1. **Contact Form Server Webhook (`contact.html`):** Because the live site is hosted on **Cloudflare Pages** rather than Netlify, `data-netlify="true"` does not trigger server-side email delivery on Cloudflare. The form now validates all required fields client-side and opens a structured, pre-addressed `mailto:gnep.partnership@gmail.com` dispatch with a transparent status banner. To enable background server-side POST delivery without opening the user's email client, the owner can provide a **Formspree endpoint ID**, **Web3Forms access key**, or **Cloudflare Pages Function (`functions/api/contact.js`)** with Resend/SendGrid API credentials.
-2. **Knowledge Hub Research Alerts Newsletter (`knowledge-hub.html` & `publication.html`):** Currently prepares a direct subscription request email to `gnep.partnership@gmail.com` with an explicit configuration notice. To enable automated mailing-list signups, the owner can connect a **Buttondown**, **Mailchimp**, or **Brevo** form action URL.
-3. **Web Analytics:** No third-party tracking scripts or cookies are active. If the owner enables **Cloudflare Web Analytics** in the Cloudflare Dashboard, `privacy.html` should be updated to note privacy-first aggregate telemetry.
+## 1. Automated 26-Page Structural & Accessibility Audit Results
+
+| Check Category | Target Standard | Result Across All 26 HTML Pages |
+|---|---|---|
+| **Single `<h1>` Landmark** | Exactly `1` `<h1>` per page (including static fallback on `publication.html`) | **26 / 26 PASS** (`H1=1` on every page) |
+| **Skip-to-Content Link** | `<a class="skip-to-content" href="#main-content">` targeting `<main id="main-content">` | **26 / 26 PASS** (`skip=True`, `main=True`) |
+| **Canonical Design Tokens** | `css/design-tokens.css` loaded before `bootstrap.min.css`, `style.css`, and `gnep.css` | **26 / 26 PASS** (`tokens=True`) |
+| **SEO & Social Metadata** | Unique `<title>`, `<meta name="description">`, `<link rel="canonical">`, and `og:*` tags | **26 / 26 PASS** (`canon=True`, `desc=True`) |
+| **Placeholder Link Elimination** | Zero dead `href="#"` anchor links across navigation, cards, or footers | **26 / 26 PASS** (`href#=0` across all 26 pages) |
+| **Local Asset & Link Integrity** | Every internal `href` and `src` resolves to an existing file on disk | **26 / 26 PASS** (`missing=[]` across all 26 pages) |
+| **Language Attribute Compliance** | `lang="en"` on 25 English pages; `lang="ha"` on Hausa El Niño advisory page | **26 / 26 PASS** |
+
+---
+
+## 2. Functional & Component Verification
+
+1. **Knowledge Hub Repository (`knowledge-hub.html` & `data/publications.json`):**
+   - Verified all **11 publications** render with accurate metadata, category filter pills, search filtering, direct HTML webpage links (`Read Full Article`), and direct PDF download links (`Download PDF`).
+   - Verified all 11 PDF files exist in `assets/publications/` and are non-empty, clean GNEP-typeset documents.
+2. **Programmes & Impact Observatory (`programmes.html`):**
+   - Verified client-side status filter buttons (`All Portfolio Records`, `Completed`, `Active / Ongoing`, `Planned / In Development`) filter `#portfolio-grid` cards and update `#portfolio-count-label`.
+   - Verified 5-stage Results-Chain table clearly distinguishes verified outputs (`150 seedlings`, `20 CSO representatives`, `11 publications`) from medium-term outcomes.
+3. **Climate Intelligence & Policy Observatory (`climate-intelligence.html`):**
+   - Verified Leaflet 1.9.4 map (`#gnep-intelligence-map`) initializes with 7 colour-coded markers, interactive layer checkboxes, and popups linking to evidence pages.
+   - Verified full accessible HTML table fallback immediately below the map so keyboard/screen-reader and no-JS users have 100% data parity.
+4. **Governance & Accountability Centre (`accountability.html`):**
+   - Verified 5-tier Partnership Classification Vocabulary, Research Integrity standards, Safeguarding protocols, and 1-click `mailto:gnep.partnership@gmail.com` correction link.
+
+---
+
+## 3. Known Static-Hosting Boundaries (Disclosed Candidly)
+
+- **Form & Newsletter Delivery:** Because the site is deployed as a static Cloudflare Pages project without a paid third-party form backend credential, `contact.html` and `#kh-newsletter-form` use validated `mailto:gnep.partnership@gmail.com` dispatch with explicit user feedback.
+- **Geospatial Map Tiles:** `climate-intelligence.html` loads standard OpenStreetMap tiles via HTTPS (`tile.openstreetmap.org`) when online and degrades gracefully to the static geo-referenced HTML data table when offline.

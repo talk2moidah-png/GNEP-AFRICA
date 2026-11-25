@@ -227,15 +227,21 @@
     <a class="skip-to-content no-print" href="#main-content">Skip to main content</a>
 
     <!-- Topbar & Navigation -->
-    <header class="fixed-top no-print">
-        <aside class="gnep-topbar d-none d-md-block" aria-label="Quick Links">
+    <!-- Skip to main content -->
+    <a class="skip-to-content" href="#main-content">Skip to main content</a>
+
+    <!-- GNEP Africa 2.0 Institutional Header -->
+    <header class="fixed-top">
+        <aside class="gnep-topbar d-none d-md-block" aria-label="Institutional Utility Navigation">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
                     <a href="knowledge-hub.html" class="fw-bold"><i class="fas fa-book-reader me-1" aria-hidden="true"></i> Knowledge Hub</a>
                     <span class="topbar-divider">|</span>
-                    <a href="events.html"><i class="fas fa-file-alt me-1" aria-hidden="true"></i> Research and Insights</a>
+                    <a href="climate-intelligence.html"><i class="fas fa-globe-africa me-1" aria-hidden="true"></i> Climate Intelligence</a>
                     <span class="topbar-divider">|</span>
-                    <a href="contact.html"><i class="fas fa-envelope me-1" aria-hidden="true"></i> Contact</a>
+                    <a href="programmes.html"><i class="fas fa-project-diagram me-1" aria-hidden="true"></i> Project Portfolio</a>
+                    <span class="topbar-divider">|</span>
+                    <a href="accountability.html"><i class="fas fa-shield-alt me-1" aria-hidden="true"></i> Accountability</a>
                     <span class="topbar-divider">|</span>
                     <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
                 </div>
@@ -246,7 +252,7 @@
             </div>
         </aside>
 
-        <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
+        <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Primary Institutional Navigation">
             <div class="container">
                 <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
                     <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="160" height="48">
@@ -260,30 +266,76 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item"><a href="about.html" class="nav-link">About GNEP</a></li>
+                        <!-- 1. About GNEP -->
+                        <li class="nav-item dropdown">
+                            <a href="about.html" class="nav-link dropdown-toggle" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About GNEP</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="about.html">Institutional Mandate &amp; Vision</a></li>
+                                <li><a class="dropdown-item" href="founder.html">Leadership &amp; Founder Dossier</a></li>
+                                <li><a class="dropdown-item" href="accountability.html">Governance &amp; Accountability</a></li>
+                                <li><a class="dropdown-item" href="accountability.html#research-standards">Editorial &amp; Research Standards</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 2. Our Work -->
                         <li class="nav-item dropdown">
                             <a href="index.html#focus-areas" class="nav-link dropdown-toggle" id="workDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Work</a>
                             <ul class="dropdown-menu" aria-labelledby="workDropdown">
                                 <li><a class="dropdown-item" href="index.html#focus-areas">1. Climate Action &amp; Resilience</a></li>
                                 <li><a class="dropdown-item" href="index.html#focus-areas">2. Nature &amp; Ecosystem Restoration</a></li>
                                 <li><a class="dropdown-item" href="index.html#focus-areas">3. Environmental Governance &amp; Policy</a></li>
-                                <li><a class="dropdown-item" href="index.html#focus-areas">4. Youth Leadership &amp; Participation</a></li>
-                                <li><a class="dropdown-item" href="index.html#focus-areas">5. WEFE Nexus</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">4. Youth Leadership &amp; Green Skills</a></li>
+                                <li><a class="dropdown-item" href="index.html#focus-areas">5. WEFE Nexus <span class="badge bg-warning text-dark ms-1">In Development</span></a></li>
                                 <li><a class="dropdown-item" href="index.html#focus-areas">6. Research &amp; Capacity Development</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="knowledge-hub.html" class="nav-link active fw-bold text-success">Knowledge Hub</a></li>
+
+                        <!-- 3. Research & Knowledge -->
                         <li class="nav-item dropdown">
-                            <a href="events.html" class="nav-link dropdown-toggle" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Updates</a>
-                            <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
-                                <li><a class="dropdown-item" href="events.html">Events &amp; Workshops</a></li>
-                                <li><a class="dropdown-item" href="events.html">Research &amp; Insights</a></li>
-                                <li><a class="dropdown-item" href="gallery.html">Field Gallery</a></li>
+                            <a href="knowledge-hub.html" class="nav-link dropdown-toggle" id="knowledgeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Research &amp; Knowledge</a>
+                            <ul class="dropdown-menu" aria-labelledby="knowledgeDropdown">
+                                <li><a class="dropdown-item" href="knowledge-hub.html">Knowledge Hub Repository (11)</a></li>
+                                <li><a class="dropdown-item" href="knowledge-hub.html?type=Policy+briefs">Policy Briefs &amp; Analyses</a></li>
+                                <li><a class="dropdown-item" href="knowledge-hub.html?type=Technical+reports">Technical &amp; Field Reports</a></li>
+                                <li><a class="dropdown-item" href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html">Hausa Climate Advisories</a></li>
+                                <li><a class="dropdown-item" href="accountability.html#research-standards">Research Integrity Standards</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Get Involved</a></li>
+
+                        <!-- 4. Climate Intelligence -->
+                        <li class="nav-item dropdown">
+                            <a href="climate-intelligence.html" class="nav-link dropdown-toggle" id="intelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Climate Intelligence</a>
+                            <ul class="dropdown-menu" aria-labelledby="intelDropdown">
+                                <li><a class="dropdown-item" href="climate-intelligence.html#observatory-map">Geospatial &amp; Field Activity Explorer</a></li>
+                                <li><a class="dropdown-item" href="climate-intelligence.html#policy-observatory">African Climate Policy Observatory</a></li>
+                                <li><a class="dropdown-item" href="climate-intelligence.html#climate-indicators">Verified Climate &amp; Fiscal Indicators</a></li>
+                                <li><a class="dropdown-item" href="climate-intelligence.html#data-governance">Data Provenance &amp; Methodology</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 5. Programmes & Impact -->
+                        <li class="nav-item dropdown">
+                            <a href="programmes.html" class="nav-link dropdown-toggle" id="progDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Programmes &amp; Impact</a>
+                            <ul class="dropdown-menu" aria-labelledby="progDropdown">
+                                <li><a class="dropdown-item" href="programmes.html#portfolio">Verified Project Portfolio</a></li>
+                                <li><a class="dropdown-item" href="programmes.html#results-chain">Impact Methodology &amp; Results Chain</a></li>
+                                <li><a class="dropdown-item" href="programmes.html#planned">Programmes in Development</a></li>
+                                <li><a class="dropdown-item" href="gallery.html">Field Documentation Gallery (28)</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 6. News & Events -->
+                        <li class="nav-item dropdown">
+                            <a href="events.html" class="nav-link dropdown-toggle" id="updatesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">News &amp; Events</a>
+                            <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
+                                <li><a class="dropdown-item" href="events.html">Events, Workshops &amp; Press Releases</a></li>
+                                <li><a class="dropdown-item" href="cso-policy-workshop.html">Katsina CSO Policy Workshop Report</a></li>
+                                <li><a class="dropdown-item" href="tree-planting-150-seedlings.html">150 Economic Tree Seedlings Drive</a></li>
+                                <li><a class="dropdown-item" href="gallery.html">Media &amp; Field Photography</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                    <div class="d-flex align-items-center ms-lg-2 mt-3 mt-lg-0">
                         <a href="contact.html" class="btn-partner-nav text-center w-100 w-lg-auto">Partner With Us</a>
                     </div>
                 </div>
@@ -596,63 +648,92 @@
         </section>
     </main>
 
-    <!-- Standard GNEP Footer -->
-    <footer class="gnep-footer no-print" id="contact" aria-label="Footer and Contact Information">
+    <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
+    <footer class="gnep-footer" id="contact" aria-label="Institutional Footer and Accountability Navigation">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="d-flex align-items-center mb-3">
                         <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="bg-white p-1 rounded" width="130" height="40" style="object-fit: contain;">
                     </div>
                     <p class="small text-light-50 mb-3" style="color: #BFD3C7;">
-                        Global Nature and Environmental Partnership (GNEP Africa) is a youth-led initiative connecting climate research, policy, and education with practical community action across Africa.
+                        Global Nature and Environmental Partnership (GNEP Africa) connects environmental research, climate policy, and community-led action to advance resilience across Africa.
                     </p>
-                    <div class="small" style="color: #9EBAAB;">
-                        <div><strong>Founded:</strong> 2025</div>
+                    <div class="small mb-2" style="color: #9EBAAB;">
+                        <div><strong>Founded:</strong> 2025 &bull; <strong>Status:</strong> Independent Youth-Led Initiative</div>
                         <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4>Our Work</h4>
+                <div class="col-lg-2 col-md-6">
+                    <h4>About &amp; Governance</h4>
                     <ul class="footer-link-list">
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Action &amp; Resilience</a></li>
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Nature &amp; Ecosystem Restoration</a></li>
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Environmental Governance &amp; Policy</a></li>
-                        <li><a href="index.html#focus-areas"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Youth Leadership &amp; Participation</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Mandate &amp; Vision</a></li>
+                        <li><a href="founder.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Leadership &amp; Founder</a></li>
+                        <li><a href="accountability.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Accountability Centre</a></li>
+                        <li><a href="accountability.html#research-standards"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research Standards</a></li>
+                        <li><a href="accountability.html#safeguarding"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Safeguarding &amp; Conduct</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h4>Get Involved</h4>
+                    <h4>Programmes &amp; Impact</h4>
                     <ul class="footer-link-list">
-                        <li><a href="knowledge-hub.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Knowledge Hub</a></li>
-                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With Us</a></li>
-                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery</a></li>
-                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Our Mission &amp; Values</a></li>
+                        <li><a href="programmes.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Project Portfolio</a></li>
+                        <li><a href="programmes.html#results-chain"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Results &amp; Impact Chain</a></li>
+                        <li><a href="events.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Newsroom &amp; Events</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery (28)</a></li>
+                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With GNEP</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4>Knowledge &amp; Data</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="knowledge-hub.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Knowledge Hub (11)</a></li>
+                        <li><a href="knowledge-hub.html?type=Policy+briefs"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Briefs</a></li>
+                        <li><a href="climate-intelligence.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Intelligence</a></li>
+                        <li><a href="climate-intelligence.html#policy-observatory"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Observatory</a></li>
+                        <li><a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Hausa Advisories</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4>Contact Us</h4>
+                    <h4>Connect &amp; Inquiries</h4>
                     <div class="mb-3 small" style="color: #BFD3C7;">
                         <p class="mb-2"><i class="fas fa-envelope text-success me-2" aria-hidden="true"></i><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></p>
                         <p class="mb-2"><i class="fas fa-phone-alt text-success me-2" aria-hidden="true"></i><a href="tel:+2347065885070">+234 706 588 5070</a></p>
                         <p class="mb-0"><i class="fas fa-map-marker-alt text-success me-2" aria-hidden="true"></i>Katsina State, Nigeria</p>
                     </div>
+                    <div class="mt-3 pt-2 border-top border-secondary">
+                        <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light me-2"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
+                        <a href="contact.html" class="btn btn-sm btn-success"><i class="fas fa-handshake me-1" aria-hidden="true"></i> Partner</a>
+                    </div>
                 </div>
+            </div>
+            <div class="mt-4 pt-3 border-top border-secondary small" style="color: #9EBAAB; font-size: 0.78rem;">
+                <strong>Institutional Independence &amp; Evidence Notice:</strong> GNEP Africa is an independent African environmental initiative and is not an agency of, nor officially endorsed by, the United Nations, UNDP, UNFCCC, IPCC, WHO, FAO, GIZ, or the Green Climate Fund. All cited multilateral datasets and policy records remain the property of their respective issuing institutions.
             </div>
         </div>
     </footer>
 
-    <div class="gnep-legal-bar no-print" aria-label="Legal and Copyright">
+    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
         <div class="container">
             <div class="row align-items-center gy-2">
                 <div class="col-md-6 text-center text-md-start">
                     &copy; 2026 Global Nature and Environmental Partnership (GNEP Africa). All rights reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <span class="me-3 text-white-50">Photography &amp; Research &copy; GNEP Africa</span>
+                    <span class="me-3 text-white-50">Photography &copy; GNEP &amp; AYINET</span>
+                    <a href="accountability.html" class="text-decoration-none text-white-50 me-2">Accountability</a>&bull;
+                    <a href="privacy.html" class="text-decoration-none text-white-50 mx-2">Privacy</a>&bull;
+                    <a href="terms.html" class="text-decoration-none text-white-50 mx-2">Terms</a>&bull;
+                    <a href="accessibility.html" class="text-decoration-none text-white-50 ms-2">Accessibility</a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

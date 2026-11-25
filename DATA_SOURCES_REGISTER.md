@@ -1,0 +1,31 @@
+# GNEP Africa 2.0 — Data Sources & Provenance Register
+
+In compliance with **Section 8 (Climate Intelligence & Geospatial Rules)** and **Section 13** of the *GNEP Africa 2.0 Blueprint*, every geospatial node, climate hazard baseline, fiscal indicator, and statutory policy record displayed on `climate-intelligence.html`, `index.html`, and across GNEP policy briefs is registered below with its provider, URL, licence, reference date, methodology, and limitations.
+
+---
+
+## 1. Climate, Macroeconomic, Energy & Urban Hazard Datasets
+
+| Layer / Indicator ID | Title & Metric Displayed | Primary Source Provider | Reference URL | Licence / Terms | Reference Period | Spatial Resolution | Methodology & Scope Limitations |
+|---|---|---|---|---|---|---|---|
+| **GNEP-DAT-001** | **Sahel & Northern Nigeria Peak Thermal Anomaly** (`41°C – 45°C` dry-season heat index) | Nigerian Meteorological Agency (NiMet) & World Meteorological Organization (WMO) | `https://nimet.gov.ng` / `https://wmo.int` | Public Domain / Government Open Weather Data | 2024–2026 El Niño / Pre-Monsoon Baseline | Regional / State Synoptic Station Level (Katsina State) | Derived from seasonal climate predictions and synoptic station maxima. Static verified baseline; not a real-time weather station telemetry stream. |
+| **GNEP-DAT-002** | **Projected Excess Annual Heat-Related Mortality in Nigeria by 2050** (`~31,400 excess deaths/yr` under high-emissions scenario) | Lancet Countdown on Health and Climate Change / WHO Country Profile | `https://www.lancetcountdown.org` | Academic / Open Policy Citation | 2024–2050 Projection Window | National (Nigeria) | Epidemiological scenario modelling cited in GNEP's *Nigeria Heat Emergency Policy Brief*. Projection depends on emissions pathway and adaptation interventions. |
+| **GNEP-DAT-003** | **Africa NDC Implementation Finance Gap** (`~US$277B/yr` required vs. `~US$30B–44B/yr` tracked flows; `~23%` met) | Climate Policy Initiative (CPI) — *Landscape of Climate Finance in Africa* & AfDB | `https://www.climatepolicyinitiative.org` | CC BY / Open Research Attribution | 2020–2030 NDC Costing / 2019–2022 Flows | Continental (51 of 53 African NDCs) | Aggregated from costed African NDCs and tracked bilateral/multilateral/private flows. Loans are often reported at face value rather than grant-equivalent value. |
+| **GNEP-DAT-004** | **Sub-Saharan Africa External Debt Service Burden** (`~US$865B` projected decade debt service) | World Bank International Debt Statistics / ONE Data Analysis (cited in *Rethinking Climate Finance*) | `https://www.worldbank.org/en/programs/debt-statistics` | CC BY 4.0 (World Bank Open Data) | 2020–2030 Decade Projection | Regional (Sub-Saharan Africa) | Sovereign external debt service obligations compared against adaptation finance inflows. Fluctuates with interest rates and sovereign restructuring. |
+| **GNEP-DAT-005** | **Nigeria Electricity Access Deficit** (`~86 Million` citizens without grid power) | International Energy Agency (IEA) & World Bank — *Tracking SDG7: The Energy Progress Report* | `https://trackingsdg7.esmap.org` | CC BY 3.0 IGO | 2023–2025 Assessment | National (Nigeria) | Survey and utility connection estimates; does not fully capture informal captive diesel generators or newly commissioned mini-grids. |
+| **GNEP-DAT-006** | **Lagos Annual Economic Cost of Urban Flooding** (`~US$4 Billion/yr` estimated asset & productivity loss) | World Bank / Lagos State Resilience Office (LASRO) Urban Flood Studies | `https://www.worldbank.org` | CC BY 4.0 / Public Policy Citation | 2021–2025 Baseline | Municipal / Coastal Megacity (Lagos State) | Macroeconomic estimate combining direct infrastructure damage and informal sector disruption cited in GNEP's *Adapting Rotterdam's Sponge City Model* brief. |
+| **GNEP-DAT-007** | **West & Central Africa Hausa Speaker Population** (`80M – 100M+` L1 & L2 speakers) | Ethnologue / Linguistic Demography Cited in *Lingua Franca: Incorporating Hausa into Climate* | `https://www.ethnologue.com` | Academic / Fair Dealing Citation | 2024–2026 Estimate | Regional (Northern Nigeria, Southern Niger, Sahel Corridor) | Combined first- and second-language speaker estimates across the West African Sudan-Sahel belt. |
+
+---
+
+## 2. Geo-Referenced Field & Institutional Nodes (`climate-intelligence.html` Map)
+
+| Node ID | Location Name | Coordinates (WGS84) | Node Classification | Provenance & Precision Note |
+|---|---|---|---|---|
+| **NODE-01** | Katsina LGA — 150 Economic Tree Seedling Drive (`GNEP-PRJ-2026-001`) | `12.9816° N, 7.6223° E` | Verified Field Activity (with `AYINET`) | Centroid of Katsina municipal field corridor; individual school plot polygons are not exposed for school privacy. |
+| **NODE-02** | Katsina Civic Training Hub — 20 CSO Policy Workshop (`GNEP-PRJ-2026-002`) | `12.9908° N, 7.6018° E` | Verified Capacity Workshop (with `The Green Minds Space`) | Municipal venue coordinates in Katsina metropolis. |
+| **NODE-03** | Katsina Secondary Schools — Youth Climate Clubs (`GNEP-PRJ-2026-004`) | `12.9750° N, 7.6100° E` | Active Youth Eco-Literacy Programme | Representative municipal coordinate in Katsina State (child safeguarding protocol omits specific school gate coordinates). |
+| **NODE-04** | SUBEB Katsina & UNICEF Green Skills Workshop Venue (`GNEP-PRJ-2026-003`) | `13.0059° N, 7.6000° E` | Institutional Event Participation (19 Aug 2026) | Katsina State institutional conference location. |
+| **NODE-05** | Sahel / Northern Nigeria Extreme Heat & Aridity Corridor | `13.1500° N, 7.4500° E` | Regional Climate Hazard Zone | Representative synoptic zone for Katsina/Sahel borderland thermal and desertification risk analysis. |
+| **NODE-06** | Lagos Coastal Megacity — Urban Sponge City Case Study | `6.5244° N, 3.3792° E` | Comparative Policy Research Node | Municipal centroid for Lagos Island / Mainland drainage basin analysis (`pub-011`). |
+| **NODE-07** | Abuja Federal Policy Corridor — Climate Change Act & Fiscal Accountability | `9.0579° N, 7.4951° E` | National Policy Observatory Node | Federal capital coordinate representing statutory instruments (`Climate Change Act 2021`, `Electricity Act 2023`, subsidy accountability brief `pub-008`). |
