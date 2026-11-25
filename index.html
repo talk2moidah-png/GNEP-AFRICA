@@ -47,9 +47,6 @@
 
     <!-- Header & Navigation Start -->
     <header class="fixed-top">
-        <button id="dark-mode-toggle" class="btn btn-sm btn-outline-secondary ms-2" aria-label="Toggle dark mode" title="Toggle dark mode">
-            🌙
-        </button>
         <!-- Thin Utility Bar (UNEP Pattern) -->
         <aside class="gnep-topbar d-none d-md-block" aria-label="Quick Links">
             <div class="container d-flex justify-content-between align-items-center">
@@ -143,13 +140,6 @@
 
         <!-- 1. CINEMATIC 3D HERO SECTION (Three.js WebGL Spatial Environment & African Landscape) -->
         <section class="gnep-hero" id="hero" aria-label="Introduction">
-    <!-- CesiumJS 3D Earth (lazy loaded) -->
-    <div id="cesiumContainer" class="w-100" style="height:600px; min-height:400px;"></div>
-    <!-- Fallback: original Three.js canvas (hidden when Cesium loads) -->
-    <div id="hero-webgl-container" aria-hidden="true" style="display:none;"></div>
-    <img src="assets/real/hero-tree-planting.webp" class="gnep-hero-bg" alt="GNEP youth planting tree seedlings in Katsina State field" width="1630" height="1080">
-    <div class="gnep-hero-overlay"></div>
-    <div class="container gnep-hero-content">
             <!-- 3D Interactive WebGL Canvas (Organic African Topography & Atmospheric Spores) -->
             <div id="hero-webgl-container" aria-hidden="true"></div>
 
@@ -160,7 +150,7 @@
             <div class="container gnep-hero-content">
                 <div class="row align-items-center g-5">
                     <!-- Hero Text Content -->
-                    <div class="col-lg-7 text-start">
+                    <div class="col-lg-9 text-start">
                         <span class="gnep-hero-badge"><span class="pulse-dot"></span> GLOBAL NATURE AND ENVIRONMENTAL PARTNERSHIP</span>
                         <h1 class="gnep-hero-headline">Building Africa's Environmental Resilience.</h1>
                         <p class="gnep-hero-sub">
@@ -168,53 +158,8 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="#focus-areas" class="btn btn-gnep-hero-primary">Explore Our Work <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i></a>
-                            <a href="#partner-with-us" class="btn btn-gnep-hero-secondary">Partner With Us</a>
-                        </div>
-                    </div>
-
-                    <!-- Hero Newsletter & Updates Form Card (Formspree Integration) -->
-                    <div class="col-lg-5" id="partner-with-us">
-                        <div class="gnep-hero-form-card">
-                            <h3>Stay Connected</h3>
-                            <p class="form-desc">Receive verified updates on GNEP field programmes, policy research, and collaborative opportunities.</p>
-                            
-                            <form name="gnep-newsletter" method="POST" data-netlify="true" id="heroSignupForm">
-                                <input type="hidden" name="form-name" value="gnep-newsletter">
-                                <div class="mb-3">
-                                    <label for="subscriberEmail" class="gnep-form-label">Email Address <span class="text-danger">*</span></label>
-                                    <input type="email" class="gnep-form-control" id="subscriberEmail" name="email" placeholder="name@example.org" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="subscriberCountry" class="gnep-form-label">Country (Optional)</label>
-                                    <select class="gnep-form-control" id="subscriberCountry" name="country">
-                                        <option value="">Select country...</option>
-                                        <option value="Nigeria">Nigeria</option>
-                                        <option value="Algeria">Algeria</option>
-                                        <option value="Ghana">Ghana</option>
-                                        <option value="Kenya">Kenya</option>
-                                        <option value="Egypt">Egypt</option>
-                                        <option value="South Africa">South Africa</option>
-                                        <option value="Ethiopia">Ethiopia</option>
-                                        <option value="Rwanda">Rwanda</option>
-                                        <option value="Senegal">Senegal</option>
-                                        <option value="Uganda">Uganda</option>
-                                        <option value="Tanzania">Tanzania</option>
-                                        <option value="Cameroon">Cameroon</option>
-                                        <option value="Morocco">Morocco</option>
-                                        <option value="Niger">Niger</option>
-                                        <option value="Zimbabwe">Zimbabwe</option>
-                                        <option value="Other Africa">Other African Country</option>
-                                        <option value="Other">Other (International)</option>
-                                    </select>
-                                </div>
-
-                                <button type="submit" class="btn btn-partner-nav w-100 py-2">Join Our Network</button>
-                                
-                                <p class="gnep-consent-text">
-                                    <i class="fas fa-shield-alt text-success me-1" aria-hidden="true"></i> We will only email about GNEP programmes and opportunities. Unsubscribe any time.
-                                </p>
-                            </form>
+                            <a href="knowledge-hub.html" class="btn btn-gnep-hero-secondary"><i class="fas fa-book-reader me-2" aria-hidden="true"></i>Knowledge Hub</a>
+                            <a href="contact.html" class="btn btn-gnep-hero-secondary">Partner With Us</a>
                         </div>
                     </div>
                 </div>
@@ -248,18 +193,6 @@
 
         </section>
         <!-- Hero Section End -->
-        <!-- Data Layer Control Panel -->
-        <section id="data-layer-panel" class="position-fixed top-0 end-0 m-3 p-3 bg-white border rounded" style="z-index:1050; max-width:250px; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
-          <h5 class="mb-2">Environmental Data Layers</h5>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="gibs-modis" id="layer-gibs-modis">
-            <label class="form-check-label" for="layer-gibs-modis">NASA MODIS Terra (True Color)</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="copernicus-s2" id="layer-copernicus-s2">
-            <label class="form-check-label" for="layer-copernicus-s2">Copernicus Sentinel‑2 (NDVI)</label>
-          </div>
-        </section>
 
 
         <!-- 2. MISSION BAND (Pattern from WWF - Editorial Showcase) -->
@@ -1521,9 +1454,6 @@
     <script src="lib/gsap/gsap.min.js"></script>
     <script src="lib/gsap/ScrollTrigger.min.js"></script>
     <script src="js/gnep-3d.js"></script>
-
-<script src="js/data-layers.js"></script>
-    <script src="js/dark-mode.js"></script>
 </body>
 </html>
 
