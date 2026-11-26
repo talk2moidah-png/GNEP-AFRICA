@@ -6,11 +6,11 @@
 (function (window, document) {
     'use strict';
 
-    const STORAGE_KEY = 'gnep_knowledge_hub_v10_16_pubs';
+    const STORAGE_KEY = 'gnep_knowledge_hub_v11_17_pubs_kelcm';
     try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); } catch(e) {}
     const ADMIN_SESSION_KEY = 'gnep_kh_admin_auth';
     const SUBSCRIBERS_KEY = 'gnep_kh_subscribers';
-    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v10';
+    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v11';
 
     const KnowledgeHub = {
         data: {
@@ -30,7 +30,7 @@
             sortBy: 'newest',
             viewMode: 'grid', // 'grid' | 'list'
             page: 1,
-            pageSize: 18,
+            pageSize: 20,
             isAdmin: false
         },
 
@@ -1816,7 +1816,7 @@
         getEmbeddedFallbackData() {
             return {
                 "version": "1.0.0",
-                "updated_at": "2026-11-26T16:35:00Z",
+                "updated_at": "2026-11-26T19:58:00Z",
                 "categories": [
                                 "Climate Change and Resilience",
                                 "Environmental Governance and Policy",
@@ -1890,6 +1890,62 @@
                                 }
                 ],
                 "publications": [
+                                {
+                                                "id": "katsina-economic-linkage-capability-model",
+                                                "slug": "katsina-economic-linkage-capability-model",
+                                                "title": "Katsina Economic Linkage & Capability Model (KELCM): Synergizing Resources for Lasting Impact",
+                                                "abstract": "Authored by Mohammed Labaran Sani, the Katsina Economic Linkage and Capability Model (KELCM) synthesizes Amartya Sen's Capability Approach, Albert Hirschman's Theory of Economic Linkages, and Jeffrey Sachs' Comprehensive Development Approach into a three-pillar operational model for Katsina State's 34 Local Government Areas (>8 million residents)—connecting human capital (education, healthcare, empowerment) with strategic sectoral investments (agro-processing clusters, sustainable mining, solar/wind energy, and transport/water infrastructure).",
+                                                "full_description": "Presents a comprehensive sub-national economic and sustainable development architecture for Katsina State, Nigeria. Anchored in Sen's Capability Approach, Hirschman's backward/forward sectoral linkages, and Sachs' SDG-integrated development strategy, KELCM outlines actionable plans across Pillar I (Human Capital Development: rural school upgrades, vocational training, primary healthcare & mobile clinics, social safety nets, and women/youth microfinance), Pillar II (Strategic Sectoral Investment: modernized irrigation and agro-processing clusters for millet, rice, and groundnuts; environmentally regulated mining; solar and wind power; and transport/water infrastructure), and Pillar III (Integrated & Sustainable Development: multi-sectoral programmes, Public-Private Partnerships, and SDG monitoring).",
+                                                "authors": [
+                                                                "Mohammed Labaran Sani"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-11-26",
+                                                "year": 2026,
+                                                "doc_type": "Working papers",
+                                                "doc_code": "GNEP-WP-2026-017",
+                                                "categories": [
+                                                                "Renewable Energy and Sustainable Development",
+                                                                "Water, Food and Energy Nexus",
+                                                                "Environmental Governance and Policy",
+                                                                "Environmental Education and Youth Leadership"
+                                                ],
+                                                "collections": [
+                                                                "Water-Food-Energy Nexus",
+                                                                "Environmental Governance in Nigeria",
+                                                                "Youth Leadership and Climate Justice"
+                                                ],
+                                                "keywords": [
+                                                                "Katsina Economic Linkage & Capability Model (KELCM)",
+                                                                "Katsina State",
+                                                                "Amartya Sen Capability Approach",
+                                                                "Albert Hirschman Economic Linkages",
+                                                                "Jeffrey Sachs SDG Strategy",
+                                                                "Agro-Processing Clusters",
+                                                                "Renewable Energy",
+                                                                "Human Capital Development"
+                                                ],
+                                                "cover_image": "assets/real/kelcm-katsina-lga-map.webp",
+                                                "file_url": "assets/publications/katsina-economic-linkage-capability-model.pdf",
+                                                "article_url": "katsina-economic-linkage-capability-model.html",
+                                                "file_format": "PDF",
+                                                "file_size": "1022 KB",
+                                                "page_count": 9,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.wp2026.017",
+                                                "citation_apa": "Sani, M. L. (2026). Katsina Economic Linkage & Capability Model (KELCM): Synergizing Resources for Lasting Impact (Working Paper No. GNEP-WP-2026-017). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Sani, Mohammed Labaran. \"Katsina Economic Linkage & Capability Model (KELCM): Synergizing Resources for Lasting Impact.\" Working Paper No. GNEP-WP-2026-017. Katsina: GNEP Africa, November 2026.",
+                                                "is_featured": true,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "umaru-musa-fellowship-initiative",
+                                                                "addressing-structural-gaps-african-climate-education",
+                                                                "subsidy-removal-public-accountability-policy-brief"
+                                                ]
+                                },
                                 {
                                                 "id": "addressing-structural-gaps-african-climate-education",
                                                 "slug": "addressing-structural-gaps-african-climate-education",
