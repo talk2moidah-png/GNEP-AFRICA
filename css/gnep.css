@@ -2772,3 +2772,48 @@ img.gnep-page-hero-bg {
 }
 
 .gnep-inner-hero-overlay { display: none !important; }
+
+
+/* Compact Single-Row Navbar Guaranteed to Fit Within 992px-1400px+ Screens */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+.gnep-brand-logo {
+    height: 34px !important;
+    width: auto !important;
+    padding: 3px 8px !important;
+}
+
+.gnep-brand-text {
+    margin-left: 10px !important;
+    padding-left: 10px !important;
+}
+
+.gnep-brand-title {
+    font-size: 0.98rem !important;
+    margin-bottom: 0 !important;
+}
+
+.gnep-brand-sub {
+    display: none !important;
+}
+
+.gnep-navbar .navbar-nav {
+    gap: 2px !important;
+}
+
+.gnep-navbar .navbar-nav .nav-link,
+.gnep-navbar .nav-link {
+    font-size: 0.84rem !important;
+    padding: 6px 9px !important;
+    white-space: nowrap !important;
+}
+
+.btn-partner-nav {
+    font-size: 0.82rem !important;
+    padding: 7px 14px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
