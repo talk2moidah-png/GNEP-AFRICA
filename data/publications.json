@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-26T15:05:00Z",
+  "updated_at": "2026-11-26T16:05:00Z",
   "categories": [
     "Climate Change and Resilience",
     "Environmental Governance and Policy",
@@ -74,6 +74,61 @@
     }
   ],
   "publications": [
+    {
+      "id": "umaru-musa-fellowship-initiative",
+      "slug": "umaru-musa-fellowship-initiative",
+      "title": "Umaru Musa Fellowship Initiative (UMFI): Project Proposal for Youth Leadership, Education & Decent Jobs",
+      "abstract": "A flagship future initiative we hope to spearhead in honour of late President Umaru Musa Yar'Adua. UMFI is designed as an intensive 8-week leadership, mentorship, policy research, and civic engagement fellowship for 45 emerging youth leaders (ages 20–35) across Education, Decent Jobs, and Public Service in Katsina State and Nigeria.",
+      "full_description": "Full project proposal dossier for the Umaru Musa Fellowship Initiative (UMFI) — 'Empower. Innovate. Transform.' Outlines the problem statement, 8-week innovation design, mission and vision, 10 programme objectives, target demographic (youth aged 20–35 across 6 sector profiles), dual benefits to participants and State Government, 16-stage operational lifecycle, 45-fellow residential/field equipment specification, risk mitigation matrix, and 7-part long-term sustainability strategy.",
+      "authors": [
+        "Mohammed Labaran Sani",
+        "GNEP Africa Programme Design Team"
+      ],
+      "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+      "source_category": "GNEP-authored publications",
+      "publication_date": "2026-11-26",
+      "year": 2026,
+      "doc_type": "Technical reports",
+      "doc_code": "GNEP-PR-2026-015",
+      "categories": [
+        "Environmental Education and Youth Leadership",
+        "Environmental Governance and Policy",
+        "African Environmental Case Studies"
+      ],
+      "collections": [
+        "Youth Leadership and Climate Justice",
+        "Environmental Governance in Nigeria"
+      ],
+      "keywords": [
+        "Umaru Musa Fellowship Initiative (UMFI)",
+        "Umaru Musa Yar'Adua",
+        "Youth Leadership Fellowship",
+        "Education and Decent Jobs",
+        "Civic Engagement",
+        "Public Service Pipeline",
+        "Katsina State",
+        "Future Initiative Proposal"
+      ],
+      "cover_image": "assets/real/umfi-youth-fellows-cohort.webp",
+      "file_url": "assets/publications/umaru-musa-fellowship-initiative-proposal.pdf",
+      "article_url": "umaru-musa-fellowship-initiative.html",
+      "file_format": "PDF",
+      "file_size": "501 KB",
+      "page_count": 8,
+      "language": "English",
+      "doi": "10.5281/zenodo.gnep.pr2026.015",
+      "citation_apa": "Sani, M. L., & GNEP Africa. (2026). Umaru Musa Fellowship Initiative (UMFI): Empowering Ethical Youth Leadership, Public Service & Civic Innovation — Project Proposal Dossier (Document No. GNEP-PR-2026-015). Global Nature and Environmental Partnership (GNEP Africa).",
+      "citation_chicago": "Sani, Mohammed Labaran, and GNEP Africa. \"Umaru Musa Fellowship Initiative (UMFI): Empowering Ethical Youth Leadership, Public Service & Civic Innovation — Project Proposal Dossier.\" Document No. GNEP-PR-2026-015. Katsina: GNEP Africa, November 2026.",
+      "is_featured": true,
+      "is_external": false,
+      "external_url": "",
+      "status": "published",
+      "related_ids": [
+        "turning-research-into-action",
+        "cso-policy-brief-workshop",
+        "subsidy-removal-public-accountability-policy-brief"
+      ]
+    },
     {
       "id": "africa-by-2063-assessing-progress-priorities",
       "slug": "africa-by-2063-assessing-progress-priorities",
