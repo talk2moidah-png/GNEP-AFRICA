@@ -26,4 +26,22 @@
   <url><loc>https://gnep-africa.pages.dev/privacy.html</loc><lastmod>2026-11-25</lastmod><priority>0.5</priority></url>
   <url><loc>https://gnep-africa.pages.dev/terms.html</loc><lastmod>2026-11-25</lastmod><priority>0.5</priority></url>
   <url><loc>https://gnep-africa.pages.dev/accessibility.html</loc><lastmod>2026-11-25</lastmod><priority>0.5</priority></url>
+  <url>
+    <loc>https://gnep-africa.pages.dev/africa-by-2063-assessing-progress-priorities.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gnep-africa.pages.dev/permanent-seat-for-africa-un-security-council.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://gnep-africa.pages.dev/alau-dam-flood-maiduguri-nature-based-solutions.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

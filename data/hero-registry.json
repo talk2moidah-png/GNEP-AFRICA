@@ -572,6 +572,33 @@
         "label": "Open Knowledge Hub",
         "url": "knowledge-hub.html"
       }
+    },
+    "alau-dam-flood-maiduguri-nature-based-solutions.html": {
+      "title": "Nature-Based Solutions for the Alau Dam Flood Disaster in Maiduguri",
+      "subtitle": "Combining dam rehabilitation with upstream watershed restoration, afforestation, wetland conservation, and Vetiver grass bioengineering in Borno State.",
+      "kicker": "Policy Brief • Disaster Risk Reduction & NbS",
+      "image": "assets/real/alau-dam-maiduguri-aerial-inundation.webp",
+      "focal_point": "center 45%",
+      "ecosystem_credit": "Maiduguri Flood Corridor & Ngadda River Basin, Borno State, Nigeria",
+      "breadcrumb": "Alau Dam Flood & Nature-Based Solutions"
+    },
+    "permanent-seat-for-africa-un-security-council.html": {
+      "title": "A Permanent Seat for Africa: Reforming the UN Security Council",
+      "subtitle": "Evaluating the Ezulwini Consensus, the Sirte Declaration, and actionable steps toward the 2028 UN Charter review conference.",
+      "kicker": "Policy Brief • Global Governance & African Diplomacy",
+      "image": "assets/real/unsc-chamber-session-cover.webp",
+      "focal_point": "center 35%",
+      "ecosystem_credit": "United Nations Security Council Chamber & African Union Multilateral Diplomacy",
+      "breadcrumb": "A Permanent Seat for Africa (UNSC Reform)"
+    },
+    "africa-by-2063-assessing-progress-priorities.html": {
+      "title": "Africa by 2063: Assessing Progress and Priorities for the Decade Ahead",
+      "subtitle": "Reviewing the First Ten-Year Implementation Plan (2014–2023) of the African Union's Agenda 2063 and six priorities for the Second Ten-Year Plan (2024–2033).",
+      "kicker": "Flagship Policy Brief • Continental Development & Agenda 2063",
+      "image": "assets/real/agenda2063-light-rail-cover.webp",
+      "focal_point": "center 45%",
+      "ecosystem_credit": "African Union Agenda 2063 Flagship Infrastructure & Continental Integration",
+      "breadcrumb": "Africa by 2063: Progress & Priorities"
     }
   }
 }

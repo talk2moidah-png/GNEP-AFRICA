@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated_at": "2026-11-25T19:30:00Z",
+  "updated_at": "2026-11-26T14:15:00Z",
   "categories": [
     "Climate Change and Resilience",
     "Environmental Governance and Policy",
@@ -74,6 +74,171 @@
     }
   ],
   "publications": [
+    {
+      "id": "africa-by-2063-assessing-progress-priorities",
+      "slug": "africa-by-2063-assessing-progress-priorities",
+      "title": "Africa by 2063: Assessing Progress and Priorities for the Decade Ahead",
+      "abstract": "Ten years into Agenda 2063, Africa has built most of the continental scaffolding—AfCFTA (54 signatories, 48 ratifications), SAATM (37 states), the Free Movement Protocol, and the AU G20 seat—yet national ratification and delivery lag behind. Synthesizing IMF, AfDB, UNCTAD, OECD/AUC/ATAF, ITU, and WMO data across five visual charts and seven regional case figures, this brief proposes six targeted priorities for the Second Ten-Year Implementation Plan (2024–2033).",
+      "full_description": "Co-authored by Mohammed Labaran Sani and Mahamat H. Mahamat (26 November 2026), this flagship policy brief audits the First Ten-Year Implementation Plan (2014–2023) of the African Union's Agenda 2063 and sets out measurable priorities for the Second Ten-Year Implementation Plan (2024–2033). It examines structural transformation (4.4% GDP growth vs. 10.6% manufacturing share), AfCFTA corridors, the Free Movement ratification bottleneck (4 of 15 ratifications), domestic revenue and debt service (16.1% tax-to-GDP vs. 31% revenue absorbed by external debt service), climate adaptation costs ($30–50B/year), and human capital for Africa's 12 million annual youth labor entrants.",
+      "authors": [
+        "Mohammed Labaran Sani",
+        "Mahamat H. Mahamat"
+      ],
+      "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+      "source_category": "GNEP-authored publications",
+      "publication_date": "2026-11-26",
+      "year": 2026,
+      "doc_type": "Policy briefs",
+      "doc_code": "GNEP-PB-2026-014",
+      "categories": [
+        "Environmental Governance and Policy",
+        "Climate Finance and Development",
+        "Climate Change and Resilience",
+        "Renewable Energy and Sustainable Development"
+      ],
+      "collections": [
+        "African Climate Policy",
+        "Youth Leadership and Climate Justice"
+      ],
+      "keywords": [
+        "Agenda 2063",
+        "African Union",
+        "AfCFTA",
+        "Second Ten-Year Implementation Plan",
+        "Climate Adaptation Finance",
+        "Domestic Resource Mobilization",
+        "Youth Dividend",
+        "Regional Integration"
+      ],
+      "cover_image": "assets/real/agenda2063-light-rail-cover.webp",
+      "file_url": "assets/publications/africa-by-2063-assessing-progress-priorities.pdf",
+      "article_url": "africa-by-2063-assessing-progress-priorities.html",
+      "file_format": "PDF",
+      "file_size": "1353 KB",
+      "page_count": 10,
+      "language": "English",
+      "doi": "10.5281/zenodo.gnep.pb2026.014",
+      "citation_apa": "Sani, M. L., & Mahamat, M. H. (2026). Africa by 2063: Assessing Progress and Priorities for the Decade Ahead (Policy Brief No. GNEP-PB-2026-014). Global Nature and Environmental Partnership (GNEP Africa).",
+      "citation_chicago": "Sani, Mohammed Labaran, and Mahamat H. Mahamat. \"Africa by 2063: Assessing Progress and Priorities for the Decade Ahead.\" Policy Brief No. GNEP-PB-2026-014. Katsina: GNEP Africa, November 26, 2026.",
+      "is_featured": true,
+      "is_external": false,
+      "external_url": "",
+      "status": "published",
+      "related_ids": [
+        "permanent-seat-for-africa-un-security-council",
+        "rethinking-climate-finance-africa",
+        "alau-dam-flood-maiduguri-nature-based-solutions"
+      ]
+    },
+    {
+      "id": "permanent-seat-for-africa-un-security-council",
+      "slug": "permanent-seat-for-africa-un-security-council",
+      "title": "A Permanent Seat for Africa: Reforming the UN Security Council",
+      "abstract": "More than eighty years after the founding of the United Nations, Africa has no permanent seat on the Security Council—despite accounting for 54 of 193 UN member states (28%), roughly 18% of global population, around half of all Council meetings, 70% of Chapters VI/VII resolutions with peace-operation mandates, and over 40% of UN uniformed peacekeepers. This brief evaluates the Ezulwini Consensus, the Sirte Declaration, and five reform steps toward the 2028 UN Charter review horizon.",
+      "full_description": "Authored by Mohammed Labaran Sani (26 November 2026), this policy brief analyzes the structural exclusion of Africa from permanent representation on the United Nations Security Council. Drawing on Security Council Report datasets, UN Peacekeeping troop statistics, the 2005 Ezulwini Consensus and Sirte Declaration, Action 39 of the September 2024 Pact for the Future, and recent P5 positions, it compares the AU common position against the G4, Uniting for Consensus (UfC), and US-backed proposals, and sets out five concrete policy steps for the AU, Committee of Ten (C-10), and P5 members.",
+      "authors": [
+        "Mohammed Labaran Sani"
+      ],
+      "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+      "source_category": "GNEP-authored publications",
+      "publication_date": "2026-11-26",
+      "year": 2026,
+      "doc_type": "Policy briefs",
+      "doc_code": "GNEP-PB-2026-013",
+      "categories": [
+        "Environmental Governance and Policy",
+        "African Environmental Case Studies"
+      ],
+      "collections": [
+        "African Climate Policy"
+      ],
+      "keywords": [
+        "UN Security Council Reform",
+        "Ezulwini Consensus",
+        "Sirte Declaration",
+        "African Union",
+        "Committee of Ten (C-10)",
+        "Pact for the Future",
+        "Global Governance",
+        "Peacekeeping"
+      ],
+      "cover_image": "assets/real/unsc-chamber-session-cover.webp",
+      "file_url": "assets/publications/permanent-seat-for-africa-un-security-council.pdf",
+      "article_url": "permanent-seat-for-africa-un-security-council.html",
+      "file_format": "PDF",
+      "file_size": "687 KB",
+      "page_count": 7,
+      "language": "English",
+      "doi": "10.5281/zenodo.gnep.pb2026.013",
+      "citation_apa": "Sani, M. L. (2026). A Permanent Seat for Africa: Reforming the UN Security Council (Policy Brief No. GNEP-PB-2026-013). Global Nature and Environmental Partnership (GNEP Africa).",
+      "citation_chicago": "Sani, Mohammed Labaran. \"A Permanent Seat for Africa: Reforming the UN Security Council.\" Policy Brief No. GNEP-PB-2026-013. Katsina: GNEP Africa, November 26, 2026.",
+      "is_featured": true,
+      "is_external": false,
+      "external_url": "",
+      "status": "published",
+      "related_ids": [
+        "africa-by-2063-assessing-progress-priorities",
+        "rethinking-climate-finance-africa",
+        "subsidy-removal-public-accountability-policy-brief"
+      ]
+    },
+    {
+      "id": "alau-dam-flood-maiduguri-nature-based-solutions",
+      "slug": "alau-dam-flood-maiduguri-nature-based-solutions",
+      "title": "Nature-Based Solutions as a Preventive and Disaster Risk Reduction Strategy for the Alau Dam Flood Disaster in Maiduguri, Nigeria",
+      "abstract": "Triggered by prolonged heavy rainfall and the collapse of the Alau Dam in September 2024, flooding inundated over 40% of Maiduguri Municipal Council, killing 37 people, injuring 58, and displacing more than 414,000 residents (ACAPS, 2024; IOM, 2024). This policy brief demonstrates how watershed restoration, afforestation, wetland conservation, sustainable land management, and Vetiver grass (Chrysopogon zizanioides) bioengineering can complement dam rehabilitation to build long-term flood resilience.",
+      "full_description": "Authored by Mohammed Labaran Sani, this policy brief examines the compound drivers of the September 2024 Alau Dam flood disaster in Borno State, Nigeria—where aging dam infrastructure, sediment accumulation, and limited spillway capacity combined with upstream catchment deforestation and wetland encroachment. Drawing on empirical soil-and-water conservation evidence (Oku, Asubonteng & Blege, 2015; IUCN, 2020; World Bank, 2017), it outlines a 6-part integrated green-grey flood risk reduction strategy for Federal and Borno State Ministries, the Chad Basin Development Authority, NEMA, and SEMA.",
+      "authors": [
+        "Mohammed Labaran Sani"
+      ],
+      "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+      "source_category": "GNEP-authored publications",
+      "publication_date": "2026-11-26",
+      "year": 2026,
+      "doc_type": "Policy briefs",
+      "doc_code": "GNEP-PB-2026-012",
+      "categories": [
+        "Nature-Based Solutions and Ecosystem Restoration",
+        "Climate Change and Resilience",
+        "Water, Food and Energy Nexus",
+        "African Environmental Case Studies"
+      ],
+      "collections": [
+        "Climate Adaptation in Arid and Semi-Arid Regions",
+        "Community-Led Ecosystem Restoration",
+        "Water-Food-Energy Nexus",
+        "Environmental Governance in Nigeria"
+      ],
+      "keywords": [
+        "Alau Dam Flood",
+        "Maiduguri",
+        "Borno State",
+        "Nature-Based Solutions (NbS)",
+        "Vetiver Grass",
+        "Watershed Restoration",
+        "Disaster Risk Reduction",
+        "Wetland Conservation"
+      ],
+      "cover_image": "assets/real/alau-dam-maiduguri-flood-cover.webp",
+      "file_url": "assets/publications/alau-dam-flood-maiduguri-nature-based-solutions.pdf",
+      "article_url": "alau-dam-flood-maiduguri-nature-based-solutions.html",
+      "file_format": "PDF",
+      "file_size": "258 KB",
+      "page_count": 6,
+      "language": "English",
+      "doi": "10.5281/zenodo.gnep.pb2026.012",
+      "citation_apa": "Sani, M. L. (2026). Nature-Based Solutions as a Preventive and Disaster Risk Reduction Strategy for the Alau Dam Flood Disaster in Maiduguri, Nigeria (Policy Brief No. GNEP-PB-2026-012). Global Nature and Environmental Partnership (GNEP Africa).",
+      "citation_chicago": "Sani, Mohammed Labaran. \"Nature-Based Solutions as a Preventive and Disaster Risk Reduction Strategy for the Alau Dam Flood Disaster in Maiduguri, Nigeria.\" Policy Brief No. GNEP-PB-2026-012. Katsina: GNEP Africa, November 2026.",
+      "is_featured": true,
+      "is_external": false,
+      "external_url": "",
+      "status": "published",
+      "related_ids": [
+        "Silent-Struggles-Hard-Truths",
+        "integrating-nature-based-solutions-nigeria",
+        "Beyond-Rising-Waters"
+      ]
+    },
     {
       "id": "lingua-franca-hausa-into-climate",
       "slug": "lingua-franca-hausa-into-climate",
