@@ -107,15 +107,6 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -153,7 +144,9 @@
     </header>
 
     <main id="main-content">
-        <section class="gnep-inner-hero" aria-label="Page Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="events.html" aria-label="Page Header">
+            <img src="assets/africa/uganda-rwanda-virunga-highland-lake.webp" alt="Freshwater highland lake and volcanic mountain peaks in the Ugandan and Rwandan Albertine Rift highlands" class="gnep-page-hero-bg" style="object-position: center 48%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -164,6 +157,8 @@
                 </nav>
                 <h1 class="gnep-inner-hero-title">Updates &amp; Field Work</h1>
                 <p class="gnep-inner-hero-sub">Documented activities, workshops, and field programmes from GNEP Africa and its partners.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>Lake Bunyonyi & Virunga Volcanic Highlands, East Africa (Freshwater Ecosystem Context)</span></div>
             </div>
         </section>
 
@@ -658,5 +653,6 @@
         });
     });
     </script>
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

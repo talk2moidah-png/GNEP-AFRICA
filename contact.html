@@ -95,15 +95,6 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -141,7 +132,9 @@
     </header>
 
     <main id="main-content">
-        <section class="gnep-inner-hero" aria-label="Page Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="contact.html" aria-label="Page Header">
+            <img src="assets/africa/african-tropical-waterfall-rainbow-canopy.webp" alt="Panoramic African tropical waterfall with rainbow mist surrounded by dense emerald rainforest vegetation" class="gnep-page-hero-bg" style="object-position: center 45%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -152,6 +145,8 @@
                 </nav>
                 <h1 class="gnep-inner-hero-title">Contact &amp; Partner With Us</h1>
                 <p class="gnep-inner-hero-sub">We welcome collaborations with researchers, civil society organisations, schools, youth groups, and institutions across Africa.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>African Tropical Rainforest Waterfall & River Basin (Panoramic Conservation Context)</span></div>
             </div>
         </section>
 
@@ -578,5 +573,6 @@
     })();
     </script>
 
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

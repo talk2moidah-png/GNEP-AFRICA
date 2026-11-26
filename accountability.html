@@ -25,19 +25,6 @@
     <link href="css/gnep.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -75,7 +62,9 @@
     </header>
 
     <main id="main-content">
-        <section class="gnep-inner-hero" aria-label="Accountability Centre Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="accountability.html" aria-label="Accountability Centre Header">
+            <img src="assets/africa/congo-basin-dzanga-forest-elephants.webp" alt="African forest elephants in a Congo Basin rainforest river clearing surrounded by primary tropical forest" class="gnep-page-hero-bg" style="object-position: center 48%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -87,6 +76,8 @@
                 <span class="badge bg-success text-white text-uppercase px-3 py-1 mb-2">Institutional Transparency &amp; Standards</span>
                 <h1 class="gnep-inner-hero-title">Governance, Research Integrity &amp; Accountability Centre</h1>
                 <p class="gnep-inner-hero-sub">How GNEP Africa governs its research outputs, verifies field claims, classifies partner relationships, upholds community safeguarding, and maintains editorial transparency.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>Congo Basin Rainforest Clearing & Biodiversity Monitoring Context (Central Africa)</span></div>
             </div>
         </section>
 
@@ -297,5 +288,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

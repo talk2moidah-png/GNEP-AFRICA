@@ -27,19 +27,6 @@
     <link href="css/gnep.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -78,7 +65,9 @@
 
     <main id="main-content">
         <!-- Hero -->
-        <section class="gnep-inner-hero" aria-label="Climate Intelligence Platform Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="climate-intelligence.html" aria-label="Climate Intelligence Platform Header">
+            <img src="assets/africa/congo-braided-river-wetland-aerial.webp" alt="Authentic aerial photograph of an African braided river system, watershed wetlands, and tropical forest corridor" class="gnep-page-hero-bg" style="object-position: center 50%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -90,6 +79,8 @@
                 <span class="badge bg-info text-dark text-uppercase px-3 py-1 mb-2 fw-bold">Pilot Release &bull; Verified Data Provenance</span>
                 <h1 class="gnep-inner-hero-title">GNEP Climate Intelligence &amp; Policy Observatory</h1>
                 <p class="gnep-inner-hero-sub">Connecting verified GNEP field locations, published climate hazard projections, sub-national fiscal indicators, and official African climate policy documents — with explicit data provenance and limitations.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>Aerial African Braided River & Wetland Watershed Ecosystem (Geospatial Context)</span></div>
             </div>
         </section>
 
@@ -600,5 +591,6 @@
         });
     })();
     </script>
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

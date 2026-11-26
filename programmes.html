@@ -29,10 +29,6 @@
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
             <div class="container">
@@ -68,7 +64,9 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="gnep-inner-hero" aria-label="Programmes and Impact Observatory Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="programmes.html" aria-label="Programmes and Impact Observatory Header">
+            <img src="assets/africa/gabon-ivindo-rainforest-waterfalls.webp" alt="Gabonese tropical rainforest waterfalls cascading through dense emerald forest canopy in Central Africa" class="gnep-page-hero-bg" style="object-position: center 45%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -80,6 +78,8 @@
                 <span class="badge bg-success text-white text-uppercase px-3 py-1 mb-2">Institutional Portfolio &amp; Results Governance</span>
                 <h1 class="gnep-inner-hero-title">Programmes &amp; Impact Observatory</h1>
                 <p class="gnep-inner-hero-sub">Structured records of GNEP Africa's field initiatives, capacity-building workshops, ongoing programmes, and planned strategic frameworks — governed by strict output-to-outcome evidence standards.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>Gabonese Ivindo / Kongou Rainforest Waterfall Ecosystem (African Restoration Context)</span></div>
             </div>
         </section>
 
@@ -402,7 +402,6 @@
     </main>
 
     <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
-    <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
     <footer class="gnep-footer" id="contact" aria-label="Institutional Footer and Accountability Navigation">
         <div class="container">
             <div class="row g-4">
@@ -488,12 +487,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-    </div>
-
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
     <script>
     document.querySelectorAll('.prog-filter-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
@@ -514,5 +507,6 @@
         });
     });
     </script>
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

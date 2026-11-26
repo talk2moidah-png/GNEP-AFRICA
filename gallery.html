@@ -45,18 +45,6 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <!-- Spinner End -->
-
-    <!-- Header & Navigation Start -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -98,7 +86,9 @@
     <main id="main-content">
 
         <!-- Page Breadcrumb Banner Start -->
-        <section class="gallery-hero-banner" aria-label="Gallery Introduction">
+        <section class="gallery-hero-banner gnep-page-hero" data-page-hero="gallery.html" aria-label="Gallery Introduction">
+            <img src="assets/real/gallery/gnep-tree-planting-24-full.webp" alt="Authenticated GNEP Africa field photograph of the 20 CSO representatives and youth restoration cohort in Katsina State" class="gnep-page-hero-bg" style="object-position: center 32%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="container text-center">
                 <span class="gallery-hero-badge"><i class="fas fa-camera me-1" aria-hidden="true"></i> Documented Impact &bull; Real Field Records</span>
                 <h1 class="gallery-hero-title">GNEP Field Gallery</h1>
@@ -112,6 +102,8 @@
                         <li class="breadcrumb-item active text-white" aria-current="page">Field Gallery</li>
                     </ol>
                 </nav>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-camera-retro text-success me-1" aria-hidden="true"></i><strong>Authentic GNEP Field Documentation:</strong> <span>Authentic GNEP Field Documentation • Katsina State Cohort (© GNEP & The Green Minds Space)</span></div>
             </div>
         </section>
         <!-- Page Breadcrumb Banner End -->
@@ -1041,5 +1033,6 @@
         });
     </script>
 
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

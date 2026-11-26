@@ -2476,3 +2476,108 @@ header.fixed-top.gnep-vanam-header.nav-scrolled-3d {
         padding: 115px 0 44px 0 !important;
     }
 }
+
+
+/* ==========================================================================
+   UNIVERSAL PAGE HERO & AFRICAN BIODIVERSITY VISUAL ARCHITECTURE (.gnep-page-hero)
+   Desktop: ~380-520px | Tablet: responsive | Mobile: ~300-380px
+   ========================================================================== */
+.gnep-page-hero {
+    position: relative !important;
+    min-height: 430px !important;
+    padding: 132px 0 56px 0 !important;
+    background-color: #071A0F !important;
+    color: #FFFFFF !important;
+    overflow: hidden !important;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.gnep-page-hero-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 1 !important;
+    pointer-events: none;
+    transition: transform 8s ease;
+}
+
+.gnep-page-hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background:
+        linear-gradient(135deg, rgba(5, 19, 11, 0.88) 0%, rgba(11, 37, 22, 0.72) 52%, rgba(7, 25, 15, 0.58) 100%),
+        linear-gradient(180deg, rgba(4, 15, 9, 0.56) 0%, rgba(4, 15, 9, 0.24) 42%, rgba(4, 15, 9, 0.88) 100%) !important;
+    z-index: 2 !important;
+    pointer-events: none;
+}
+
+.gnep-page-hero > .container,
+.gnep-page-hero-container {
+    position: relative !important;
+    z-index: 4 !important;
+    width: 100%;
+}
+
+.gnep-page-hero-kicker {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.2);
+    color: #A7F3D0;
+    border: 1px solid rgba(16, 185, 129, 0.42);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 0.65rem;
+}
+
+.gnep-page-hero h1,
+.gnep-page-hero .gnep-inner-hero-title,
+.gnep-page-hero .kh-hero-title,
+.gnep-page-hero-title {
+    color: #FFFFFF !important;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.gnep-page-hero p,
+.gnep-page-hero .gnep-inner-hero-sub,
+.gnep-page-hero-desc {
+    color: rgba(255, 255, 255, 0.88) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.gnep-page-hero-credit {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 1.15rem;
+    padding: 4px 11px;
+    border-radius: 6px;
+    background: rgba(4, 15, 9, 0.68);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #CBD5E1;
+    font-size: 0.73rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 991.98px) {
+    .gnep-page-hero {
+        min-height: 360px !important;
+        padding: 116px 0 44px 0 !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .gnep-page-hero {
+        min-height: 320px !important;
+        padding: 104px 0 36px 0 !important;
+    }
+}

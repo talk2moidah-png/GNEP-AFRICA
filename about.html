@@ -113,15 +113,6 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <!-- Skip to main content -->
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
@@ -161,7 +152,9 @@
     <main id="main-content">
 
         <!-- 1. Inner Page Hero Banner -->
-        <section class="gnep-inner-hero" aria-label="Page Header">
+        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="about.html" aria-label="Page Header">
+            <img src="assets/africa/kilimanjaro-savannah-elephants-panorama.webp" alt="Panoramic African natural landscape showing African elephants walking across savannah toward snow-capped Mount Kilimanjaro" class="gnep-page-hero-bg" style="object-position: center 42%;" width="1600" height="720" fetchpriority="high">
+            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
             <div class="gnep-inner-hero-overlay"></div>
             <div class="container gnep-inner-hero-content">
                 <nav aria-label="breadcrumb">
@@ -172,6 +165,8 @@
                 </nav>
                 <h1 class="gnep-inner-hero-title">About GNEP Africa</h1>
                 <p class="gnep-inner-hero-sub">A youth-led initiative connecting climate research, policy, and education with practical community action across Africa.</p>
+            
+                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>East African Kilimanjaro & Amboseli Biosphere Panorama (Regional Ecological Context)</span></div>
             </div>
         </section>
 
@@ -975,5 +970,6 @@
     <script src="lib/gsap/gsap.min.js"></script>
     <script src="lib/gsap/ScrollTrigger.min.js"></script>
     <script src="js/gnep-3d.js"></script>
+    <script src="js/page-hero.js"></script>
 </body>
 </html>

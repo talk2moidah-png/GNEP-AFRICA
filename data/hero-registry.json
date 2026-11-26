@@ -1,0 +1,577 @@
+{
+  "schema_version": "2.1.0",
+  "policy": "Universal PageHero Requirement: Every existing and future GNEP Africa webpage must begin with a dedicated African environmental or authenticated GNEP field photographic hero section immediately below the primary navigation. External African nature photographs are explicitly badged as Regional Ecological Context and never presented as GNEP field activities.",
+  "dimensions": {
+    "desktop_height": "380px - 520px (100vh on index.html)",
+    "tablet_height": "340px - 420px",
+    "mobile_height": "300px - 380px"
+  },
+  "future_page_archetypes": {
+    "homepage": "assets/real/hero-forest-valley.webp",
+    "about-gnep": "assets/africa/kilimanjaro-savannah-elephants-panorama.webp",
+    "mission-and-vision": "assets/africa/afromontane-misty-forest-canopy.webp",
+    "community-and-schools": "assets/real/schools-tree-planting.webp",
+    "civil-society-and-institutions": "assets/real/cso-workshop-group.webp",
+    "research-and-policy": "assets/real/policy-brief-research.webp",
+    "climate-action": "assets/real/climate-finance-wfp-drought.webp",
+    "nature-and-ecosystem-restoration": "assets/real/hero-tree-planting.webp",
+    "biodiversity-conservation": "assets/africa/congo-basin-dzanga-forest-elephants.webp",
+    "youth-leadership": "assets/real/gallery/gnep-schools-05-full.webp",
+    "renewable-energy": "assets/real/climate-finance-undp-solar.webp",
+    "wefe-nexus": "assets/africa/west-africa-coastal-mangrove-estuary.webp",
+    "projects-and-impact-observatory": "assets/africa/gabon-ivindo-rainforest-waterfalls.webp",
+    "climate-intelligence-hub": "assets/africa/congo-braided-river-wetland-aerial.webp",
+    "policy-observatory": "assets/africa/african-acacia-savannah-sunrise.webp",
+    "knowledge-hub": "assets/africa/congo-basin-misty-river-rainforest-aerial.webp",
+    "policy-briefs": "assets/real/climate-finance-gabon-coast.webp",
+    "newsroom-and-events": "assets/africa/uganda-rwanda-virunga-highland-lake.webp",
+    "field-gallery": "assets/real/gallery/gnep-tree-planting-24-full.webp",
+    "partners": "assets/real/field-restoration.webp",
+    "leadership": "assets/real/cso-workshop-speaker-action.webp",
+    "accountability-centre": "assets/africa/congo-basin-dzanga-forest-elephants.webp",
+    "safeguarding": "assets/real/lingua-franca-hausa-classroom.webp",
+    "contact": "assets/africa/african-tropical-waterfall-rainbow-canopy.webp"
+  },
+  "pages": {
+    "index.html": {
+      "page": "index.html",
+      "archetype": "homepage",
+      "heroImage": "assets/real/hero-forest-valley.webp",
+      "secondaryImage": "assets/africa/african-tropical-waterfall-rainbow-canopy.webp",
+      "imagePosition": "center center",
+      "imageAlt": "Emerald African rainforest valley with misty canopy, waterfall, and turquoise river system",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "African Tropical Rainforest & River Ecosystem Collection (GNEP Visual Identity)",
+      "license": "Curated Institutional Editorial Licence",
+      "kicker": "Global Nature & Environmental Partnership (GNEP Africa)",
+      "title": "Building Africa's Environmental Resilience.",
+      "description": "We are dedicated to advancing climate resilience, environmental governance, biodiversity conservation, and nature-based solutions across Africa for generations to come."
+    },
+    "about.html": {
+      "page": "about.html",
+      "archetype": "about-gnep",
+      "heroImage": "assets/africa/kilimanjaro-savannah-elephants-panorama.webp",
+      "imagePosition": "center 42%",
+      "imageAlt": "Panoramic African natural landscape showing African elephants walking across savannah toward snow-capped Mount Kilimanjaro",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "East African Kilimanjaro & Amboseli Biosphere Panorama (Regional Ecological Context)",
+      "license": "Open Editorial / Commons Attribution",
+      "kicker": "Institutional Profile & Continental Outlook",
+      "title": "About GNEP Africa",
+      "description": "Rooted in Katsina State, Nigeria, with a pan-African outlook—bridging environmental research, climate policy, youth leadership, and practical community conservation.",
+      "breadcrumb": "About GNEP",
+      "ctaPrimary": {
+        "label": "Explore Our Programmes",
+        "url": "programmes.html"
+      },
+      "ctaSecondary": {
+        "label": "Governance & Accountability",
+        "url": "accountability.html"
+      }
+    },
+    "founder.html": {
+      "page": "founder.html",
+      "archetype": "leadership",
+      "heroImage": "assets/real/cso-workshop-speaker-action.webp",
+      "imagePosition": "center 28%",
+      "imageAlt": "Mohammed Labaran Sani facilitating the 2026 Civil Society Policy and Advocacy Workshop in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field & Institutional Photo • Katsina State CSO Workshop (2026)",
+      "license": "© GNEP Africa / The Green Minds Space",
+      "kicker": "Executive Leadership & Academic Portfolio",
+      "title": "Mohammed Labaran Sani",
+      "description": "Founder & Project Lead of GNEP Africa, Nigerian climate policy researcher, and MSc Climate Change Policy Scholar at the Pan-African University (PAUWES), Algeria.",
+      "breadcrumb": "Founder & Leadership",
+      "ctaPrimary": {
+        "label": "View Research Portfolio",
+        "url": "knowledge-hub.html"
+      },
+      "ctaSecondary": {
+        "label": "Partner With Us",
+        "url": "contact.html"
+      }
+    },
+    "accountability.html": {
+      "page": "accountability.html",
+      "archetype": "accountability-centre",
+      "heroImage": "assets/africa/congo-basin-dzanga-forest-elephants.webp",
+      "imagePosition": "center 48%",
+      "imageAlt": "African forest elephants in a Congo Basin rainforest river clearing surrounded by primary tropical forest",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Congo Basin Rainforest Clearing & Biodiversity Monitoring Context (Central Africa)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "GNEP Africa 2.0 • Institutional Transparency & Safeguarding",
+      "title": "Governance, Research Integrity & Accountability Centre",
+      "description": "Transparent disclosure of GNEP Africa's organisational governance, partnership classification standards, research verification rules, child and youth safeguarding commitments, and public corrections procedure.",
+      "breadcrumb": "Governance & Accountability",
+      "ctaPrimary": {
+        "label": "Research Standards",
+        "url": "#research-standards"
+      },
+      "ctaSecondary": {
+        "label": "Safeguarding Protocol",
+        "url": "#safeguarding"
+      }
+    },
+    "programmes.html": {
+      "page": "programmes.html",
+      "archetype": "projects-and-impact-observatory",
+      "heroImage": "assets/africa/gabon-ivindo-rainforest-waterfalls.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "Gabonese tropical rainforest waterfalls cascading through dense emerald forest canopy in Central Africa",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Gabonese Ivindo / Kongou Rainforest Waterfall Ecosystem (African Restoration Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "GNEP Africa 2.0 • Transparent Results Architecture",
+      "title": "Programmes & Impact Observatory",
+      "description": "Structured portfolio disclosure separating completed field deliverables, active ongoing programmes, and planned concepts—with a strict results-chain distinction between direct outputs and long-term impact.",
+      "breadcrumb": "Programmes & Impact",
+      "ctaPrimary": {
+        "label": "Filter Project Portfolio",
+        "url": "#project-portfolio"
+      },
+      "ctaSecondary": {
+        "label": "Results-Chain Methodology",
+        "url": "#results-chain"
+      }
+    },
+    "climate-intelligence.html": {
+      "page": "climate-intelligence.html",
+      "archetype": "climate-intelligence-hub",
+      "heroImage": "assets/africa/congo-braided-river-wetland-aerial.webp",
+      "imagePosition": "center 50%",
+      "imageAlt": "Authentic aerial photograph of an African braided river system, watershed wetlands, and tropical forest corridor",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Aerial African Braided River & Wetland Watershed Ecosystem (Geospatial Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "GNEP Africa 2.0 • Geospatial & Policy Intelligence",
+      "title": "Climate Intelligence & African Climate Policy Observatory",
+      "description": "Integrating geo-referenced GNEP field locations with verifiable regional climate hazard baselines, adaptation finance indicators, and statutory policy tracking across Nigeria and Africa.",
+      "breadcrumb": "Climate Intelligence",
+      "ctaPrimary": {
+        "label": "Interactive Field & Hazard Map",
+        "url": "#geospatial-observatory"
+      },
+      "ctaSecondary": {
+        "label": "African Policy Observatory",
+        "url": "#policy-observatory"
+      }
+    },
+    "knowledge-hub.html": {
+      "page": "knowledge-hub.html",
+      "archetype": "knowledge-hub",
+      "heroImage": "assets/africa/congo-basin-misty-river-rainforest-aerial.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "Aerial misty sunrise over the Congo Basin tropical rainforest canopy and winding river watershed",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Congo Basin Rainforest Canopy & River System at Dawn (African Biodiversity Heritage)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "Open-Access Research & Policy Repository",
+      "title": "GNEP Africa Knowledge Hub",
+      "description": "Explore 11 open-access policy briefs, field dossiers, climate finance analyses, urban resilience studies, and bilingual Hausa climate advisories—each available as a full webpage and downloadable typeset PDF.",
+      "breadcrumb": "Knowledge Hub",
+      "ctaPrimary": {
+        "label": "Browse All 11 Publications",
+        "url": "#kh-grid"
+      },
+      "ctaSecondary": {
+        "label": "Climate Policy Observatory",
+        "url": "climate-intelligence.html#policy-observatory"
+      }
+    },
+    "publication.html": {
+      "page": "publication.html",
+      "archetype": "mission-and-vision",
+      "heroImage": "assets/africa/afromontane-misty-forest-canopy.webp",
+      "imagePosition": "center 40%",
+      "imageAlt": "Natural morning mist rising through dense Afromontane emerald rainforest canopy peaks",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Afromontane Misty Rainforest Canopy Reserve (African Forest Ecosystem Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "GNEP Open-Access Publication Dossier",
+      "title": "GNEP Africa Publication Repository",
+      "description": "Evidence-informed policy briefs, field evaluation reports, and multilingual climate advisories connecting African environmental science with institutional delivery.",
+      "breadcrumb": "Publication Viewer",
+      "ctaPrimary": {
+        "label": "Back to Knowledge Hub",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "events.html": {
+      "page": "events.html",
+      "archetype": "newsroom-and-events",
+      "heroImage": "assets/africa/uganda-rwanda-virunga-highland-lake.webp",
+      "imagePosition": "center 48%",
+      "imageAlt": "Freshwater highland lake and volcanic mountain peaks in the Ugandan and Rwandan Albertine Rift highlands",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Lake Bunyonyi & Virunga Volcanic Highlands, East Africa (Freshwater Ecosystem Context)",
+      "license": "Wikimedia Commons / CC BY-SA Attribution",
+      "kicker": "Workshops, Field Drives & Institutional Dialogues",
+      "title": "Events, Workshops & Institutional Engagement",
+      "description": "Documented civil society capacity-building workshops, community reforestation drives, and participation in regional climate education frameworks.",
+      "breadcrumb": "Events & Workshops",
+      "ctaPrimary": {
+        "label": "View Programme Portfolio",
+        "url": "programmes.html"
+      },
+      "ctaSecondary": {
+        "label": "28-Photo Field Gallery",
+        "url": "gallery.html"
+      }
+    },
+    "gallery.html": {
+      "page": "gallery.html",
+      "archetype": "field-gallery",
+      "heroImage": "assets/real/gallery/gnep-tree-planting-24-full.webp",
+      "imagePosition": "center 32%",
+      "imageAlt": "Authenticated GNEP Africa field photograph of the 20 CSO representatives and youth restoration cohort in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • Katsina State Cohort (© GNEP & The Green Minds Space)",
+      "license": "© GNEP Africa / AYINET / The Green Minds Space",
+      "kicker": "Authenticated Field Documentation",
+      "title": "Verified Field Photo Repository (28 Photos)",
+      "description": "Every photograph in this repository is authentic field documentation from GNEP Africa's tree-planting drives, school climate clubs, and civil society workshops in Katsina State.",
+      "breadcrumb": "Field Gallery",
+      "ctaPrimary": {
+        "label": "Explore Programmes",
+        "url": "programmes.html"
+      }
+    },
+    "contact.html": {
+      "page": "contact.html",
+      "archetype": "contact",
+      "heroImage": "assets/africa/african-tropical-waterfall-rainbow-canopy.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "Panoramic African tropical waterfall with rainbow mist surrounded by dense emerald rainforest vegetation",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "African Tropical Rainforest Waterfall & River Basin (Panoramic Conservation Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "Institutional Partnerships & Research Collaboration",
+      "title": "Contact & Partnership Desk",
+      "description": "Connect with GNEP Africa in Katsina State, Nigeria, for research collaboration, community tree-planting partnerships, civil society workshops, or policy inquiries.",
+      "breadcrumb": "Contact Us",
+      "ctaPrimary": {
+        "label": "Email Partnership Desk",
+        "url": "mailto:gnep.partnership@gmail.com"
+      }
+    },
+    "nigeria-heat-emergency-policy-brief.html": {
+      "page": "nigeria-heat-emergency-policy-brief.html",
+      "archetype": "climate-action",
+      "heroImage": "assets/real/climate-finance-wfp-drought.webp",
+      "imagePosition": "center 38%",
+      "imageAlt": "African agricultural landscape experiencing extreme heat and drought stress",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Photo: WFP / Gabriela Vivacqua (Cited in GNEP Policy Brief on Extreme Heat & Drought Vulnerability)",
+      "license": "Editorial Policy Brief Citation",
+      "kicker": "Urgent Climate Health & Adaptation Policy Brief",
+      "title": "31,400 Lives at Risk? Nigeria's Heat Emergency and How to Prepare Before the Next Super El Niño",
+      "description": "Evidence synthesis on extreme thermal anomalies across northern Nigeria and the Sahel, school and outdoor worker heat thresholds, and early-warning heat action plans.",
+      "breadcrumb": "Nigeria Heat Emergency Brief",
+      "ctaPrimary": {
+        "label": "Download Typeset PDF",
+        "url": "assets/publications/nigeria-heat-emergency-policy-brief.pdf"
+      },
+      "ctaSecondary": {
+        "label": "All Policy Briefs",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "subsidy-removal-public-accountability-policy-brief.html": {
+      "page": "subsidy-removal-public-accountability-policy-brief.html",
+      "archetype": "policy-observatory",
+      "heroImage": "assets/africa/african-acacia-savannah-sunrise.webp",
+      "imagePosition": "center 48%",
+      "imageAlt": "Golden sunrise over an African acacia savannah with giraffes and elephants symbolizing public stewardship",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "African Savannah Ecosystem at Sunrise (Governance & Public Stewardship Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "Economic Governance & Fiscal Accountability Policy Brief • Oct 2026",
+      "title": "Subsidy Removal and the Crisis of Public Accountability in Nigeria",
+      "description": "Why Weak Institutions Undermine Economic Reform and How Transparency Can Rebuild Trust — authored by Muhammad Garba Isah.",
+      "breadcrumb": "Subsidy Reform Policy Brief",
+      "ctaPrimary": {
+        "label": "Download 12-Page PDF (314 KB)",
+        "url": "assets/publications/subsidy-removal-public-accountability-policy-brief.pdf"
+      },
+      "ctaSecondary": {
+        "label": "All Policy Briefs",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "rethinking-climate-finance-africa.html": {
+      "page": "rethinking-climate-finance-africa.html",
+      "archetype": "policy-briefs",
+      "heroImage": "assets/real/climate-finance-gabon-coast.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "Aerial view of the rainforest coastline at Pongara National Park, Gabon, representing African debt-for-nature and climate finance",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "Pongara National Park Coastline, Gabon (© Roshni Lodhia • Cited in GNEP Climate Finance Brief)",
+      "license": "Documented Policy Brief Figure Attribution",
+      "kicker": "Climate Finance Policy Brief • Oct 15, 2026",
+      "title": "Rethinking Climate Finance for Africa: From Pledges to Delivery",
+      "description": "Examining Africa's US$2.8 trillion NDC financing requirement, sovereign debt service crowding out adaptation, debt-for-nature swaps, and grant-equivalent delivery — by Mohammed Labaran Sani & Amina Baala.",
+      "breadcrumb": "Rethinking Climate Finance",
+      "ctaPrimary": {
+        "label": "Download Typeset PDF (1.37 MB)",
+        "url": "assets/publications/rethinking-climate-finance-africa.pdf"
+      },
+      "ctaSecondary": {
+        "label": "All Policy Briefs",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "adapting-rotterdam-sponge-city-lagos.html": {
+      "page": "adapting-rotterdam-sponge-city-lagos.html",
+      "archetype": "wefe-nexus",
+      "heroImage": "assets/africa/west-africa-coastal-mangrove-estuary.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "Aerial view of a West African coastal mangrove estuary and river delta meeting the Atlantic Ocean",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "West African Coastal Mangrove & Estuary Wetland Buffer (Coastal Flood Resilience Context)",
+      "license": "Open Conservation Editorial Attribution",
+      "kicker": "Urban Flood Resilience & Nature-Based Solutions Brief • Oct 13, 2026",
+      "title": "Adapting Rotterdam's Sponge City Model for Urban Flood Resilience in Lagos",
+      "description": "How wetland preservation, permeable urban corridors, and decentralized retention basins can mitigate Lagos's US$4 billion annual flood losses — by Mohammed Labaran Sani.",
+      "breadcrumb": "Lagos Sponge City Brief",
+      "ctaPrimary": {
+        "label": "Download Typeset PDF (854 KB)",
+        "url": "assets/publications/adapting-rotterdam-sponge-city-lagos.pdf"
+      },
+      "ctaSecondary": {
+        "label": "All Policy Briefs",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "lingua-franca-hausa-into-climate.html": {
+      "page": "lingua-franca-hausa-into-climate.html",
+      "archetype": "safeguarding",
+      "heroImage": "assets/real/lingua-franca-hausa-classroom.webp",
+      "imagePosition": "center 35%",
+      "imageAlt": "Northern Nigerian classroom and community learning environment for Hausa-language climate communication",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "GNEP Linguistic Inclusion Advisory Figure • Classroom & Community Literacy Context",
+      "license": "GNEP Advisory Figure Attribution",
+      "kicker": "Climate Communication & Linguistic Inclusion Advisory • Nov 11, 2026",
+      "title": "Lingua Franca — Incorporating Hausa into Climate Communication",
+      "description": "Bridging the linguistic divide in West African climate science by translating meteorological warnings, adaptation strategies, and environmental governance into Hausa for 80M–100M+ speakers.",
+      "breadcrumb": "Hausa Climate Communication",
+      "ctaPrimary": {
+        "label": "Download Typeset PDF (639 KB)",
+        "url": "assets/publications/lingua-franca-hausa-into-climate.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Read Hausa El Niño Guide",
+        "url": "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html"
+      }
+    },
+    "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html": {
+      "page": "el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html",
+      "archetype": "climate-action-hausa",
+      "heroImage": "assets/real/el-nino-hausa-flood.webp",
+      "imagePosition": "center 40%",
+      "imageAlt": "Ambaliyar ruwa da sauyin yanayi a Najeriya — Hausa El Niño Climate Advisory illustration",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "GNEP Hausa Climate Advisory Archive • Hydrological & Thermal Risk Documentation",
+      "license": "GNEP Advisory Figure Attribution",
+      "kicker": "Takardar Bayani kan Sauyin Yanayi (Hausa Climate Advisory) • Oct 30, 2026",
+      "title": "EL NIÑO: Me Ya Kamata Kowane Ɗan Najeriya Ya Sani?",
+      "description": "Cikakken bayani cikin harshen Hausa kan guguwar El Niño, zafin rana mai tsanani, ambaliyar ruwa, da matakan kariya ga manoma, makarantu, da al'ummomin Najeriya.",
+      "breadcrumb": "El Niño (Hausa Advisory)",
+      "ctaPrimary": {
+        "label": "Sauke Cikakken PDF (1.08 MB)",
+        "url": "assets/publications/el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Knowledge Hub",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "tree-planting-150-seedlings.html": {
+      "page": "tree-planting-150-seedlings.html",
+      "archetype": "nature-and-ecosystem-restoration",
+      "heroImage": "assets/real/hero-tree-planting.webp",
+      "imagePosition": "center 32%",
+      "imageAlt": "Authentic GNEP and AYINET field photograph of youth planting 150 economic tree seedlings in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • Katsina 150 Economic Tree Seedling Drive (© GNEP & AYINET)",
+      "license": "© GNEP Africa & AYINET",
+      "kicker": "Verified Field Dossier • Project GNEP-PRJ-2026-001",
+      "title": "150 Economic Tree Seedlings Planted Across Katsina State",
+      "description": "Documented community agroforestry and school micro-shelterbelt restoration drive delivered jointly by GNEP Africa and implementation partner AYINET in Katsina State.",
+      "breadcrumb": "150 Tree Seedlings Drive",
+      "ctaPrimary": {
+        "label": "Download Field Report PDF",
+        "url": "assets/publications/gnep-tree-planting-field-report-2026.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Programmes Observatory",
+        "url": "programmes.html"
+      }
+    },
+    "cso-policy-workshop.html": {
+      "page": "cso-policy-workshop.html",
+      "archetype": "civil-society-and-institutions",
+      "heroImage": "assets/real/cso-workshop-group.webp",
+      "imagePosition": "center 30%",
+      "imageAlt": "Authentic GNEP and The Green Minds Space photograph of 20 civil society representatives at the Katsina policy workshop",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Workshop Documentation • Katsina CSO Cohort (© GNEP & The Green Minds Space)",
+      "license": "© GNEP Africa & The Green Minds Space",
+      "kicker": "Verified Capacity Report • Project GNEP-PRJ-2026-002",
+      "title": "Strengthening Civil Society Capacity in Policy Briefs, Proposals & AI Research Tools",
+      "description": "Hands-on technical training for 20 civil society organization representatives in Katsina State, co-hosted by GNEP Africa and The Green Minds Space.",
+      "breadcrumb": "CSO Policy Workshop",
+      "ctaPrimary": {
+        "label": "Download Workshop Report PDF",
+        "url": "assets/publications/cso-policy-brief-workshop.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Programmes Observatory",
+        "url": "programmes.html"
+      }
+    },
+    "youth-environmental-action.html": {
+      "page": "youth-environmental-action.html",
+      "archetype": "community-and-schools",
+      "heroImage": "assets/real/schools-tree-planting.webp",
+      "imagePosition": "center 28%",
+      "imageAlt": "Authentic GNEP field photograph of secondary school students holding economic tree seedlings in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • Katsina School Climate Champions (© GNEP Africa)",
+      "license": "© GNEP Africa",
+      "kicker": "Youth Leadership & School Eco-Literacy • Project GNEP-PRJ-2026-004",
+      "title": "Why Youth Environmental Action Matters in Building Climate-Resilient Communities",
+      "description": "Equipping secondary school students and young environmental champions in northern Nigeria with hands-on agroforestry skills and ecological literacy.",
+      "breadcrumb": "Youth Environmental Action",
+      "ctaPrimary": {
+        "label": "Download Climate Clubs Guide PDF",
+        "url": "assets/publications/youth-led-environmental-action.pdf"
+      },
+      "ctaSecondary": {
+        "label": "View Field Gallery",
+        "url": "gallery.html"
+      }
+    },
+    "turning-research-into-action.html": {
+      "page": "turning-research-into-action.html",
+      "archetype": "research-and-policy",
+      "heroImage": "assets/real/policy-brief-research.webp",
+      "imagePosition": "center 28%",
+      "imageAlt": "Authentic GNEP research presentation translating climate science and flood disaster studies into actionable policy briefs",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Research Documentation • Flood Disaster Policy Brief Presentation (© PAUWES / GNEP)",
+      "license": "© GNEP Africa",
+      "kicker": "Research-to-Action Methodology Framework",
+      "title": "Turning Climate Research into Local Action: Bridging the Policy-Practice Divide",
+      "description": "How African researchers, civil society practitioners, and municipal institutions can translate empirical climate datasets into community-level adaptation delivery.",
+      "breadcrumb": "Turning Research into Action",
+      "ctaPrimary": {
+        "label": "Download Framework PDF",
+        "url": "assets/publications/turning-research-into-action.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Knowledge Hub",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "communicating-environmental-issues.html": {
+      "page": "communicating-environmental-issues.html",
+      "archetype": "partners",
+      "heroImage": "assets/real/field-restoration.webp",
+      "imagePosition": "center 35%",
+      "imageAlt": "Authentic GNEP community tree-planting and grassroots environmental engagement in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • Community Restoration Engagement in Katsina (© GNEP & AYINET)",
+      "license": "© GNEP Africa & AYINET",
+      "kicker": "Grassroots Climate Communication Advisory",
+      "title": "Communicating Environmental Issues in Ways Communities Can Understand and Use",
+      "description": "Practical principles for translating technical climate terminology into culturally grounded, actionable guidance for farmers, educators, and local leaders.",
+      "breadcrumb": "Communicating Environmental Issues",
+      "ctaPrimary": {
+        "label": "Download Communication Brief PDF",
+        "url": "assets/publications/communicating-environmental-issues.pdf"
+      },
+      "ctaSecondary": {
+        "label": "Hausa Climate Advisory",
+        "url": "lingua-franca-hausa-into-climate.html"
+      }
+    },
+    "privacy.html": {
+      "page": "privacy.html",
+      "archetype": "biodiversity-conservation",
+      "heroImage": "assets/real/gallery/gnep-schools-05-full.webp",
+      "imagePosition": "center 30%",
+      "imageAlt": "Authentic GNEP school climate champions photograph illustrating ethical media consent and youth safeguarding",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • School Safeguarding & Media Ethics Standard (© GNEP Africa)",
+      "license": "© GNEP Africa",
+      "kicker": "Data Protection & Ethical Media Stewardship",
+      "title": "Privacy & Data Protection Policy",
+      "description": "How GNEP Africa protects visitor privacy through zero-cookie static architecture, transparent email inquiry handling, and strict community photography consent standards.",
+      "breadcrumb": "Privacy Policy",
+      "ctaPrimary": {
+        "label": "Accountability & Safeguarding Centre",
+        "url": "accountability.html"
+      }
+    },
+    "terms.html": {
+      "page": "terms.html",
+      "archetype": "renewable-energy",
+      "heroImage": "assets/real/climate-finance-undp-solar.webp",
+      "imagePosition": "center 45%",
+      "imageAlt": "African solar renewable energy infrastructure illustrating sustainable development and open-access policy knowledge",
+      "isGnepFieldPhoto": false,
+      "imageCredit": "African Renewable Energy Infrastructure Context (UNDP / Open Knowledge Citation)",
+      "license": "Editorial Policy Citation",
+      "kicker": "Open-Access Research Reuse & Institutional Terms",
+      "title": "Terms of Use & Open-Access Attribution",
+      "description": "Open-access citation licence for GNEP Africa's policy briefs and datasets, alongside our explicit institutional independence and non-affiliation notice.",
+      "breadcrumb": "Terms of Use",
+      "ctaPrimary": {
+        "label": "Explore Knowledge Hub",
+        "url": "knowledge-hub.html"
+      }
+    },
+    "accessibility.html": {
+      "page": "accessibility.html",
+      "archetype": "youth-leadership",
+      "heroImage": "assets/real/gallery/gnep-workshops-01-full.webp",
+      "imagePosition": "center 35%",
+      "imageAlt": "Authentic GNEP workshop breakout session illustrating inclusive digital access and civil society collaboration",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Workshop Documentation • Digital & Civic Inclusion Cohort (© GNEP Africa)",
+      "license": "© GNEP Africa & The Green Minds Space",
+      "kicker": "WCAG 2.2 AA Conformance & Inclusive Access",
+      "title": "Accessibility Statement",
+      "description": "Our commitment to ensuring GNEP Africa's research, bilingual Hausa/English advisories, and geospatial observatories remain accessible to all readers across every device.",
+      "breadcrumb": "Accessibility Statement",
+      "ctaPrimary": {
+        "label": "Report an Accessibility Barrier",
+        "url": "contact.html"
+      }
+    },
+    "404.html": {
+      "page": "404.html",
+      "archetype": "system-recovery",
+      "heroImage": "assets/real/gallery/gnep-tree-planting-09-full.webp",
+      "imagePosition": "center 35%",
+      "imageAlt": "Authentic GNEP field restoration activity in Katsina State",
+      "isGnepFieldPhoto": true,
+      "imageCredit": "Authentic GNEP Field Documentation • Katsina Restoration Corridor (© GNEP & AYINET)",
+      "license": "© GNEP Africa & AYINET",
+      "kicker": "HTTP 404 • Route Not Found",
+      "title": "Page Not Found",
+      "description": "The page or publication link you requested could not be found. Use the institutional links below to return to our homepage, Knowledge Hub, or Programmes Observatory.",
+      "breadcrumb": "404 Error",
+      "ctaPrimary": {
+        "label": "Return to Homepage",
+        "url": "index.html"
+      },
+      "ctaSecondary": {
+        "label": "Open Knowledge Hub",
+        "url": "knowledge-hub.html"
+      }
+    }
+  }
+}
