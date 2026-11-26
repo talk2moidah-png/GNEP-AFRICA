@@ -6,11 +6,11 @@
 (function (window, document) {
     'use strict';
 
-    const STORAGE_KEY = 'gnep_knowledge_hub_v9_15_pubs_umfi';
-    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); } catch(e) {}
+    const STORAGE_KEY = 'gnep_knowledge_hub_v10_16_pubs';
+    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); } catch(e) {}
     const ADMIN_SESSION_KEY = 'gnep_kh_admin_auth';
     const SUBSCRIBERS_KEY = 'gnep_kh_subscribers';
-    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v9';
+    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v10';
 
     const KnowledgeHub = {
         data: {
@@ -1816,7 +1816,7 @@
         getEmbeddedFallbackData() {
             return {
                 "version": "1.0.0",
-                "updated_at": "2026-11-26T16:05:00Z",
+                "updated_at": "2026-11-26T16:35:00Z",
                 "categories": [
                                 "Climate Change and Resilience",
                                 "Environmental Governance and Policy",
@@ -1890,6 +1890,62 @@
                                 }
                 ],
                 "publications": [
+                                {
+                                                "id": "addressing-structural-gaps-african-climate-education",
+                                                "slug": "addressing-structural-gaps-african-climate-education",
+                                                "title": "Addressing Five Structural Gaps in African Climate Education Systems: Policy Recommendations for Governments",
+                                                "abstract": "Climate shocks already interrupt learning across Africa—disrupting 20 million students in West, Central, Eastern, and Southern Africa in 2024 and causing US$1.3 billion in direct education damage (2005–2024)—yet education systems remain under-equipped. This brief synthesizes UNESCO, UNICEF, IPCC AR6, and NAP Global Network data across five gaps (curricula, teacher readiness, resilient schools, climate finance, and African-led research) and sets out a sequenced government action matrix.",
+                                                "full_description": "Examines five binding constraints on climate-resilient education in Africa: (1) 47% of national curriculum frameworks make no reference to climate change; (2) fewer than 30% of teachers feel ready to teach it; (3) floods and heatwaves cost learners 18 school days per year while every US$1 in resilient school construction saves US$2–13 in avoided losses; (4) only 1.5% of climate finance reaches education and only 27% of NAPs cost education actions; and (5) Africa-related topics receive at most 3.8% of global climate research funding (only 14.5% to African institutions). Provides a 0–3 year sequenced reform roadmap for Ministries of Education, Finance, Environment, and Works.",
+                                                "authors": [
+                                                                "Mohammed Labaran Sani",
+                                                                "GNEP Africa Policy Research Unit"
+                                                ],
+                                                "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
+                                                "source_category": "GNEP-authored publications",
+                                                "publication_date": "2026-11-26",
+                                                "year": 2026,
+                                                "doc_type": "Policy briefs",
+                                                "doc_code": "GNEP-PB-2026-016",
+                                                "categories": [
+                                                                "Environmental Education and Youth Leadership",
+                                                                "Climate Change and Resilience",
+                                                                "Environmental Governance and Policy",
+                                                                "Climate Finance and Development"
+                                                ],
+                                                "collections": [
+                                                                "Youth Leadership and Climate Justice",
+                                                                "African Climate Policy"
+                                                ],
+                                                "keywords": [
+                                                                "Climate Education",
+                                                                "Teacher Preparedness",
+                                                                "Climate-Resilient Schools",
+                                                                "UNESCO Greening Education Partnership",
+                                                                "UNICEF Learning Interrupted",
+                                                                "National Adaptation Plans (NAPs)",
+                                                                "Education Climate Finance",
+                                                                "African-Led Research"
+                                                ],
+                                                "cover_image": "assets/real/climate-ed-schoolgirls-tree-planting.webp",
+                                                "file_url": "assets/publications/addressing-structural-gaps-african-climate-education.pdf",
+                                                "article_url": "addressing-structural-gaps-african-climate-education.html",
+                                                "file_format": "PDF",
+                                                "file_size": "1048 KB",
+                                                "page_count": 8,
+                                                "language": "English",
+                                                "doi": "10.5281/zenodo.gnep.pb2026.016",
+                                                "citation_apa": "Sani, M. L., & GNEP Africa. (2026). Addressing Five Structural Gaps in African Climate Education Systems: Policy Recommendations for Governments (Policy Brief No. GNEP-PB-2026-016). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_chicago": "Sani, Mohammed Labaran, and GNEP Africa. \"Addressing Five Structural Gaps in African Climate Education Systems: Policy Recommendations for Governments.\" Policy Brief No. GNEP-PB-2026-016. Katsina: GNEP Africa, November 2026.",
+                                                "is_featured": true,
+                                                "is_external": false,
+                                                "external_url": "",
+                                                "status": "published",
+                                                "related_ids": [
+                                                                "lingua-franca-hausa-into-climate",
+                                                                "umaru-musa-fellowship-initiative",
+                                                                "rethinking-climate-finance-africa"
+                                                ]
+                                },
                                 {
                                                 "id": "umaru-musa-fellowship-initiative",
                                                 "slug": "umaru-musa-fellowship-initiative",
