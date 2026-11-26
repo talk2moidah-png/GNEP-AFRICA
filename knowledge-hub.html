@@ -26,9 +26,9 @@
 
     <!-- Customized Bootstrap & Site Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/design-tokens.css" rel="stylesheet">
-    <link href="css/gnep.css" rel="stylesheet">
+    <link href="css/style.css?v=20261126-v5" rel="stylesheet">
+    <link href="css/design-tokens.css?v=20261126-v5" rel="stylesheet">
+    <link href="css/gnep.css?v=20261126-v5" rel="stylesheet">
     <link href="css/knowledge-hub.css" rel="stylesheet">
 </head>
 
@@ -45,11 +45,11 @@
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
-    <header class="fixed-top">
+    <header class="fixed-top gnep-guide-header">
         <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
             <div class="container">
                 <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
-                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="140" height="42">
+                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="136" height="42">
                     <div class="gnep-brand-text d-none d-sm-block">
                         <span class="gnep-brand-title">GNEP Africa</span>
                         <span class="gnep-brand-sub d-none d-xl-block">Global Nature &amp; Environmental Partnership</span>
@@ -62,6 +62,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About GNEP</a></li>
                         <li class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></li>
                         <li class="nav-item"><a href="knowledge-hub.html" class="nav-link">Knowledge Hub</a></li>
@@ -82,9 +83,7 @@
     <main id="main-content">
 
         <!-- 1. HERO & SEARCH SECTION -->
-        <section class="kh-hero gnep-page-hero" data-page-hero="knowledge-hub.html" aria-label="GNEP Environmental Knowledge Hub Header">
-            <img src="assets/africa/congo-basin-misty-river-rainforest-aerial.webp" alt="Aerial misty sunrise over the Congo Basin tropical rainforest canopy and winding river watershed" class="gnep-page-hero-bg" style="object-position: center 45%;" width="1600" height="720" fetchpriority="high">
-            <div class="gnep-page-hero-overlay" aria-hidden="true"></div>
+        <section class="kh-hero gnep-page-hero" data-page-hero="knowledge-hub.html" aria-label="GNEP Environmental Knowledge Hub Header" style="background-image: linear-gradient(90deg, rgba(5, 20, 11, 0.76) 0%, rgba(5, 20, 11, 0.40) 48%, rgba(5, 20, 11, 0.06) 100%), url('assets/africa/congo-basin-misty-river-rainforest-aerial.webp'); background-position: center 45%; background-size: cover; background-repeat: no-repeat;">
             <div class="container position-relative z-index-1">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-10 col-xl-9">
@@ -384,6 +383,6 @@
     <!-- GNEP Knowledge Hub Engine -->
     <script src="js/knowledge-hub.js"></script>
 
-    <script src="js/page-hero.js"></script>
+    <script src="js/page-hero.js?v=20261126-v5"></script>
 </body>
 </html>

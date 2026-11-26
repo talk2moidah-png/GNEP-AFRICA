@@ -2581,3 +2581,194 @@ header.fixed-top.gnep-vanam-header.nav-scrolled-3d {
         padding: 104px 0 36px 0 !important;
     }
 }
+
+
+/* ==========================================================================
+   TEMPLATE GUIDE & WEB IMAGE GUIDELINES HERO ARCHITECTURE (ZERO OVERLAP)
+   - Solid non-overlapping sticky navbar (68px height)
+   - Homepage Hero: Taller without curve, left-aligned headline + description + CTA,
+     followed by Quick Links strip (Template Guide p.14)
+   - Inner Page Heroes: Shorter with rounded bottom-right corner (Image Guide p.1),
+     left-aligned headline, CSS background-image with left-to-right dark gradient
+     so the photograph on the right is clearly visible and text never overlaps.
+   ========================================================================== */
+body {
+    padding-top: 68px !important;
+}
+
+header.fixed-top,
+header.fixed-top.gnep-guide-header {
+    background: #0B2516 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22) !important;
+    height: auto !important;
+    min-height: 68px !important;
+    padding: 0 !important;
+    z-index: 1040 !important;
+}
+
+/* Never let any old background ::before or stray .gnep-page-hero-bg img collide with hero content */
+.gnep-inner-hero::before,
+.article-hero::before,
+.kh-hero::before,
+.gallery-hero-banner::before,
+.founder-page-hero::before {
+    display: none !important;
+    content: none !important;
+}
+
+img.gnep-page-hero-bg {
+    display: none !important;
+}
+
+/* Homepage Hero: Taller without curve (Image Guide p.1 & Template Guide p.14) */
+.gnep-guide-hero-home {
+    position: relative;
+    min-height: 540px;
+    padding: 84px 0 76px 0;
+    display: flex;
+    align-items: center;
+    background-color: #071A0F;
+    color: #FFFFFF;
+}
+
+.gnep-guide-hero-kicker {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.22);
+    color: #A7F3D0;
+    border: 1px solid rgba(134, 239, 172, 0.4);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.gnep-guide-hero-title {
+    font-family: var(--font-heading) !important;
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.14 !important;
+    color: #FFFFFF !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.025em !important;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.gnep-guide-hero-desc {
+    font-size: 1.06rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.92) !important;
+    max-width: 58ch;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.gnep-guide-hero-credit {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: rgba(4, 15, 9, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #E2E8F0;
+    font-size: 0.74rem;
+}
+
+/* Quick Links Bar under Homepage Hero (Template Guide p.14 Component 2) */
+.gnep-guide-quicklinks {
+    background: #FFFFFF;
+    border-bottom: 2px solid #E2E8F0;
+    padding: 18px 0;
+    box-shadow: 0 6px 18px rgba(11, 37, 22, 0.05);
+}
+
+.gnep-quicklink-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #F8FAF8;
+    border: 1px solid #E2E8F0;
+    color: #0B2516 !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    height: 100%;
+}
+
+.gnep-quicklink-item:hover {
+    background: #ECFDF5;
+    border-color: #15803D;
+    transform: translateY(-2px);
+}
+
+.gnep-quicklink-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #0B2516;
+    color: #86EFAC;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Inner Page Hero: Shorter with rounded bottom-right corner (Image Guide p.1) */
+.gnep-page-hero,
+.gnep-inner-hero.gnep-page-hero,
+.article-hero.gnep-page-hero,
+.kh-hero.gnep-page-hero,
+.gallery-hero-banner.gnep-page-hero,
+.founder-page-hero.gnep-page-hero {
+    position: relative !important;
+    display: block !important;
+    min-height: 390px !important;
+    padding: 56px 0 52px 0 !important;
+    margin-top: 0 !important;
+    background-color: #0B2516 !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-bottom-right-radius: 56px !important;
+    overflow: hidden !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 28px rgba(11, 37, 22, 0.12);
+}
+
+.gnep-page-hero .gnep-page-hero-overlay {
+    display: none !important;
+}
+
+.gnep-page-hero > .container {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* Breadcrumb Guide Rule (Template Guide p.9: hidden on mobile and 404/home) */
+@media (max-width: 767.98px) {
+    .gnep-page-hero nav[aria-label="breadcrumb"] {
+        display: none !important;
+    }
+    .gnep-page-hero,
+    .gnep-inner-hero.gnep-page-hero,
+    .article-hero.gnep-page-hero {
+        min-height: 310px !important;
+        padding: 40px 0 38px 0 !important;
+        border-bottom-right-radius: 32px !important;
+    }
+    .gnep-guide-hero-home {
+        min-height: 440px;
+        padding: 48px 0 48px 0;
+    }
+}
+
+.gnep-inner-hero-overlay { display: none !important; }

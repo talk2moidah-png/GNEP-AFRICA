@@ -27,11 +27,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css?v=20261126" rel="stylesheet">
-    <link href="css/design-tokens.css?v=20261126" rel="stylesheet">
+    <link href="css/style.css?v=20261126-v5" rel="stylesheet">
+    <link href="css/design-tokens.css?v=20261126-v5" rel="stylesheet">
 
     <!-- GNEP Custom Stylesheet (WCAG AA, Editorial, Responsive) -->
-    <link href="css/gnep.css?v=20261126" rel="stylesheet">
+    <link href="css/gnep.css?v=20261126-v5" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,7 +69,7 @@
     <a class="skip-to-content" href="#main-content">Skip to main content</a>
 
     <!-- GNEP Africa 2.0 Institutional Header -->
-    <header class="fixed-top gnep-vanam-header">
+    <header class="fixed-top gnep-guide-header">
         <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
             <div class="container">
                 <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
@@ -85,29 +85,19 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <!-- Minimalist Multi-Column Editorial Navigation -->
-                    <div class="gnep-vanam-nav-grid ms-auto d-none d-lg-grid" role="navigation" aria-label="Primary Editorial Links">
-                        <a href="index.html" class="vanam-nav-link active">Home</a>
-                        <a href="programmes.html" class="vanam-nav-link">Programmes</a>
-                        <a href="knowledge-hub.html" class="vanam-nav-link">Knowledge Hub</a>
-                        <a href="climate-intelligence.html" class="vanam-nav-link">Climate Intelligence</a>
-                        <a href="events.html" class="vanam-nav-link">Events</a>
-                        <a href="about.html" class="vanam-nav-link">About</a>
-                        <a href="accountability.html" class="vanam-nav-link">Governance</a>
-                        <a href="contact.html" class="vanam-nav-link">Contact</a>
-                    </div>
-
-                    <!-- Mobile Collapsed Navigation -->
-                    <ul class="navbar-nav ms-auto d-lg-none mt-3">
-                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About GNEP</a></li>
                         <li class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></li>
                         <li class="nav-item"><a href="knowledge-hub.html" class="nav-link">Knowledge Hub</a></li>
                         <li class="nav-item"><a href="climate-intelligence.html" class="nav-link">Climate Intelligence</a></li>
                         <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
                         <li class="nav-item"><a href="accountability.html" class="nav-link">Governance</a></li>
-                        <li class="nav-item mt-2"><a href="contact.html" class="btn-partner-nav w-100">Partner With Us</a></li>
                     </ul>
+
+                    <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                        <a href="contact.html" class="btn-partner-nav text-center w-100 w-lg-auto">Partner With Us</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -117,40 +107,65 @@
     <!-- Main Content Container -->
     <main id="main-content">
 
-        <!-- 1. FULL-BLEED FOREST VALLEY EDITORIAL HERO SECTION (NO CARDS, TONED-DOWN NATURAL GREEN ACCENT) -->
-        <section class="gnep-hero gnep-vanam-hero" id="hero" data-page-hero="index.html" aria-label="Introduction">
-            <img src="assets/real/hero-forest-valley.webp" id="vanam-hero-bg-img" class="gnep-hero-bg" alt="Misty emerald forest valley and turquoise river representing environmental preservation and climate resilience" width="1630" height="1080">
-            <div class="gnep-vanam-overlay"></div>
-
-            <div class="container gnep-vanam-hero-container">
-                <div class="row align-items-end justify-content-between gy-4 w-100 mx-0">
-                    <!-- Bottom-Left: Headline + Subtext + Natural Green Pill & Circle Arrow CTA -->
-                    <div class="col-lg-8 col-xl-7 px-0">
-                        <div class="gnep-vanam-kicker mb-2">
-                            <span class="vanam-kicker-dot"></span> Global Nature &amp; Environmental Partnership (GNEP Africa)
-                        </div>
-                        <h1 class="gnep-vanam-headline">
-                            Building Africa's<br>
-                            Environmental <span class="gnep-lime-text">Resilience.</span>
+        <!-- 1. HOMEPAGE HERO BANNER (Template Guide p.14 & Image Guide p.1: Taller without curve, Headline + Subtext + CTA on Left) -->
+        <section class="gnep-guide-hero-home" id="hero" data-page-hero="index.html" aria-label="Introduction"
+                 style="background-image: linear-gradient(90deg, rgba(5, 20, 11, 0.76) 0%, rgba(5, 20, 11, 0.40) 48%, rgba(5, 20, 11, 0.06) 100%), url('assets/real/hero-forest-valley.webp'); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6 text-start">
+                        <span class="gnep-guide-hero-kicker">
+                            <i class="fas fa-leaf me-1" aria-hidden="true"></i> Global Nature &amp; Environmental Partnership
+                        </span>
+                        <h1 class="gnep-guide-hero-title">
+                            Building Africa's Environmental <span style="color: #86EFAC;">Resilience.</span>
                         </h1>
-
-                        <div class="gnep-vanam-bottom-row">
-                            <p class="gnep-vanam-subtext">
-                                We are dedicated to advancing climate resilience, environmental governance, biodiversity conservation, and nature-based solutions across Africa for generations to come.
-                            </p>
-
-                            <div class="d-flex align-items-center flex-wrap gap-3">
-                                <a href="#focus-areas" class="gnep-lime-cta-group" aria-label="Join our mission and explore our work">
-                                    <span class="gnep-lime-cta-pill">Join our mission</span>
-                                    <span class="gnep-lime-cta-circle" aria-hidden="true">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
-                                </a>
-                                <a href="knowledge-hub.html" class="gnep-vanam-secondary-link">
-                                    Knowledge Hub &rarr;
-                                </a>
-                            </div>
+                        <p class="gnep-guide-hero-desc">
+                            Advancing climate resilience, environmental governance, biodiversity conservation, and nature-based solutions across Africa through research, partnerships, and community action.
+                        </p>
+                        <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+                            <a href="programmes.html" class="btn btn-success rounded-pill px-4 py-2 fw-bold">
+                                Explore Our Work <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+                            </a>
+                            <a href="knowledge-hub.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                <i class="fas fa-book-open me-2" aria-hidden="true"></i>Knowledge Hub
+                            </a>
                         </div>
+                        <div class="gnep-guide-hero-credit mt-4">
+                            <i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i>
+                            <strong>African Ecological Context:</strong> Emerald Rainforest &amp; River Watershed Collection
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1B. QUICK LINKS BAR (Template Guide p.14 Component 2: Quick-links to primary user tasks under hero banner) -->
+        <section class="gnep-guide-quicklinks" aria-label="Quick Links to Key Institutional Resources">
+            <div class="container">
+                <div class="row g-3 text-center">
+                    <div class="col-6 col-md-3">
+                        <a href="programmes.html" class="gnep-quicklink-item">
+                            <span class="gnep-quicklink-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></span>
+                            <span class="gnep-quicklink-label">Programmes &amp; Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="knowledge-hub.html" class="gnep-quicklink-item">
+                            <span class="gnep-quicklink-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
+                            <span class="gnep-quicklink-label">Policy Briefs &amp; Research (11)</span>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="climate-intelligence.html" class="gnep-quicklink-item">
+                            <span class="gnep-quicklink-icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
+                            <span class="gnep-quicklink-label">Climate Intelligence Map</span>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="contact.html" class="gnep-quicklink-item">
+                            <span class="gnep-quicklink-icon"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+                            <span class="gnep-quicklink-label">Partner With GNEP</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1662,7 +1677,7 @@
     <script src="lib/gsap/ScrollTrigger.min.js"></script>
     <script src="js/gnep-3d.js"></script>
 
-    <script src="js/page-hero.js"></script>
+    <script src="js/page-hero.js?v=20261126-v5"></script>
 </body>
 </html>
 
