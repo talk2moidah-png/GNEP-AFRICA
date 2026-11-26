@@ -6,11 +6,11 @@
 (function (window, document) {
     'use strict';
 
-    const STORAGE_KEY = 'gnep_knowledge_hub_v6_14_pubs';
-    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); } catch(e) {}
+    const STORAGE_KEY = 'gnep_knowledge_hub_v7_amina_coauthor';
+    try { localStorage.removeItem('gnep_knowledge_hub_custom_pubs'); localStorage.removeItem('gnep_knowledge_hub_v3_webpage_pubs'); localStorage.removeItem('gnep_knowledge_hub_v4_clean_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); localStorage.removeItem('gnep_knowledge_hub_v5_verified_pubs'); } catch(e) {}
     const ADMIN_SESSION_KEY = 'gnep_kh_admin_auth';
     const SUBSCRIBERS_KEY = 'gnep_kh_subscribers';
-    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v7';
+    const DEFAULT_DATA_PATH = 'data/publications.json?v=20261126-v8';
 
     const KnowledgeHub = {
         data: {
@@ -1816,7 +1816,7 @@
         getEmbeddedFallbackData() {
             return {
                 "version": "1.0.0",
-                "updated_at": "2026-11-26T14:15:00Z",
+                "updated_at": "2026-11-26T15:05:00Z",
                 "categories": [
                                 "Climate Change and Resilience",
                                 "Environmental Governance and Policy",
@@ -2224,11 +2224,11 @@
                                                 "id": "rethinking-climate-finance-africa",
                                                 "slug": "rethinking-climate-finance-africa",
                                                 "title": "Rethinking Climate Finance for Africa",
-                                                "abstract": "Africa requires approximately USD 2.8 trillion between 2020 and 2030 to implement 51 Nationally Determined Contributions (NDCs), yet climate finance flows reached only $44 billion in 2021/22 (23% of annual need), with more than half arriving as debt. Co-authored with Amina Baala, this brief evaluates debt-for-nature swaps, concessional capital guarantees, and the Second Africa Climate Summit's Addis Ababa Declaration to propose seven grant-equivalent delivery reforms.",
+                                                "abstract": "Co-authored by Mohammed Labaran Sani and Amina Baala (baalaamina@gmail.com). Africa requires approximately USD 2.8 trillion between 2020 and 2030 to implement 51 Nationally Determined Contributions (NDCs), yet climate finance flows reached only $44 billion in 2021/22 (23% of annual need), with more than half arriving as debt. This brief evaluates debt-for-nature swaps, concessional capital guarantees, and the Second Africa Climate Summit's Addis Ababa Declaration to propose seven grant-equivalent delivery reforms.",
                                                 "full_description": "Examines why the structure of African climate finance—not just its volume—is the binding constraint on resilience. Against US$865 billion in decadal African external debt service and borrowing costs two to three times higher than in advanced economies, the brief analyzes Gabon's $500M Blue Bond, IEA concessional leverage multipliers, the African Climate Facility, and the Loss and Damage Fund, setting out seven concrete benchmarks for negotiators through 2035.",
                                                 "authors": [
-                                                                "Mohammed Labaran Sani (Founder & Lead, GNEP Africa)",
-                                                                "Amina Baala"
+                                                                "Mohammed Labaran Sani",
+                                                                "Amina Baala (Co-Author — baalaamina@gmail.com)"
                                                 ],
                                                 "publishing_org": "Global Nature and Environmental Partnership (GNEP Africa)",
                                                 "source_category": "GNEP-authored publications",
@@ -2260,11 +2260,11 @@
                                                 "file_url": "assets/publications/rethinking-climate-finance-africa.pdf",
                                                 "article_url": "rethinking-climate-finance-africa.html",
                                                 "file_format": "PDF",
-                                                "file_size": "1370 KB",
+                                                "file_size": "1171 KB",
                                                 "page_count": 6,
                                                 "language": "English",
                                                 "doi": "10.5281/zenodo.gnep.pb2026.009",
-                                                "citation_apa": "Sani, M. L., & Baala, A. (2026). Rethinking Climate Finance for Africa (Policy Brief No. GNEP-PB-2026-009). Global Nature and Environmental Partnership (GNEP Africa).",
+                                                "citation_apa": "Sani, M. L., & Baala, A. (2026). Rethinking Climate Finance for Africa (Policy Brief No. GNEP-PB-2026-009). Global Nature and Environmental Partnership (GNEP Africa). Co-author correspondence: baalaamina@gmail.com.",
                                                 "citation_chicago": "Sani, Mohammed Labaran, and Amina Baala. \"Rethinking Climate Finance for Africa.\" Policy Brief No. GNEP-PB-2026-009. Katsina: Global Nature and Environmental Partnership, 2026.",
                                                 "is_featured": false,
                                                 "is_external": false,
