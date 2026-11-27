@@ -1,0 +1,191 @@
+/*
+Template Name: Nonprofitx | Charity & Donation Website Template (GNEP Africa Edition)
+Author: Pillarix / GNEP Africa
+Version: 1.0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&family=Homemade+Apple&display=swap');
+
+/* Accessibility skip link */
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 9999;
+    background: #ffc107;
+    color: #000;
+    padding: 8px 16px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.skip-to-content:focus {
+    left: 12px;
+}
+
+/* Body */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Barlow', sans-serif;
+}
+.handwriting-font {
+    font-family: 'Homemade Apple', cursive;
+}
+a {
+    text-decoration: none;
+    color: #1b1b1b;
+}
+a:hover {
+    color: #ffc107;
+}
+
+/* Custom Classes */
+.charity-nav a.nav-link {
+    padding-top: 29px !important;
+    padding-bottom: 29px !important;
+    color: #ffffff !important;
+}
+.w-15 {
+    width: 15% !important;
+}
+
+/* Side Navbar */
+.sidebar-nav .nav-link.active {
+    color: #ffc107;
+}
+
+/* Index */
+.bg-homepage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.58)), url(../assets/real/hero-forest-valley.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.provide-img {
+    width: 50px;
+}
+.provide {
+    margin-top: -8rem;
+}
+.school-video {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/real/schools-tree-planting.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+/* Projects */
+.bg-project {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../assets/africa/uganda-rwanda-virunga-highland-lake.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-volunteer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58)), url(../assets/real/tree-planting-action.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* About */
+.bg-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../assets/africa/kilimanjaro-savannah-elephants-panorama.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.work-img {
+    width: 70px;
+}
+
+/* Volunteer */
+.bg-volunteer-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../assets/real/cso-workshop-group.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contact */
+.bg-contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../assets/africa/african-tropical-waterfall-rainbow-canopy.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Card image uniform aspect ratio */
+.np-card-img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    width: 100%;
+}
+.np-team-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+}
+.np-partner-avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+/* Admin & Icons */
+.b-icon {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-sm {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+.social-icon {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+footer .footer-top a {
+    color: #9ca3af;
+}
+footer .footer-top a:hover {
+    color: #ffc107;
+}
+footer .footer-top .social-icon {
+    border: 1px solid #6c757d;
+}
+footer .footer-top .social-icon:hover {
+    border: 1px solid #ffc107;
+}

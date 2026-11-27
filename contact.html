@@ -1,575 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Contact &amp; Partner With Us | GNEP Africa</title>
-    <link rel="icon" type="image/png" href="assets/real/gnep-logo.png">
-    <link rel="canonical" href="https://gnep-africa.pages.dev/contact.html">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="GNEP contact, partner with us, environmental partnership, Katsina, Nigeria" name="keywords">
-    <meta content="Contact GNEP Africa or send a partnership inquiry. We welcome collaborations with researchers, civil society organisations, schools, and institutions across Africa." name="description">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css?v=20261126-v6" rel="stylesheet">
-    <link href="css/design-tokens.css?v=20261126-v6" rel="stylesheet">
-    <link href="css/gnep.css?v=20261126-v6" rel="stylesheet">
-    <style>
-        /* Inner hero */
-        .gnep-inner-hero {
-            position: relative; min-height: 300px; display: flex; align-items: flex-end;
-            padding-top: 120px;
-            background: url('assets/real/leadership-team.webp') center/cover no-repeat;
-        }
-        .gnep-inner-hero-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(to bottom, rgba(10,50,88,0.80) 0%, rgba(10,50,88,0.65) 100%);
-        }
-        .gnep-inner-hero-content { position: relative; z-index: 2; padding-bottom: 2.5rem; }
-        .gnep-inner-hero-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; color: #fff; margin-bottom: 0.75rem;
-        }
-        .gnep-inner-hero-sub { color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 640px; margin-bottom: 0; }
-        .gnep-breadcrumb { background: none; padding: 0; margin-bottom: 1rem; }
-        .gnep-breadcrumb .breadcrumb-item a { color: rgba(255,255,255,0.75); text-decoration: none; }
-        .gnep-breadcrumb .breadcrumb-item.active { color: rgba(255,255,255,0.55); }
-        .gnep-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.45); }
-
-        /* Contact form card */
-        .gnep-contact-card {
-            background: #fff; border-radius: 14px; padding: 2.5rem;
-            box-shadow: 0 4px 32px rgba(11,37,22,0.10); border: 1px solid #E8F0EA;
-        }
-        .gnep-contact-card .gnep-form-label {
-            font-size: 0.85rem; font-weight: 600; color: #0B2516; display: block; margin-bottom: 0.4rem;
-        }
-        .gnep-contact-card .gnep-form-control {
-            width: 100%; padding: 0.65rem 1rem; border: 1.5px solid #D1D5DB; border-radius: 6px;
-            font-size: 0.9rem; color: #1A1A1A; background: #FAFAFA;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-        .gnep-contact-card .gnep-form-control:focus {
-            outline: none; border-color: #15803D; box-shadow: 0 0 0 3px rgba(21,128,61,0.15); background: #fff;
-        }
-        .gnep-contact-card textarea.gnep-form-control { min-height: 130px; resize: vertical; }
-        .gnep-contact-card .gnep-form-check { display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 0.5rem; }
-        .gnep-contact-card .gnep-form-check input { margin-top: 3px; flex-shrink: 0; accent-color: #15803D; }
-        .gnep-contact-card .gnep-form-check label { font-size: 0.8rem; color: #555; }
-
-        /* Info sidebar */
-        .gnep-contact-info-block {
-            background: #0B2516; border-radius: 14px; padding: 2.5rem; color: #fff; height: 100%;
-        }
-        .gnep-contact-info-block h3 { color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; }
-        .gnep-contact-info-item {
-            display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem;
-        }
-        .gnep-contact-info-icon {
-            width: 40px; height: 40px; border-radius: 8px; background: rgba(255,255,255,0.12);
-            display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; color: #6EE7B7;
-        }
-        .gnep-contact-info-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); margin-bottom: 0.2rem; }
-        .gnep-contact-info-value { font-size: 0.9rem; color: #fff; }
-        .gnep-contact-info-value a { color: #6EE7B7; text-decoration: none; }
-        .gnep-contact-info-value a:hover { color: #fff; text-decoration: underline; }
-
-        /* Partnership types */
-        .gnep-partner-type-card {
-            background: rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem 1.25rem;
-            border: 1px solid rgba(255,255,255,0.12); margin-bottom: 0.75rem;
-        }
-        .gnep-partner-type-card h4 { color: #fff; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.25rem; }
-        .gnep-partner-type-card p { color: rgba(255,255,255,0.65); font-size: 0.8rem; margin: 0; }
-    </style>
-</head>
-<body>
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center" aria-hidden="true">
-        <div class="spinner-grow text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/real/gnep-logo.png" type="image/png">
+        <link rel="canonical" href="https://gnep-africa.pages.dev/contact.html">
+        <title>Contact &amp; Partnership Desk | GNEP Africa</title>
+        <meta name="description" content="Contact the Global Nature and Environmental Partnership (GNEP Africa) in Katsina State, Nigeria, for partnerships, research collaboration, and inquiries.">
+        <link rel="stylesheet" href="css/design-tokens.css?v=20261127-np">
+        <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vender/icofont/icofont.min.css">
+        <link rel="stylesheet" href="vender/aos/dist/aos.css">
+        <link rel="stylesheet" href="vender/remixicon/remixicon.css">
+        <link rel="stylesheet" href="css/nonprofitx.css?v=20261127-np">
+        <link rel="stylesheet" href="css/common.css?v=20261127-np">
+    </head>
+    <body>
+        <a class="skip-to-content" href="#main-content">Skip to main content</a>
+        <div class="page-loading active">
+            <div class="page-loading-inner">
+                <div class="page-spinner"></div>
+                <span>Loading...</span>
+            </div>
         </div>
-    </div>
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- GNEP Africa 2.0 Institutional Header -->
-    <header class="fixed-top gnep-guide-header">
-        <nav class="navbar navbar-expand-lg gnep-navbar" aria-label="Main Navigation">
-            <div class="container">
-                <a href="index.html" class="gnep-brand-wrap" aria-label="GNEP Africa Homepage">
-                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="gnep-brand-logo" width="112" height="36">
-                    <div class="gnep-brand-text d-none d-sm-block">
-                        <span class="gnep-brand-title">GNEP Africa</span>
+        <main id="main-content">
+        <div class="bg-contact">
+            <nav class="navbar osahan-main-nav navbar-expand charity-nav p-0 border-bottom border-white border-opacity-25 py-4 py-lg-0 w-100">
+                <div class="container">
+                    <div class="position-relative d-flex align-items-center gap-2 site-brand">
+                        <img src="assets/real/gnep-logo.webp" alt="GNEP Africa Logo" class="bg-white rounded-2 p-1" style="height: 38px; width: auto;">
+                        <div class="lh-1">
+                            <h5 class="fw-bold m-0 text-white">GNEP Africa</h5>
+                            <small class="text-white-50">Nature &amp; Environment</small>
+                        </div>
+                        <a class="stretched-link" href="index.html" aria-label="GNEP Africa Home"></a>
                     </div>
-                </a>
-
-                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span class="fa fa-bars text-white fs-5"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></li>
-                        <li class="nav-item"><a href="knowledge-hub.html" class="nav-link">Knowledge Hub</a></li>
-                        <li class="nav-item"><a href="climate-intelligence.html" class="nav-link">Climate Intelligence</a></li>
-                        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-                        <li class="nav-item"><a href="accountability.html" class="nav-link">Governance</a></li>
-                    </ul>
-
-                    <div class="d-flex align-items-center ms-lg-2 mt-3 mt-lg-0">
-                        <a href="contact.html" class="btn-partner-nav text-center w-100 w-lg-auto">Partner With Us</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-none d-lg-block ms-auto">
+                            <ul class="navbar-nav ms-auto gap-3 me-4">
+                                <li class="nav-item">
+                                    <a class="nav-link py-4" href="index.html"><i class="ri-apps-2-line"></i> Home</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link py-4" href="about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link py-4" href="programmes.html">Programmes</a></li>
+                                <li class="nav-item"><a class="nav-link py-4" href="knowledge-hub.html">Knowledge Hub</a></li>
+                                <li class="nav-item dropdown osahan-mega-menu position-static">
+                                    <a class="nav-link dropdown-toggle py-4" href="knowledge-hub.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Research &amp; Briefs </a>
+                                    <ul class="dropdown-menu w-100 m-0 border-opacity-10 border-dark border-top border-bottom p-0 start-0 end-0 rounded-0 shadow">
+                                        <li>
+                                            <div class="dropdown-mega-content container">
+                                                <div class="row g-0">
+                                                    <div class="col-lg-3 p-5 border-end border-start border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Continental Policy Briefs</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="africa-by-2063-assessing-progress-priorities.html">Africa by 2063: Progress &amp; Priorities</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="permanent-seat-for-africa-un-security-council.html">A Permanent Seat for Africa (UNSC)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="addressing-structural-gaps-african-climate-education.html">African Climate Education Gaps</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="rethinking-climate-finance-africa.html">Rethinking Climate Finance for Africa</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="turning-research-into-action.html">Turning Climate Research into Action</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Nigeria &amp; Sahel Studies</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="katsina-economic-linkage-capability-model.html">Katsina Economic Linkage Model (KELCM)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="alau-dam-flood-maiduguri-nature-based-solutions.html">Alau Dam Flood &amp; Nature-Based Solutions</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="subsidy-removal-public-accountability-policy-brief.html">Subsidy Removal &amp; Accountability</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="adapting-rotterdam-sponge-city-lagos.html">Rotterdam Sponge City Model for Lagos</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="nigeria-heat-emergency-policy-brief.html">31,400 Lives at Risk? Heat Emergency</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Field Reports &amp; Hausa</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="umaru-musa-fellowship-initiative.html">Umaru Musa Fellowship (UMFI) Proposal</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="lingua-franca-hausa-into-climate.html">Lingua Franca: Hausa into Climate</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html">El Ni&ntilde;o (Hausa Public Advisory)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="tree-planting-150-seedlings.html">150 Economic Tree Seedlings Report</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="cso-policy-workshop.html">20 CSO Leaders Policy Workshop</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="communicating-environmental-issues.html">Storytelling &amp; Communication Toolkit</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 dropdown-mega-sub-content-block d-none d-lg-block bg-light p-5 osahan-dropdown-box border-end border-opacity-10 border-dark">
+                                                        <img src="assets/real/gnep-logo.webp" class="img-fluid content-block-image osahan-dropdown-box-logo" alt="GNEP Logo" width="110">
+                                                        <h5 class="text-dark mt-4 mb-2">Open-Access</h5>
+                                                        <h2 class="text-success fw-bold h3">17 Indexed Policy &amp; Research Works</h2>
+                                                        <p class="lead mb-4 small">
+                                                            Full-text HTML essays and downloadable typeset PDFs advancing African climate resilience.
+                                                        </p>
+                                                        <a class="btn btn-warning px-4 py-2 fw-bold" href="knowledge-hub.html">OPEN KNOWLEDGE HUB</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown osahan-mega-menu position-static">
+                                    <a class="nav-link dropdown-toggle py-4" href="climate-intelligence.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Observatories </a>
+                                    <ul class="dropdown-menu w-100 m-0 border-opacity-10 border-dark border-top border-bottom p-0 start-0 end-0 rounded-0 shadow">
+                                        <li>
+                                            <div class="dropdown-mega-content container">
+                                                <div class="row g-0">
+                                                    <div class="col-lg-4 p-5 border-end border-start border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Geospatial &amp; Policy Data</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="climate-intelligence.html">Climate Intelligence Hub</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="climate-intelligence.html#policy-observatory">African Climate Policy Observatory</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="programmes.html">Programmes &amp; Impact Observatory</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="programmes.html#results-chain">Results-Chain Methodology</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Activities &amp; Visual Archive</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="events.html">Events &amp; Workshops</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="gallery.html">28-Photo Verified Field Gallery</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="youth-environmental-action.html">School Climate Clubs</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="founder.html">Founder &amp; Leadership Profile</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Institutional Governance</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="accountability.html">Governance &amp; Accountability Centre</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="privacy.html">Privacy &amp; Data Protection</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="terms.html">Terms of Use &amp; Open Access</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="accessibility.html">Accessibility Statement</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link py-4" href="events.html">Events</a></li>
+                                <li class="nav-item"><a class="nav-link active py-4" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 me-4 ms-1">
+                            <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="link-light" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="mailto:gnep.partnership@gmail.com" class="link-light" aria-label="Email GNEP"><i class="ri-mail-fill"></i></a>
+                            <a href="tel:+2347065885070" class="link-light" aria-label="Call GNEP"><i class="ri-phone-fill"></i></a>
+                        </div>
+                        <a href="contact.html" class="btn btn-warning rounded-0 d-none d-lg-block py-4 px-5 ms-2"> <span class="py-1 d-inline-block text-uppercase fw-bold">Partner With Us</span> </a>
+                        <a href="#sidebar" class="link-light d-lg-none ms-auto" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open menu"><i class="ri-menu-3-line ri-lg"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <!-- body -->
+            <div class="py-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center pb-5">
+                        <div class="col-xl-7 col-lg-8 col-md-9 col-12">
+                            <div class="text-center text-white" data-aos="fade-up" data-aos-duration="1500">
+                                <h1 class="fw-bold display-1">Contact Us</h1>
+                                <nav class="d-flex align-items-center justify-content-center small">
+                                    <ol class="breadcrumb gap-1">
+                                        <li class="breadcrumb-item"><a href="index.html" class="text-warning">HOME</a></li>
+                                        <li><i class="ri-arrow-right-s-line"></i></li>
+                                        <li class="breadcrumb-item" aria-current="page">CONTACT</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <section class="gnep-inner-hero gnep-page-hero" data-page-hero="contact.html" aria-label="Page Header" style="background-image: linear-gradient(90deg, rgba(5, 20, 11, 0.76) 0%, rgba(5, 20, 11, 0.40) 48%, rgba(5, 20, 11, 0.06) 100%), url('assets/africa/african-tropical-waterfall-rainbow-canopy.webp'); background-position: center 45%; background-size: cover; background-repeat: no-repeat;">
-            <div class="container gnep-inner-hero-content">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb gnep-breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Contact &amp; Partner With Us</li>
-                    </ol>
-                </nav>
-                <h1 class="gnep-inner-hero-title">Contact &amp; Partner With Us</h1>
-                <p class="gnep-inner-hero-sub">We welcome collaborations with researchers, civil society organisations, schools, youth groups, and institutions across Africa.</p>
-            
-                <div class="gnep-page-hero-credit" aria-label="Hero photograph attribution"><i class="fas fa-globe-africa text-info me-1" aria-hidden="true"></i><strong>African Ecological Heritage (Regional Context):</strong> <span>African Tropical Rainforest Waterfall & River Basin (Panoramic Conservation Context)</span></div>
-            </div>
-        </section>
-
-        <section class="py-5 bg-light" id="partner-form" aria-label="Partnership Inquiry Form">
-            <div class="container">
+        </div>
+        <!-- Useful Information -->
+        <div class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h2 class="fw-bold display-4">Useful Information</h2>
+                            <p class="lead text-muted">Direct channels for institutional partnerships, research inquiries, and community programmes</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="row g-5">
-                    <!-- Left: Form -->
-                    <div class="col-lg-7">
-                        <span class="gnep-section-tag">Get In Touch</span>
-                        <h2 class="h3 fw-bold text-dark mb-4">Send us a message or partnership inquiry</h2>
-                        <div class="gnep-contact-card spatial-tilt-card">
-                            <form name="gnep-partnership-inquiry" method="POST" data-netlify="true" id="partnerForm" novalidate>
-                                <input type="hidden" name="form-name" value="gnep-partnership-inquiry">
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <label for="contactName" class="gnep-form-label">Full Name <span class="text-danger">*</span></label>
-                                        <input type="text" class="gnep-form-control" id="contactName" name="name" placeholder="Your full name" required autocomplete="name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="contactOrg" class="gnep-form-label">Organisation</label>
-                                        <input type="text" class="gnep-form-control" id="contactOrg" name="organisation" placeholder="Your organisation (if any)" autocomplete="organization">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="contactEmail" class="gnep-form-label">Email Address <span class="text-danger">*</span></label>
-                                        <input type="email" class="gnep-form-control" id="contactEmail" name="email" placeholder="name@example.org" required autocomplete="email">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="contactCountry" class="gnep-form-label">Country</label>
-                                        <select class="gnep-form-control" id="contactCountry" name="country" autocomplete="country-name">
-                                            <option value="">Select country...</option>
-                                            <option value="Nigeria">Nigeria</option>
-                                            <option value="Algeria">Algeria</option>
-                                            <option value="Ghana">Ghana</option>
-                                            <option value="Kenya">Kenya</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="South Africa">South Africa</option>
-                                            <option value="Ethiopia">Ethiopia</option>
-                                            <option value="Rwanda">Rwanda</option>
-                                            <option value="Senegal">Senegal</option>
-                                            <option value="Uganda">Uganda</option>
-                                            <option value="Tanzania">Tanzania</option>
-                                            <option value="Cameroon">Cameroon</option>
-                                            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
-                                            <option value="Zambia">Zambia</option>
-                                            <option value="Mozambique">Mozambique</option>
-                                            <option value="Mali">Mali</option>
-                                            <option value="Niger">Niger</option>
-                                            <option value="Burkina Faso">Burkina Faso</option>
-                                            <option value="Sudan">Sudan</option>
-                                            <option value="Somalia">Somalia</option>
-                                            <option value="Morocco">Morocco</option>
-                                            <option value="Tunisia">Tunisia</option>
-                                            <option value="Libya">Libya</option>
-                                            <option value="Angola">Angola</option>
-                                            <option value="Zimbabwe">Zimbabwe</option>
-                                            <option value="Malawi">Malawi</option>
-                                            <option value="Chad">Chad</option>
-                                            <option value="DR Congo">DR Congo</option>
-                                            <option value="Congo">Congo</option>
-                                            <option value="Gabon">Gabon</option>
-                                            <option value="Togo">Togo</option>
-                                            <option value="Benin">Benin</option>
-                                            <option value="Sierra Leone">Sierra Leone</option>
-                                            <option value="Liberia">Liberia</option>
-                                            <option value="Guinea">Guinea</option>
-                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
-                                            <option value="Gambia">Gambia</option>
-                                            <option value="Mauritania">Mauritania</option>
-                                            <option value="Eritrea">Eritrea</option>
-                                            <option value="Djibouti">Djibouti</option>
-                                            <option value="Comoros">Comoros</option>
-                                            <option value="Cape Verde">Cape Verde</option>
-                                            <option value="São Tomé and Príncipe">São Tomé and Príncipe</option>
-                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                            <option value="Central African Republic">Central African Republic</option>
-                                            <option value="South Sudan">South Sudan</option>
-                                            <option value="Burundi">Burundi</option>
-                                            <option value="Rwanda">Rwanda</option>
-                                            <option value="Seychelles">Seychelles</option>
-                                            <option value="Mauritius">Mauritius</option>
-                                            <option value="Madagascar">Madagascar</option>
-                                            <option value="Lesotho">Lesotho</option>
-                                            <option value="Eswatini">Eswatini</option>
-                                            <option value="Namibia">Namibia</option>
-                                            <option value="Botswana">Botswana</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="contactInterest" class="gnep-form-label">Nature of Inquiry <span class="text-danger">*</span></label>
-                                        <select class="gnep-form-control" id="contactInterest" name="interest" required>
-                                            <option value="">Select inquiry type...</option>
-                                            <option value="Partnership">Partnership Inquiry</option>
-                                            <option value="Research">Research Collaboration</option>
-                                            <option value="Volunteering">Volunteering / Get Involved</option>
-                                            <option value="Schools">Schools &amp; Education</option>
-                                            <option value="Media">Media / Press</option>
-                                            <option value="General">General Enquiry</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="contactMessage" class="gnep-form-label">Message <span class="text-danger">*</span></label>
-                                        <textarea class="gnep-form-control" id="contactMessage" name="message" placeholder="Tell us about yourself, your organisation, and how you'd like to collaborate with GNEP..." required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="gnep-form-check">
-                                            <input type="checkbox" id="contactConsent" name="consent" required>
-                                            <label for="contactConsent">I agree that GNEP may contact me about programmes, partnerships, and opportunities. I can withdraw my consent at any time. <span class="text-danger">*</span></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mt-2">
-                                        <button type="submit" class="btn btn-success px-4 py-2 fw-600">
-                                            <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Send Inquiry
-                                        </button>
-                                        <p class="small text-muted mt-2 mb-0"><i class="fas fa-lock me-1" aria-hidden="true"></i> Your information is used only to respond to your inquiry. We do not share personal data with third parties.</p>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Right: Contact Info + Partnership Types -->
-                    <div class="col-lg-5">
-                        <div class="gnep-contact-info-block spatial-tilt-card">
-                            <h3 class="h5 mb-4">Contact Information</h3>
-
-                            <div class="gnep-contact-info-item">
-                                <div class="gnep-contact-info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-                                <div>
-                                    <div class="gnep-contact-info-label">Email</div>
-                                    <div class="gnep-contact-info-value"><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></div>
-                                </div>
-                            </div>
-
-                            <div class="gnep-contact-info-item">
-                                <div class="gnep-contact-info-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
-                                <div>
-                                    <div class="gnep-contact-info-label">Phone</div>
-                                    <div class="gnep-contact-info-value"><a href="tel:+2347065885070">+234 706 588 5070</a></div>
-                                </div>
-                            </div>
-
-                            <div class="gnep-contact-info-item">
-                                <div class="gnep-contact-info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-                                <div>
-                                    <div class="gnep-contact-info-label">Location</div>
-                                    <div class="gnep-contact-info-value">Katsina State, Nigeria</div>
-                                </div>
-                            </div>
-
-                            <div class="gnep-contact-info-item">
-                                <div class="gnep-contact-info-icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
-                                <div>
-                                    <div class="gnep-contact-info-label">LinkedIn</div>
-                                    <div class="gnep-contact-info-value"><a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer">GNEP Africa on LinkedIn</a></div>
-                                </div>
-                            </div>
-
-                            <hr style="border-color: rgba(255,255,255,0.2); margin: 1.5rem 0;">
-
-                            <h3 class="h6 mb-3" style="color: rgba(255,255,255,0.75);">Types of partnership we welcome:</h3>
-
-                            <div class="gnep-partner-type-card spatial-tilt-card">
-                                <h4><i class="fas fa-flask me-2" aria-hidden="true"></i>Research Collaboration</h4>
-                                <p>Joint research on climate governance, ecosystem restoration, and environmental policy in Africa.</p>
-                            </div>
-
-                            <div class="gnep-partner-type-card spatial-tilt-card">
-                                <h4><i class="fas fa-university me-2" aria-hidden="true"></i>Institutional Partnership</h4>
-                                <p>Working with schools, universities, government bodies, and development institutions on shared environmental programmes.</p>
-                            </div>
-
-                            <div class="gnep-partner-type-card spatial-tilt-card">
-                                <h4><i class="fas fa-users me-2" aria-hidden="true"></i>Civil Society &amp; Community</h4>
-                                <p>Collaborating with CSOs and community groups on capacity-building, field work, and advocacy initiatives.</p>
-                            </div>
-
-                            <div class="gnep-partner-type-card spatial-tilt-card">
-                                <h4><i class="fas fa-graduation-cap me-2" aria-hidden="true"></i>Youth &amp; Schools</h4>
-                                <p>Engaging schools and youth groups through Climate Clubs, literacy programmes, and leadership development.</p>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="bg-white rounded-4 shadow text-center p-5 h-100" data-aos="zoom-in-down" data-aos-duration="1000">
+                            <i class="ri-map-pin-2-fill ri-3x text-warning"></i>
+                            <div class="pt-3">
+                                <h5 class="fw-bold">Operational Base</h5>
+                                <p class="text-muted mb-0">Katsina State, Nigeria (Africa-Wide Outlook)</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5 bg-white" aria-label="Other ways to get involved">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <span class="gnep-section-tag">Get Involved</span>
-                    <h2 class="h3 fw-bold text-dark">Other ways to connect with GNEP</h2>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="text-center p-4 bg-light rounded-3 h-100">
-                            <div class="text-success fs-2 mb-3"><i class="fas fa-envelope-open-text" aria-hidden="true"></i></div>
-                            <h3 class="h6 fw-bold text-dark mb-2">Subscribe to Updates</h3>
-                            <p class="small text-muted mb-3">Receive verified field updates, research news, and programme opportunities.</p>
-                            <a href="index.html#partner-with-us" class="btn btn-sm btn-outline-success">Subscribe</a>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="bg-white rounded-4 shadow text-center p-5 h-100" data-aos="zoom-in-down" data-aos-duration="1000">
+                            <i class="ri-mail-send-fill ri-3x text-warning"></i>
+                            <div class="pt-3">
+                                <h5 class="fw-bold">Official Email</h5>
+                                <p class="text-muted mb-0"><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="text-center p-4 bg-light rounded-3 h-100">
-                            <div class="text-success fs-2 mb-3"><i class="fas fa-images" aria-hidden="true"></i></div>
-                            <h3 class="h6 fw-bold text-dark mb-2">Field Gallery</h3>
-                            <p class="small text-muted mb-3">Explore 28 verified photographs from GNEP's tree-planting drives and workshops.</p>
-                            <a href="gallery.html" class="btn btn-sm btn-outline-success">View Gallery</a>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="bg-white rounded-4 shadow text-center p-5 h-100" data-aos="zoom-in-down" data-aos-duration="1000">
+                            <i class="ri-phone-fill ri-3x text-warning"></i>
+                            <div class="pt-3">
+                                <h5 class="fw-bold">Phone &amp; WhatsApp</h5>
+                                <p class="text-muted mb-0"><a href="tel:+2347065885070">+234 706 588 5070</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="text-center p-4 bg-light rounded-3 h-100">
-                            <div class="text-success fs-2 mb-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div>
-                            <h3 class="h6 fw-bold text-dark mb-2">Latest Updates</h3>
-                            <p class="small text-muted mb-3">Read about workshops, field activities, and upcoming GNEP programmes.</p>
-                            <a href="events.html" class="btn btn-sm btn-outline-success">View Updates</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="text-center p-4 bg-light rounded-3 h-100">
-                            <div class="text-success fs-2 mb-3"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
-                            <h3 class="h6 fw-bold text-dark mb-2">Follow on LinkedIn</h3>
-                            <p class="small text-muted mb-3">Connect with GNEP Africa's professional network and see our latest posts.</p>
-                            <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success">Follow GNEP</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
-    <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
-    <!-- GNEP Africa 2.0 Institutional 5-Column Footer -->
-    <footer class="gnep-footer" id="contact" aria-label="Institutional Footer and Accountability Navigation">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-center mb-3">
-                        <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="bg-white p-1 rounded" width="130" height="40" style="object-fit: contain;">
-                    </div>
-                    <p class="small text-light-50 mb-3" style="color: #BFD3C7;">
-                        Global Nature and Environmental Partnership (GNEP Africa) connects environmental research, climate policy, and community-led action to advance resilience across Africa.
-                    </p>
-                    <div class="small mb-2" style="color: #9EBAAB;">
-                        <div><strong>Founded:</strong> 2025 &bull; <strong>Status:</strong> Independent Youth-Led Initiative</div>
-                        <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>About &amp; Governance</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Mandate &amp; Vision</a></li>
-                        <li><a href="founder.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Leadership &amp; Founder</a></li>
-                        <li><a href="accountability.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Accountability Centre</a></li>
-                        <li><a href="accountability.html#research-standards"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research Standards</a></li>
-                        <li><a href="accountability.html#safeguarding"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Safeguarding &amp; Conduct</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>Programmes &amp; Impact</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="programmes.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Project Portfolio</a></li>
-                        <li><a href="programmes.html#results-chain"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Results &amp; Impact Chain</a></li>
-                        <li><a href="events.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Newsroom &amp; Events</a></li>
-                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery (28)</a></li>
-                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With GNEP</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>Knowledge &amp; Data</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="knowledge-hub.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Knowledge Hub (11)</a></li>
-                        <li><a href="knowledge-hub.html?type=Policy+briefs"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Briefs</a></li>
-                        <li><a href="climate-intelligence.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Intelligence</a></li>
-                        <li><a href="climate-intelligence.html#policy-observatory"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Observatory</a></li>
-                        <li><a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Hausa Advisories</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4>Connect &amp; Inquiries</h4>
-                    <div class="mb-3 small" style="color: #BFD3C7;">
-                        <p class="mb-2"><i class="fas fa-envelope text-success me-2" aria-hidden="true"></i><a href="mailto:gnep.partnership@gmail.com">gnep.partnership@gmail.com</a></p>
-                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2" aria-hidden="true"></i><a href="tel:+2347065885070">+234 706 588 5070</a></p>
-                        <p class="mb-0"><i class="fas fa-map-marker-alt text-success me-2" aria-hidden="true"></i>Katsina State, Nigeria</p>
-                    </div>
-                    <div class="mt-3 pt-2 border-top border-secondary">
-                        <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light me-2"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
-                        <a href="contact.html" class="btn btn-sm btn-success"><i class="fas fa-handshake me-1" aria-hidden="true"></i> Partner</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-top border-secondary small" style="color: #9EBAAB; font-size: 0.78rem;">
-                <strong>Institutional Independence &amp; Evidence Notice:</strong> GNEP Africa is an independent African environmental initiative and is not an agency of, nor officially endorsed by, the United Nations, UNDP, UNFCCC, IPCC, WHO, FAO, GIZ, or the Green Climate Fund. All cited multilateral datasets and policy records remain the property of their respective issuing institutions.
-            </div>
-        </div>
-    </footer>
-
-    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
-        <div class="container">
-            <div class="row align-items-center gy-2">
-                <div class="col-md-6 text-center text-md-start">
-                    &copy; 2026 Global Nature and Environmental Partnership (GNEP Africa). All rights reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <span class="me-3 text-white-50">Photography &copy; GNEP &amp; AYINET</span>
-                    <a href="accountability.html" class="text-decoration-none text-white-50 me-2">Accountability</a>&bull;
-                    <a href="privacy.html" class="text-decoration-none text-white-50 mx-2">Privacy</a>&bull;
-                    <a href="terms.html" class="text-decoration-none text-white-50 mx-2">Terms</a>&bull;
-                    <a href="accessibility.html" class="text-decoration-none text-white-50 ms-2">Accessibility</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    </div>
-    </div>
-
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    </div>
-
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    </div>
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- 3D WebGL & Motion Libraries (Local Zero-Latency Bundles) -->
-    <script src="lib/three/three.min.js"></script>
-    <script src="lib/gsap/gsap.min.js"></script>
-    <script src="lib/gsap/ScrollTrigger.min.js"></script>
-    <script src="js/gnep-3d.js"></script>
-
-    <script>
-    (function() {
-        var form = document.getElementById('partnerForm');
-        if (!form) return;
-
-        var statusBox = document.createElement('div');
-        statusBox.id = 'partnerFormStatus';
-        statusBox.setAttribute('aria-live', 'polite');
-        form.appendChild(statusBox);
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var nameEl = document.getElementById('contactName');
-            var orgEl = document.getElementById('contactOrg');
-            var emailEl = document.getElementById('contactEmail');
-            var countryEl = document.getElementById('contactCountry');
-            var interestEl = document.getElementById('contactInterest');
-            var msgEl = document.getElementById('contactMessage');
-            var consentEl = document.getElementById('contactConsent');
-
-            var errors = [];
-            [nameEl, emailEl, interestEl, msgEl, consentEl].forEach(function(el) {
-                if (el) el.removeAttribute('aria-invalid');
-            });
-
-            if (!nameEl.value.trim()) {
-                errors.push('Please enter your Full Name.');
-                nameEl.setAttribute('aria-invalid', 'true');
-            }
-            var emailVal = emailEl.value.trim();
-            if (!emailVal || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-                errors.push('Please enter a valid Email Address.');
-                emailEl.setAttribute('aria-invalid', 'true');
-            }
-            if (!interestEl.value) {
-                errors.push('Please select the Nature of Inquiry.');
-                interestEl.setAttribute('aria-invalid', 'true');
-            }
-            if (!msgEl.value.trim()) {
-                errors.push('Please enter your Message.');
-                msgEl.setAttribute('aria-invalid', 'true');
-            }
-            if (!consentEl.checked) {
-                errors.push('Please confirm consent so GNEP may respond to your inquiry.');
-                consentEl.setAttribute('aria-invalid', 'true');
-            }
-
-            if (errors.length > 0) {
-                statusBox.innerHTML = '<div class="alert alert-danger mt-3 mb-0 small" role="alert"><strong><i class="fas fa-exclamation-circle me-1"></i> Please complete the required fields:</strong><ul class="mb-0 mt-1">' + errors.map(function(err) { return '<li>' + err + '</li>'; }).join('') + '</ul></div>';
-                return;
-            }
-
-            var subject = '[GNEP ' + interestEl.value + '] Inquiry from ' + nameEl.value.trim() + (orgEl.value.trim() ? ' (' + orgEl.value.trim() + ')' : '');
-            var bodyLines = [
-                'Full Name: ' + nameEl.value.trim(),
-                'Organisation: ' + (orgEl.value.trim() || 'N/A'),
-                'Email Address: ' + emailVal,
-                'Country: ' + (countryEl.value || 'Not specified'),
-                'Nature of Inquiry: ' + interestEl.value,
-                '----------------------------------------',
-                msgEl.value.trim()
-            ];
-            var mailtoHref = 'mailto:gnep.partnership@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-
-            statusBox.innerHTML = '<div class="p-3 rounded-3 mt-3 border small" style="background:#F0FDF4; border-color:#86EFAC; color:#0B2516;" role="status">' +
-                '<strong><i class="fas fa-envelope-open-text text-success me-1"></i> Inquiry Validated &amp; Prepared for Direct Dispatch:</strong><br>' +
-                'Because this static site is hosted on Cloudflare Pages without an intermediate form server, your inquiry has been formatted for direct delivery to <strong>gnep.partnership@gmail.com</strong>.' +
-                '<div class="d-flex flex-wrap gap-2 mt-2">' +
-                '<a href="' + mailtoHref + '" class="btn btn-sm btn-success fw-bold"><i class="fas fa-paper-plane me-1"></i> Open in Email Client to Send</a>' +
-                '</div></div>';
-
-            window.location.href = mailtoHref;
-        });
-    })();
-    </script>
-
-    <script src="js/page-hero.js?v=20261126-v6"></script>
-</body>
+        <!-- Contact Form -->
+        <div class="py-5">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-7 col-md-9 col-12">
+                        <div class="text-center mb-5">
+                            <h2 class="fw-bold display-4">Send Us Your Inquiry</h2>
+                            <p class="lead text-muted">Reach out to collaborate on tree restoration, civil society workshops, school climate clubs, or policy briefs</p>
+                        </div>
+                        <form onsubmit="event.preventDefault(); var n=document.getElementById('exampleName').value; var s=document.getElementById('exampleSubject').value||'Partnership Inquiry'; var m=document.getElementById('exampleTextarea').value; window.location.href='mailto:gnep.partnership@gmail.com?subject='+encodeURIComponent(s+' - '+n)+'&body='+encodeURIComponent(m);">
+                            <div class="mb-3">
+                                <label for="exampleName" class="form-label">Full Name &amp; Organization</label>
+                                <input type="text" class="form-control" id="exampleName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleSubject" class="form-label">Subject / Programme Area</label>
+                                <input type="text" class="form-control" id="exampleSubject" placeholder="e.g. Institutional Partnership, UMFI Fellowship, Research Brief">
+                            </div>
+                            <div class="mb-4">
+                                <label for="exampleTextarea" class="form-label">Message</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-warning px-4 btn-lg fw-bold">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partner CTA -->
+        <div class="bg-volunteer py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12">
+                        <div class="text-white" data-aos="fade-left" data-aos-duration="1500">
+                            <p class="fw-bold">Join Our Network</p>
+                            <div class="progress rounded-pill w-15" role="progressbar" aria-label="Progress indicator" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 4px;">
+                                <div class="progress-bar bg-warning" style="width: 100%;"></div>
+                            </div>
+                            <div class="mt-4 mb-5">
+                                <h2 class="fw-bold display-4 pb-2">Connect with GNEP Africa on LinkedIn</h2>
+                                <p>Follow our latest policy briefs, field restoration reports, and civil society capacity workshops across Nigeria and Africa.</p>
+                            </div>
+                            <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-warning btn-lg px-4">Follow on LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <!-- footer -->
+        <footer class="footer bg-dark text-white" id="contact">
+            <!-- footer-top -->
+            <div class="footer-top py-5">
+                <div class="container py-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="me-lg-5 pe-lg-5">
+                                <h5 class="fw-bold pb-2">About GNEP Africa</h5>
+                                <p class="text-white-50">Global Nature and Environmental Partnership (GNEP Africa) — Founded in January 2025 in Katsina State, Nigeria.</p>
+                                <p class="text-white-50 m-0">We empower people and communities with the knowledge, partnerships, and opportunities needed to respond to climate and environmental challenges and build a resilient, sustainable Africa where people and nature thrive together.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="fw-bold pb-2">Useful Links</h5>
+                            <ul class="list-unstyled d-grid gap-2">
+                                <li><a href="index.html">Home &amp; Introduction</a></li>
+                                <li><a href="about.html">About GNEP Africa</a></li>
+                                <li><a href="programmes.html">Programmes &amp; Portfolio</a></li>
+                                <li><a href="knowledge-hub.html">Knowledge Hub (17)</a></li>
+                                <li><a href="climate-intelligence.html">Climate Intelligence</a></li>
+                                <li><a href="events.html">Events &amp; Workshops</a></li>
+                                <li><a href="gallery.html">28-Photo Field Gallery</a></li>
+                                <li><a href="contact.html">Contact &amp; Partner</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="fw-bold pb-2">Governance &amp; Flagships</h5>
+                            <ul class="list-unstyled d-grid gap-2">
+                                <li><a href="accountability.html">Accountability Centre</a></li>
+                                <li><a href="founder.html">Founder &amp; Leadership</a></li>
+                                <li><a href="umaru-musa-fellowship-initiative.html">Umaru Musa Fellowship (UMFI)</a></li>
+                                <li><a href="katsina-economic-linkage-capability-model.html">Katsina Economic Model (KELCM)</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom -->
+            <div class="footer-bottom bg-black pt-5 pb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                                <!-- Address -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-map-pin-2-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Address:</p>
+                                        <p class="small mb-0 text-white-50">Katsina State, Nigeria</p>
+                                    </div>
+                                </div>
+                                <!-- Phone -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Phone:</p>
+                                        <a href="tel:+2347065885070" class="small text-white-50">+234 706 588 5070</a>
+                                    </div>
+                                </div>
+                                <!-- Founded -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-Global-line ri-earth-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Founded:</p>
+                                        <a href="about.html" class="small text-white-50">January 2025 &bull; Africa-Wide</a>
+                                    </div>
+                                </div>
+                                <!-- Knowledge Hub -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-book-open-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Publications:</p>
+                                        <a href="knowledge-hub.html" class="small text-white-50">17 Open-Access Briefs</a>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-mail-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Email:</p>
+                                        <a href="mailto:gnep.partnership@gmail.com" class="small text-white-50">gnep.partnership@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-end -->
+            <div class="footer-end py-5 bg-dark">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between gy-3">
+                        <div class="col-auto">
+                            <p class="text-center m-0 text-white-50">Copyright &copy; <a href="index.html" class="text-white">Global Nature and Environmental Partnership (GNEP Africa)</a> 2026</p>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-4">
+                                <a class="text-white" href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-fill ri-lg"></i></a>
+                                <a class="text-white" href="mailto:gnep.partnership@gmail.com" aria-label="Email"><i class="ri-mail-fill ri-lg"></i></a>
+                                <a class="text-white" href="tel:+2347065885070" aria-label="Phone"><i class="ri-phone-fill ri-lg"></i></a>
+                                <a class="text-white" href="knowledge-hub.html" aria-label="Knowledge Hub"><i class="ri-book-2-fill ri-lg"></i></a>
+                                <a class="text-white" href="gallery.html" aria-label="Field Gallery"><i class="ri-image-2-fill ri-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Sidebar Offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="sidebar">
+            <div class="offcanvas-header d-flex justify-content-between">
+                <div class="position-relative d-flex align-items-center gap-2 site-brand">
+                    <img src="assets/real/gnep-logo.webp" alt="GNEP Africa Logo" style="height: 34px; width: auto;">
+                    <div class="lh-1">
+                        <h5 class="fw-bold m-0">GNEP Africa</h5>
+                        <small>Nature &amp; Environment</small>
+                    </div>
+                    <a class="stretched-link" href="index.html"></a>
+                </div>
+                <a href="#sidebar" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ri-close-line ri-lg"></i></a>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar-nav">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item"><a class="nav-link active py-3" href="index.html"><i class="ri-apps-2-line"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="about.html">About GNEP</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="programmes.html">Programmes &amp; Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="knowledge-hub.html">Knowledge Hub (17)</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="climate-intelligence.html">Climate Intelligence</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="events.html">Events &amp; Workshops</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="gallery.html">28-Photo Field Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="founder.html">Founder &amp; Leadership</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="accountability.html">Governance &amp; Accountability</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="contact.html">Contact &amp; Partner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vender/jquery/jquery-3.6.4.min.js"></script>
+        <script src="vender/aos/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
