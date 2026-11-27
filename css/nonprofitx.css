@@ -380,3 +380,101 @@ footer .footer-top .social-icon:hover {
     padding: 1.25rem 1.5rem;
     margin-bottom: 2rem;
 }
+
+/* GNEP Consultancy & Capacity Development Custom Styles */
+.cns-service-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cns-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2.25rem rgba(0, 0, 0, 0.1);
+}
+.cns-service-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #ffc107;
+    color: #111827;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.cns-module-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.cns-module-list li {
+    position: relative;
+    padding-left: 1.65rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.55;
+}
+.cns-module-list li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #d97706;
+    font-size: 1.05rem;
+}
+.cns-note-box {
+    background: #fffbeb;
+    border-left: 4px solid #ffc107;
+    padding: 0.9rem 1.15rem;
+    border-radius: 0 12px 12px 0;
+    font-size: 0.9rem;
+    color: #1e293b;
+}
+.cns-safeguard-box {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 1rem 1.2rem;
+    border-radius: 0 12px 12px 0;
+    font-size: 0.9rem;
+    color: #14532d;
+}
+.cns-client-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 1.4rem;
+    height: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cns-client-card:hover {
+    border-color: #ffc107;
+    box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.06);
+}
+.cns-delivery-badge {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #ffc107;
+    color: #111827;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.cns-enquiry-shell {
+    background: #ffffff;
+    border-radius: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1.25rem 3rem rgba(15, 23, 42, 0.08);
+}
+.w-35 {
+    width: 35%;
+}
