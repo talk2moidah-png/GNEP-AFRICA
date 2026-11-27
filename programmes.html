@@ -1,1819 +1,778 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Programmes &amp; Impact Observatory | Project Portfolio | GNEP Africa</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="GNEP Africa project portfolio, environmental programmes Nigeria, Katsina tree planting AYINET, CSO policy workshop, climate clubs, Umaru Musa Fellowship Initiative, KELCM, results chain" name="keywords">
-    <meta content="Explore GNEP Africa's structured project portfolio, verified output indicators, results-chain methodology, and flagship future initiatives across Nigeria and Africa." name="description">
-    <meta property="og:title" content="Programmes &amp; Impact Observatory | GNEP Africa">
-    <meta property="og:description" content="Structured project portfolio, verified field outputs, partner classifications, and results-chain impact governance from GNEP Africa.">
-    <meta property="og:image" content="https://gnep-africa.pages.dev/assets/real/gallery/gnep-schools-05-full.webp">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://gnep-africa.pages.dev/programmes.html">
-    <link rel="icon" type="image/png" href="assets/real/gnep-logo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css?v=20261127-v1" rel="stylesheet">
-    <link href="css/design-tokens.css?v=20261127-v1" rel="stylesheet">
-    <link href="css/gnep.css?v=20261127-v1" rel="stylesheet">
-
-    <style>
-        :root {
-            --cn-gold: #F3C955;
-            --cn-gold-hover: #EAB938;
-            --cn-dark: #111312;
-            --cn-ink: #181A19;
-            --cn-muted: #5F6662;
-            --cn-surface: #F7F7F5;
-            --cn-border: #E5E7E4;
-        }
-        body.cn-programmes-body {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: var(--cn-ink);
-            overflow-x: hidden;
-        }
-
-        /* 1. FLOATING WHITE PILL NAVBAR OVER HERO (100% Matching Reference Image) */
-        .cn-floating-header {
-            position: absolute;
-            top: 24px;
-            left: 0;
-            right: 0;
-            z-index: 1040;
-            padding: 0 16px;
-        }
-        .cn-pill-navbar {
-            background: #FFFFFF;
-            border-radius: 999px;
-            padding: 10px 24px;
-            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
-            max-width: 1240px;
-            margin: 0 auto;
-        }
-        .cn-brand-wrap {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #111111;
-            font-weight: 800;
-            font-size: 1.15rem;
-            letter-spacing: -0.02em;
-        }
-        .cn-brand-wrap img {
-            height: 32px;
-            width: auto;
-            object-fit: contain;
-        }
-        .cn-header-contact {
-            border-left: 1.5px solid #D1D5DB;
-            padding-left: 16px;
-            margin-left: 18px;
-            font-size: 0.76rem;
-            line-height: 1.38;
-            color: #4B5563;
-            font-weight: 500;
-        }
-        .cn-header-contact a {
-            color: #374151;
-            text-decoration: none;
-            display: block;
-        }
-        .cn-header-contact a:hover {
-            color: #15803D;
-        }
-        .cn-pill-navbar .navbar-nav .nav-link {
-            color: #1F2937 !important;
-            font-weight: 600;
-            font-size: 0.86rem;
-            padding: 6px 12px !important;
-            border-radius: 999px;
-            transition: all 0.2s ease;
-        }
-        .cn-pill-navbar .navbar-nav .nav-link:hover,
-        .cn-pill-navbar .navbar-nav .nav-link.active {
-            color: #111111 !important;
-            background: rgba(243, 201, 85, 0.28);
-        }
-
-        /* 2. FULL-BLEED PHOTOGRAPHIC HERO WITH TWO-COLUMN BOTTOM SPLIT */
-        .cn-hero-section {
-            position: relative;
-            min-height: 670px;
-            padding: 145px 0 64px 0;
-            display: flex;
-            align-items: flex-end;
-            background-size: cover;
-            background-position: center 28%;
-            background-repeat: no-repeat;
-            color: #FFFFFF;
-        }
-        .cn-hero-headline {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            font-size: clamp(2.55rem, 4.8vw, 4.35rem);
-            font-weight: 600;
-            line-height: 1.08;
-            letter-spacing: -0.028em;
-            color: #FFFFFF;
-            margin-bottom: 0;
-        }
-        .cn-hero-kicker-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(17, 19, 18, 0.58);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.24);
-            color: #F3C955;
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            padding: 6px 14px;
-            border-radius: 999px;
-            margin-bottom: 18px;
-        }
-        .cn-hero-right-copy {
-            color: rgba(255, 255, 255, 0.88);
-            font-size: 0.96rem;
-            line-height: 1.62;
-            max-width: 430px;
-            margin-bottom: 22px;
-        }
-
-        /* SIGNATURE CARENEST PILL BUTTON WITH GOLDEN CIRCULAR ARROW */
-        .cn-pill-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            background: rgba(15, 18, 16, 0.65);
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(243, 201, 85, 0.65);
-            color: #FFFFFF !important;
-            border-radius: 999px;
-            padding: 6px 7px 6px 20px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-decoration: none !important;
-            transition: all 0.22s ease;
-        }
-        .cn-pill-cta:hover {
-            background: #111312;
-            border-color: var(--cn-gold);
-            transform: translateY(-1px);
-        }
-        .cn-pill-cta-dark {
-            background: #111312;
-            border-color: #111312;
-        }
-        .cn-pill-cta-sm {
-            padding: 5px 6px 5px 16px;
-            font-size: 0.82rem;
-            gap: 10px;
-        }
-        .cn-pill-cta-arrow {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--cn-gold);
-            color: #111111;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.78rem;
-            flex-shrink: 0;
-            transition: transform 0.22s ease;
-        }
-        .cn-pill-cta-sm .cn-pill-cta-arrow {
-            width: 27px;
-            height: 27px;
-            font-size: 0.72rem;
-        }
-        .cn-pill-cta-arrow i {
-            transform: rotate(45deg);
-        }
-        .cn-pill-cta:hover .cn-pill-cta-arrow {
-            transform: scale(1.06);
-        }
-
-        /* 3. GOLDEN-AMBER PARTNER & COLLABORATOR BAND BELOW HERO */
-        .cn-partner-gold-strip {
-            background: var(--cn-gold);
-            color: #111111;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
-        .cn-partner-logos-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1.25rem 2rem;
-        }
-        .cn-partner-mark {
-            font-weight: 700;
-            font-size: 1.02rem;
-            color: #141413;
-            letter-spacing: -0.01em;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-        .cn-partner-mark:hover {
-            color: #000000;
-            opacity: 0.78;
-        }
-        .cn-partner-mark-spaced {
-            letter-spacing: 0.14em;
-            font-size: 0.88rem;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        /* 4. THREE-COLUMN CLEAN IMPACT METRICS BAR (Top-Right Sheet of Reference Image) */
-        .cn-metrics-bar {
-            background: #FFFFFF;
-            border-bottom: 1px solid var(--cn-border);
-            padding: 3.25rem 0;
-        }
-        .cn-metric-col {
-            text-align: center;
-            padding: 0.5rem 1.75rem;
-            border-right: 1px solid var(--cn-border);
-        }
-        .cn-metric-col:last-child {
-            border-right: none;
-        }
-        .cn-metric-num {
-            font-size: 2.35rem;
-            font-weight: 700;
-            color: #111111;
-            line-height: 1.1;
-            margin-bottom: 0.35rem;
-            letter-spacing: -0.03em;
-        }
-        .cn-metric-title {
-            font-size: 0.96rem;
-            font-weight: 700;
-            color: #111111;
-            margin-bottom: 0.45rem;
-        }
-        .cn-metric-desc {
-            font-size: 0.83rem;
-            color: var(--cn-muted);
-            max-width: 280px;
-            margin: 0 auto;
-            line-height: 1.55;
-        }
-
-        /* 5. "/ ABOUT PROGRAMMES /" BENTO OVERVIEW SECTION */
-        .cn-slash-kicker {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: #4B5563;
-            margin-bottom: 0.65rem;
-            display: block;
-        }
-        .cn-section-heading {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            font-size: clamp(1.95rem, 3.3vw, 2.85rem);
-            font-weight: 600;
-            color: #111111;
-            line-height: 1.16;
-            letter-spacing: -0.025em;
-        }
-        .cn-bento-photo-card {
-            border-radius: 18px;
-            overflow: hidden;
-            height: 330px;
-            position: relative;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
-        }
-        .cn-bento-photo-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .cn-bento-photo-badge {
-            position: absolute;
-            bottom: 14px;
-            left: 14px;
-            right: 14px;
-            background: rgba(15, 18, 16, 0.76);
-            backdrop-filter: blur(6px);
-            color: #FFFFFF;
-            padding: 8px 14px;
-            border-radius: 12px;
-            font-size: 0.78rem;
-            font-weight: 500;
-        }
-        .cn-bento-stat-card {
-            border-radius: 18px;
-            background: #FFFFFF;
-            border: 1px solid #E5E7EB;
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
-            height: 330px;
-            padding: 2.1rem 1.85rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .cn-bento-big-num {
-            font-size: 3.6rem;
-            font-weight: 700;
-            color: #111111;
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        /* 6. PROJECT & ACTIVITY REGISTRY — EVERY FEATURE HAS ITS OWN PHOTOGRAPHIC HERO */
-        .cn-registry-section {
-            background: var(--cn-surface);
-            padding: 5rem 0;
-            border-top: 1px solid var(--cn-border);
-            border-bottom: 1px solid var(--cn-border);
-        }
-        .cn-filter-pill {
-            border-radius: 999px;
-            padding: 8px 18px;
-            font-size: 0.84rem;
-            font-weight: 600;
-            border: 1px solid #D1D5DB;
-            background: #FFFFFF;
-            color: #1F2937;
-            transition: all 0.2s ease;
-        }
-        .cn-filter-pill:hover {
-            border-color: #111111;
-            color: #111111;
-        }
-        .cn-filter-pill.active {
-            background: #111312;
-            color: #FFFFFF;
-            border-color: #111312;
-        }
-        .cn-project-card {
-            background: #FFFFFF;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid #E5E7EB;
-            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
-            transition: transform 0.24s ease, box-shadow 0.24s ease;
-        }
-        .cn-project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 42px rgba(15, 23, 42, 0.11);
-        }
-        .cn-project-hero {
-            min-height: 305px;
-            padding: 1.35rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: #FFFFFF;
-            position: relative;
-        }
-        .cn-project-hero-top {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 8px;
-        }
-        .cn-code-pill {
-            background: rgba(255, 255, 255, 0.92);
-            color: #111111;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 999px;
-        }
-        .cn-status-pill {
-            color: #FFFFFF;
-            font-size: 0.74rem;
-            font-weight: 700;
-            padding: 4px 12px;
-            border-radius: 999px;
-            letter-spacing: 0.02em;
-        }
-        .cn-project-byline {
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.84);
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-        .cn-sector-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--cn-gold);
-            display: inline-block;
-        }
-        .cn-project-hero-title {
-            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-            font-size: 1.32rem;
-            font-weight: 700;
-            line-height: 1.28;
-            color: #FFFFFF;
-            margin-bottom: 0;
-        }
-        .cn-hero-pdf-link {
-            color: #F3C955;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.45);
-            padding: 5px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(243, 201, 85, 0.4);
-        }
-        .cn-hero-pdf-link:hover {
-            background: var(--cn-gold);
-            color: #111111;
-        }
-        .cn-project-body {
-            padding: 1.4rem 1.5rem 1rem 1.5rem;
-        }
-        .cn-project-summary {
-            font-size: 0.91rem;
-            color: #4B5563;
-            line-height: 1.62;
-            margin-bottom: 1.1rem;
-        }
-        .cn-spec-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            background: #F9FAFB;
-            border: 1px solid #E5E7EB;
-            border-radius: 12px;
-            padding: 12px;
-        }
-        .cn-spec-item {
-            display: flex;
-            flex-direction: column;
-        }
-        .cn-spec-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #6B7280;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-        .cn-spec-val {
-            font-size: 0.81rem;
-            color: #1F2937;
-            line-height: 1.4;
-        }
-        .cn-project-footer {
-            padding: 0.9rem 1.5rem 1.25rem 1.5rem;
-            border-top: 1px solid #F1F5F9;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.83rem;
-        }
-        .cn-footer-action-link {
-            font-weight: 700;
-            color: #111111;
-            text-decoration: none;
-        }
-        .cn-footer-action-link:hover {
-            color: #15803D;
-        }
-        .cn-footer-sublink {
-            color: #64748B;
-            text-decoration: none;
-            font-size: 0.8rem;
-        }
-
-        /* 7. MINIMALIST "+ / -" ACCORDION SECTION (Top-Right of Reference Image) */
-        .cn-faq-item {
-            border-bottom: 1px solid #E5E7EB;
-            padding: 1.15rem 0;
-        }
-        .cn-faq-btn {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 0;
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #111111;
-            gap: 16px;
-        }
-        .cn-faq-icon {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: #4B5563;
-            line-height: 1;
-        }
-        .cn-faq-body {
-            padding-top: 0.75rem;
-            font-size: 0.9rem;
-            color: #5F6662;
-            line-height: 1.65;
-            max-width: 68ch;
-        }
-
-        /* 8. GOLDEN BOTTOM TICKER STRIP (Bottom-Right of Reference Image) */
-        .cn-gold-ticker {
-            background: var(--cn-gold);
-            color: #111111;
-            padding: 10px 0;
-            font-weight: 700;
-            font-size: 0.88rem;
-            letter-spacing: -0.01em;
-            text-align: center;
-        }
-
-        @media (max-width: 991.98px) {
-            .cn-floating-header {
-                position: relative;
-                top: 0;
-                background: #111312;
-                padding: 12px;
-            }
-            .cn-pill-navbar {
-                border-radius: 20px;
-            }
-            .cn-hero-section {
-                min-height: 540px;
-                padding: 48px 0;
-            }
-            .cn-metric-col {
-                border-right: none;
-                border-bottom: 1px solid var(--cn-border);
-                padding: 1.25rem 1rem;
-            }
-            .cn-metric-col:last-child {
-                border-bottom: none;
-            }
-            .cn-bento-photo-card,
-            .cn-bento-stat-card {
-                height: auto;
-                min-height: 250px;
-            }
-            .cn-spec-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body class="cn-programmes-body">
-    <!-- Skip to main content -->
-    <a class="skip-to-content" href="#main-content">Skip to main content</a>
-
-    <!-- 1. FLOATING WHITE PILL NAVBAR OVER HERO (100% Carenest Reference Layout with GNEP Africa Details) -->
-    <header class="cn-floating-header">
-        <nav class="navbar navbar-expand-lg cn-pill-navbar" aria-label="Main Navigation">
-            <div class="container-fluid px-1">
-                <div class="d-flex align-items-center">
-                    <a href="index.html" class="cn-brand-wrap" aria-label="GNEP Africa Homepage">
-                        <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" width="102" height="32">
-                        <span>GNEP Africa</span>
-                    </a>
-                </div>
-
-                <button class="navbar-toggler py-1 px-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span class="fa fa-bars text-dark fs-5"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                        <li class="nav-item"><a href="programmes.html" class="nav-link active" aria-current="page">Programmes</a></li>
-                        <li class="nav-item"><a href="knowledge-hub.html" class="nav-link">Knowledge Hub</a></li>
-                        <li class="nav-item"><a href="climate-intelligence.html" class="nav-link">Climate Intelligence</a></li>
-                        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-                        <li class="nav-item"><a href="accountability.html" class="nav-link">Governance</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main-content">
-        <!-- 2. FULL-BLEED PHOTOGRAPHIC HERO (Bottom-Aligned 2-Column Split Matching Reference Image 100%) -->
-        <section class="cn-hero-section gnep-page-hero" data-page-hero="programmes.html" aria-label="Programmes and Impact Observatory Hero" style="background-image: linear-gradient(180deg, rgba(10, 16, 12, 0.22) 0%, rgba(10, 16, 12, 0.42) 52%, rgba(8, 14, 10, 0.88) 100%), url('assets/real/gallery/gnep-schools-05-full.webp'); background-position: center 25%; background-size: cover;">
-            <div class="container">
-                <div class="row align-items-end gy-4">
-                    <div class="col-lg-7">
-                        <span class="cn-hero-kicker-tag">
-                            <i class="fas fa-seedling" aria-hidden="true"></i> Programmes &amp; Impact Observatory
-                        </span>
-                        <h1 class="cn-hero-headline">
-                            Empowering Communities<br>To Grow With Nature
-                        </h1>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="ps-lg-4">
-                            <p class="cn-hero-right-copy">
-                                We are an African environmental &amp; research partnership dedicated to advancing climate resilience through community tree restoration, civil society capacity building, school climate clubs, and policy action.
-                            </p>
-                            <div class="d-flex flex-wrap align-items-center gap-3">
-                                <a href="#portfolio" class="cn-pill-cta">
-                                    <span>Explore Registry</span>
-                                    <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                </a>
-                                <a href="contact.html" class="cn-pill-cta">
-                                    <span>Partner With Us</span>
-                                    <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4 pt-2 small text-white-50" style="font-size: 0.76rem;">
-                    <i class="fas fa-camera text-warning me-1" aria-hidden="true"></i>
-                    <strong>Authentic GNEP Field Photograph:</strong> School Climate Action Champions &amp; Economic Tree Seedling Drive, Katsina State, Nigeria (&copy; GNEP Africa)
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. FULL-WIDTH GOLDEN-AMBER PARTNER & COLLABORATOR BAND (Matching Yellow Strip Under Hero) -->
-        <section class="cn-partner-gold-strip" aria-label="Partners and Institutional Collaborations">
-            <div class="container">
-                <div class="cn-partner-logos-row">
-                    <a href="tree-planting-150-seedlings.html" class="cn-partner-mark">
-                        <span style="font-weight:900;">//</span> AYINET Katsina
-                    </a>
-                    <a href="cso-policy-workshop.html" class="cn-partner-mark cn-partner-mark-spaced">
-                        GREEN MINDS SPACE
-                    </a>
-                    <a href="events.html" class="cn-partner-mark">
-                        <i class="fas fa-leaf" aria-hidden="true"></i> SUBEB &amp; UNICEF Workshop
-                    </a>
-                    <a href="founder.html" class="cn-partner-mark">
-                        <span style="font-size:0.9rem;">(&bull;)</span> PAUWES Research
-                    </a>
-                    <a href="subsidy-removal-public-accountability-policy-brief.html" class="cn-partner-mark">
-                        <i class="fas fa-university" aria-hidden="true"></i> UMYU Katsina
-                    </a>
-                    <a href="youth-environmental-action.html" class="cn-partner-mark">
-                        gnepclimateclubs
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. THREE-COLUMN CLEAN EDITORIAL IMPACT METRICS BAR (Top-Right Sheet of Reference Image) -->
-        <section class="cn-metrics-bar" id="impact-snapshot" aria-label="Verified Activity and Output Snapshot">
-            <div class="container">
-                <div class="row g-0 align-items-center">
-                    <div class="col-lg-4 cn-metric-col">
-                        <div class="cn-metric-num">150+</div>
-                        <div class="cn-metric-title">Tree Seedlings Planted</div>
-                        <p class="cn-metric-desc">
-                            We are an environmental partnership dedicated to restoring semi-arid community and school landscapes with AYINET.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 cn-metric-col">
-                        <div class="cn-metric-num">20+</div>
-                        <div class="cn-metric-title">CSO Leaders Joined the Mission</div>
-                        <p class="cn-metric-desc">
-                            Civil society representatives, youth researchers, and educators who help strengthen grassroots climate governance.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 cn-metric-col">
-                        <div class="cn-metric-num">17</div>
-                        <div class="cn-metric-title">Published Policy &amp; Research Works</div>
-                        <p class="cn-metric-desc">
-                            Strong evidence-based policy briefs, working papers, and Hausa climate advisories creating resilient futures for Africa.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. "/ ABOUT OUR PROGRAMMES /" BENTO OVERVIEW SECTION (Bottom-Left of Reference Image) -->
-        <section class="py-5 bg-white" id="about-programmes" aria-label="About Our GNEP Africa Programmes">
-            <div class="container py-3">
-                <div class="row align-items-end mb-4 gy-3">
-                    <div class="col-lg-7">
-                        <span class="cn-slash-kicker">/ About Programmes /</span>
-                        <h2 class="cn-section-heading mb-0">
-                            About Our GNEP Africa<br>Programme Organization
-                        </h2>
-                    </div>
-                    <div class="col-lg-5 text-lg-end">
-                        <p class="small text-muted mb-0">
-                            Governed by a strict five-stage results chain separating direct outputs from long-term ecological and policy outcomes.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row g-4 align-items-stretch">
-                    <!-- Left Wide Photo Card -->
-                    <div class="col-lg-5">
-                        <div class="cn-bento-photo-card">
-                            <img src="assets/real/cso-workshop-group.webp" alt="20 Civil Society Representatives trained by GNEP Africa and The Green Minds Space in Katsina State" loading="lazy">
-                            <div class="cn-bento-photo-badge">
-                                <i class="fas fa-users text-warning me-1"></i> <strong>Pillar 02:</strong> 20 CSO Leaders Trained in Policy Briefs &amp; Proposals (Katsina State)
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Center White Stat Card (11+ Initiatives) -->
-                    <div class="col-lg-3">
-                        <div class="cn-bento-stat-card">
-                            <div>
-                                <div class="cn-bento-big-num">11+</div>
-                                <div class="fw-bold text-dark mt-2" style="font-size: 1.05rem;">Portfolio Initiatives &amp; Frameworks</div>
-                                <p class="small text-muted mt-2 mb-0" style="line-height: 1.58;">
-                                    Spanning <strong>3 Completed</strong> field &amp; workshop projects, <strong>2 Active</strong> ongoing programmes, and <strong>6 Planned</strong> flagship future initiatives (including UMFI &amp; KELCM).
-                                </p>
-                            </div>
-                            <div class="pt-3 border-top d-flex align-items-center justify-content-between">
-                                <span class="small fw-bold text-dark">Founded Jan 2025</span>
-                                <a href="#portfolio" class="small fw-bold text-success text-decoration-none">View Registry &darr;</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Photo Card -->
-                    <div class="col-lg-4">
-                        <div class="cn-bento-photo-card">
-                            <img src="assets/real/schools-tree-planting.webp" alt="Youth holding economic tree seedlings at school in Katsina State" loading="lazy">
-                            <div class="cn-bento-photo-badge">
-                                <i class="fas fa-seedling text-success me-1"></i> <strong>Pillar 01:</strong> 150 Economic Tree Seedlings &amp; School Climate Clubs
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. PROJECT & ACTIVITY REGISTRY — EVERY FEATURE HAS ITS OWN PHOTOGRAPHIC HERO -->
-        <section class="cn-registry-section" id="portfolio" aria-label="Project and Activity Registry">
-            <div class="container">
-                <div class="row align-items-end mb-4 gy-3">
-                    <div class="col-lg-7">
-                        <span class="cn-slash-kicker">/ Project &amp; Activity Registry /</span>
-                        <h2 class="cn-section-heading mb-2">
-                            Verified Project Portfolio &amp; Future Initiatives
-                        </h2>
-                        <p class="text-muted small mb-0">
-                            Every initiative below features its dedicated photographic hero banner, controlled lifecycle status (<strong>Completed</strong>, <strong>Active / Ongoing</strong>, or <strong>Planned / In Development</strong>), and verified output-to-outcome indicators.
-                        </p>
-                    </div>
-                    <div class="col-lg-5 text-lg-end">
-                        <a href="knowledge-hub.html" class="cn-pill-cta cn-pill-cta-dark">
-                            <span>View All 17 Publications</span>
-                            <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Lifecycle Filter Pills -->
-                <div class="d-flex flex-wrap gap-2 mb-4 pb-2" role="group" aria-label="Filter project portfolio by status">
-                    <button type="button" class="cn-filter-pill prog-filter-btn active" data-prog-filter="all">All Records (11)</button>
-                    <button type="button" class="cn-filter-pill prog-filter-btn" data-prog-filter="completed">Completed (3)</button>
-                    <button type="button" class="cn-filter-pill prog-filter-btn" data-prog-filter="active">Active / Ongoing (2)</button>
-                    <button type="button" class="cn-filter-pill prog-filter-btn" data-prog-filter="planned">Planned / Future Initiatives (6)</button>
-                </div>
-
-                <!-- 11 Project Feature Cards — Each With Its Own Photographic Hero Following Uploaded Reference Image -->
-                <div class="row g-4" id="projectPortfolioGrid">
-                    
-                    <!-- GNEP-PRJ-2026-001: Policy Brief, Proposal Development & Elevator Pitch Workshop -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="completed">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/cso-workshop-policy-2026.webp'); background-position: center 28%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-2026-001</span>
-                                        <span class="cn-status-pill" style="background: #15803D;">Completed • Verified</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026  •  By GNEP Africa & The Green Minds Space &bull; <strong>Environmental Governance</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="cso-policy-workshop.html" class="text-white text-decoration-none">Policy Brief, Proposal Development & Elevator Pitch Workshop</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="cso-policy-workshop.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>View Project Report</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/cso-policy-brief-workshop.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Proceedings PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Intensive capacity-building training for 20 civil society representatives in Katsina State on translating grassroots environmental evidence into legislative policy briefs, competitive funding proposals, 60-second pitches, and ethical AI research workflows.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State, Nigeria • 2026</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Workshop Co-Host: The Green Minds Space</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">20 civil society representatives trained across 4 technical modules</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Post-workshop policy brief drafting and legislative engagement by trained CSOs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="cso-policy-workshop.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/cso-policy-brief-workshop.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="gallery.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-2025-002: 150 Economic Tree Seedlings Restoration Drive in Katsina State -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="completed">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/tree-planting-action.webp'); background-position: center 35%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-2025-002</span>
-                                        <span class="cn-status-pill" style="background: #15803D;">Completed • Monitoring Active</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2025 / 2026  •  By GNEP Africa & AYINET &bull; <strong>Ecosystem Restoration</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="tree-planting-150-seedlings.html" class="text-white text-decoration-none">150 Economic Tree Seedlings Restoration Drive in Katsina State</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="tree-planting-150-seedlings.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Restoration Story</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/sahelian-tree-planting-field-report.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Field Report PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Joint community and school tree-planting drive establishing 150 economic and indigenous tree seedlings in semi-arid Katsina State to counter land degradation, restore soil vitality, and support local micro-climates.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State, Nigeria • 2025 / 2026</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Implementation Partner: African Youth Initiative Network (AYINET)</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">150 economic tree seedlings planted with community & youth stewardship</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Seedling survival rate and canopy establishment monitored with local custodians</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="tree-planting-150-seedlings.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/sahelian-tree-planting-field-report.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="gallery.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-2025-003: Storytelling & Persuasive Communication Workshop for CSOs -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="completed">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/storytelling-speaker.webp'); background-position: center 25%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-2025-003</span>
-                                        <span class="cn-status-pill" style="background: #15803D;">Completed • Verified</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2025  •  By GNEP Communications Unit &bull; <strong>Capacity Development</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="communicating-environmental-issues.html" class="text-white text-decoration-none">Storytelling & Persuasive Communication Workshop for CSOs</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="communicating-environmental-issues.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Event Summary</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/communicating-environmental-issues.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Toolkit PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">One-day capacity-building workshop equipping civil society organisations in Katsina State with narrative frameworks, evidence translation techniques, and persuasive communication tools for environmental advocacy.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State, Nigeria • 2025</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Lead Unit: GNEP Communications Unit (Maryam Dauda)</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">One-day CSO workshop delivered + published Storytelling Toolkit</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Adoption of evidence-backed environmental storytelling by participating CSOs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="communicating-environmental-issues.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/communicating-environmental-issues.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="gallery.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-2025-004: Climate Clubs in Secondary Schools — Katsina State -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="active">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/gallery/gnep-schools-05-full.webp'); background-position: center 30%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-2025-004</span>
-                                        <span class="cn-status-pill" style="background: #0284C7;">Active • Ongoing Rollout</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2025 – Present  •  By GNEP School Climate Champions &bull; <strong>Youth Leadership & Schools</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="youth-environmental-action.html" class="text-white text-decoration-none">Climate Clubs in Secondary Schools — Katsina State</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="youth-environmental-action.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Explore Programme</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/youth-led-environmental-action.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Programme Brief PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Ongoing programme establishing student-led Climate Clubs in secondary schools across Katsina State to build early environmental awareness, practical climate literacy, and campus tree-nursery stewardship.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State, Nigeria • Ongoing (2025–Present)</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Target Group: Secondary school students & teacher mentors</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Active school climate club chapters & campus seedling stewardship</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Student ecological literacy and schoolyard tree survival (tracked iteratively)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="youth-environmental-action.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/youth-led-environmental-action.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="gallery.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-2026-005: Community Climate Literacy & Vernacular Hausa Advisory Programme -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="active">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/lingua-franca-hausa-classroom.webp'); background-position: center 35%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-2026-005</span>
-                                        <span class="cn-status-pill" style="background: #0284C7;">Active • Ongoing Programme</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026 – Present  •  By GNEP Research & Policy Unit &bull; <strong>Climate Education & Hausa Science</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="lingua-franca-hausa-into-climate.html" class="text-white text-decoration-none">Community Climate Literacy & Vernacular Hausa Advisory Programme</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="lingua-franca-hausa-into-climate.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Policy Brief</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/lingua-franca-hausa-into-climate.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Download PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Ongoing community climate and clean-energy awareness effort across Northern Nigeria, translating meteorological warnings, Super El Niño advisories, and adaptation strategies into accessible Hausa.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State & Northern Nigeria • Ongoing</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Lead Unit: GNEP Linguistic Inclusion & Climate Advisory Desk</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Hausa Super El Niño Public Advisory & Lingua Franca Policy Brief</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Expanded rural climate awareness among Hausa-speaking farming communities</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="lingua-franca-hausa-into-climate.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/lingua-franca-hausa-into-climate.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-UMFI: Umaru Musa Fellowship Initiative (UMFI) — Empower. Innovate. Transform. -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/umfi-youth-fellows-cohort.webp'); background-position: center 30%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-UMFI</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned Future Initiative</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026–2027 Horizon  •  By Mohammed Labaran Sani & GNEP &bull; <strong>Education & Decent Jobs</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="umaru-musa-fellowship-initiative.html" class="text-white text-decoration-none">Umaru Musa Fellowship Initiative (UMFI) — Empower. Innovate. Transform.</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="umaru-musa-fellowship-initiative.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Initiative Dossier</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/umaru-musa-fellowship-initiative-proposal.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Proposal PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">A flagship future youth leadership, mentorship, and civic-innovation fellowship programme we hope to spearhead in honour of late President Umaru Musa Yar'Adua—equipping 45 emerging leaders (ages 20–35) per cohort over eight intensive weeks.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State & National Scaling Horizon</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Target Partners: Universities, State Ministries & Foundations</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Full 16-stage curriculum blueprint & 45-fellow pilot specification ready</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Ethical public-service leadership pipeline and fellow-led civic projects</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="umaru-musa-fellowship-initiative.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/umaru-musa-fellowship-initiative-proposal.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="contact.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-KELCM: Katsina Economic Linkage & Capability Model (KELCM) -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/kelcm-agroforestry-nursery.webp'); background-position: center 40%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-KELCM</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned Strategic Model</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> November 2026  •  By Mohammed Labaran Sani &bull; <strong>Sub-National Economic Linkages</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="katsina-economic-linkage-capability-model.html" class="text-white text-decoration-none">Katsina Economic Linkage & Capability Model (KELCM)</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="katsina-economic-linkage-capability-model.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Working Paper</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/katsina-economic-linkage-capability-model.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Working Paper PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Sub-national development framework synthesizing Amartya Sen's Capability Approach, Albert Hirschman's Economic Linkages, and Jeffrey Sachs' SDG Strategy across Human Capital, Agro-Processing Clusters, Clean Energy, and Infrastructure in Katsina State.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">All 34 LGAs of Katsina State, Nigeria</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Framework Scope: State Ministries, Private Sector (PPPs) & CSOs</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Published 3-pillar working paper & 6-sector SDG action matrix</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Integrated human capital expansion and agro-industrial value capture</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="katsina-economic-linkage-capability-model.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/katsina-economic-linkage-capability-model.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="contact.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-006: WEFE Nexus & Watershed Resilience Strategic Framework -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/alau-dam-maiduguri-aerial-inundation.webp'); background-position: center 45%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-006</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned • In Development</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026–2027 Design Phase  •  By GNEP Technical Unit &bull; <strong>Water-Energy-Food-Ecosystems</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="alau-dam-flood-maiduguri-nature-based-solutions.html" class="text-white text-decoration-none">WEFE Nexus & Watershed Resilience Strategic Framework</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="alau-dam-flood-maiduguri-nature-based-solutions.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read NbS Flood Brief</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/alau-dam-flood-maiduguri-nature-based-solutions.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Download PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Integrated Water, Energy, Food, and Ecosystem (WEFE) resilience programming combining upstream watershed restoration, wetland protection, Vetiver bioengineering, and solar-powered irrigation across northern Nigeria.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Northern Nigeria & Sahelian River Basins</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Status: Concept & Nature-Based Solutions Dossier Published</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Alau Dam NbS Disaster Risk Reduction Brief & Lagos Sponge City Study</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Reduced flood vulnerability and climate-resilient agro-ecosystems</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="alau-dam-flood-maiduguri-nature-based-solutions.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/alau-dam-flood-maiduguri-nature-based-solutions.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="adapting-rotterdam-sponge-city-lagos.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-007: Green Schools & Climate-Ready Curriculum Initiative -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/climate-ed-schoolgirls-tree-planting.webp'); background-position: center 38%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-007</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned • In Development</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026–2028 Horizon  •  By GNEP Education Desk &bull; <strong>Climate-Resilient Education</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="addressing-structural-gaps-african-climate-education.html" class="text-white text-decoration-none">Green Schools & Climate-Ready Curriculum Initiative</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="addressing-structural-gaps-african-climate-education.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Education Brief</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/addressing-structural-gaps-african-climate-education.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Download PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Programmatic framework to close structural gaps in African climate education by pairing localized climate curricula and pre/in-service teacher training with climate-resilient school infrastructure and schoolyard nurseries.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State & African Partner Schools</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Aligned With: UNESCO Greening Education Partnership Benchmarks</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Published 5-Gap African Climate Education Policy Brief (GNEP-PB-2026-016)</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">At least one trained climate lead teacher and hazard plan per partner school</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="addressing-structural-gaps-african-climate-education.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/addressing-structural-gaps-african-climate-education.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="contact.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-008: Research & Policy Fellowship on African Multilateral Governance -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/agenda2063-light-rail-cover.webp'); background-position: center 45%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-008</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned • In Development</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026–2033 Horizon  •  By GNEP Policy Observatory &bull; <strong>Continental Policy & Diplomacy</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="africa-by-2063-assessing-progress-priorities.html" class="text-white text-decoration-none">Research & Policy Fellowship on African Multilateral Governance</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="africa-by-2063-assessing-progress-priorities.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Agenda 2063 Brief</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/africa-by-2063-assessing-progress-priorities.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Download PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Collaborative research fellowship tracking Africa's Second Ten-Year Implementation Plan of Agenda 2063 (2024–2033), UN Security Council reform, and grant-equivalent adaptation finance delivery.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Pan-African Research Network</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Lead Authors: Mohammed Labaran Sani, Mahamat H. Mahamat & Amina Baala</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Published Flagship Briefs on Agenda 2063, UNSC Reform & Climate Finance</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Evidence-backed African policy positions for continental and global forums</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="africa-by-2063-assessing-progress-priorities.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/africa-by-2063-assessing-progress-priorities.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="permanent-seat-for-africa-un-security-council.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- GNEP-PRJ-PLAN-009: Green Skills & Decentralized Clean Energy Livelihood Initiative -->
-                    <div class="col-lg-6 prog-card-item" data-prog-status="planned">
-                        <article class="cn-project-card h-100 d-flex flex-column justify-content-between">
-                            <div>
-                                <!-- Dedicated Photographic Hero on Every Project & Activity Registry Feature (Following Uploaded Reference Image) -->
-                                <div class="cn-project-hero" style="background-image: linear-gradient(180deg, rgba(8, 14, 10, 0.25) 0%, rgba(8, 14, 10, 0.55) 48%, rgba(8, 14, 10, 0.92) 100%), url('assets/real/climate-finance-undp-solar.webp'); background-position: center 42%;">
-                                    <div class="cn-project-hero-top">
-                                        <span class="cn-code-pill">GNEP-PRJ-PLAN-009</span>
-                                        <span class="cn-status-pill" style="background: #B45309;">Planned • In Development</span>
-                                    </div>
-                                    <div class="cn-project-hero-bottom">
-                                        <div class="cn-project-byline">
-                                            <span class="cn-sector-dot"></span> 2026–2028 Horizon  •  By GNEP Green Skills Desk &bull; <strong>Clean Energy & Green Jobs</strong>
-                                        </div>
-                                        <h3 class="cn-project-hero-title">
-                                            <a href="rethinking-climate-finance-africa.html" class="text-white text-decoration-none">Green Skills & Decentralized Clean Energy Livelihood Initiative</a>
-                                        </h3>
-                                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3">
-                                            <a href="rethinking-climate-finance-africa.html" class="cn-pill-cta cn-pill-cta-sm">
-                                                <span>Read Climate Finance Brief</span>
-                                                <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                                            </a>
-                                            <a href="assets/publications/rethinking-climate-finance-africa.pdf" download class="cn-hero-pdf-link">
-                                                <i class="fas fa-file-pdf me-1"></i>Download PDF
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Governed Project Specification Body -->
-                                <div class="cn-project-body">
-                                    <p class="cn-project-summary">Practical vocational training and clean-energy entrepreneurship programme preparing young people and women in northern Nigeria for solar mini-grid maintenance, clean cooking transitions, and climate-smart agribusiness.</p>
-                                    <div class="cn-spec-grid">
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Location &amp; Period</span>
-                                            <span class="cn-spec-val">Katsina State & Northern Nigeria</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Partner / Lead Classification</span>
-                                            <span class="cn-spec-val">Status: Framework Design & Partner Mobilisation</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Verified Output / Milestone</span>
-                                            <span class="cn-spec-val text-success fw-bold">Aligned with Nigeria Electricity Act 2023 & Rethinking Climate Finance Brief</span>
-                                        </div>
-                                        <div class="cn-spec-item">
-                                            <span class="cn-spec-label">Outcome Indicator</span>
-                                            <span class="cn-spec-val">Youth employment in decentralized solar and green value chains</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-project-footer">
-                                <a href="rethinking-climate-finance-africa.html" class="cn-footer-action-link">
-                                    Open Full Dossier <i class="fas fa-arrow-right ms-1"></i>
-                                </a>
-                                <div class="d-flex align-items-center gap-3">
-                                    <a href="assets/publications/rethinking-climate-finance-africa.pdf" download class="cn-footer-sublink text-danger fw-bold">
-                                        <i class="fas fa-file-pdf me-1"></i>PDF
-                                    </a>
-                                    <a href="contact.html" class="cn-footer-sublink">
-                                        <i class="fas fa-external-link-alt me-1"></i>Related Record
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. MINIMALIST "+ / -" PORTFOLIO GOVERNANCE ACCORDION & RESULTS-CHAIN TABLE -->
-        <section class="py-5 bg-white" id="results-chain" aria-label="Results Chain and Portfolio Governance">
-            <div class="container py-3">
-                <div class="row g-5 align-items-start">
-                    <div class="col-lg-5">
-                        <span class="cn-slash-kicker">/ Results-Chain Governance /</span>
-                        <h2 class="cn-section-heading mb-3">
-                            How We Measure &amp; Govern Every Programme
-                        </h2>
-                        <p class="text-muted small mb-4" style="line-height: 1.7;">
-                            To maintain institutional credibility with development partners, government ministries, and communities, GNEP Africa applies a strict five-stage results chain and never infers long-term ecological impact from activity counts alone.
-                        </p>
-                        <a href="accountability.html" class="cn-pill-cta cn-pill-cta-dark">
-                            <span>Accountability Centre</span>
-                            <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="cn-faq-list">
-                            <div class="cn-faq-item">
-                                <button class="cn-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cnFaq1" aria-expanded="false">
-                                    <span>How can partners support or co-host GNEP Africa's programmes?</span>
-                                    <span class="cn-faq-icon">+</span>
-                                </button>
-                                <div id="cnFaq1" class="collapse">
-                                    <div class="cn-faq-body">
-                                        Organizations, state ministries, universities, and foundations can partner with GNEP Africa as Implementation Partners (field tree restoration and school climate clubs), Workshop Co-Hosts (civil society capacity building), or Founding Sponsors for planned initiatives such as the Umaru Musa Fellowship Initiative (UMFI).
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-faq-item">
-                                <button class="cn-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cnFaq2" aria-expanded="true">
-                                    <span>How can I support GNEP Africa besides funding a programme?</span>
-                                    <span class="cn-faq-icon">&minus;</span>
-                                </button>
-                                <div id="cnFaq2" class="collapse show">
-                                    <div class="cn-faq-body">
-                                        Contributors can collaborate on specific programme areas such as school climate education, community agroforestry, Hausa climate translation, or policy research briefs—allowing you to direct your technical expertise or institutional network to the area you care about most.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-faq-item">
-                                <button class="cn-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cnFaq3" aria-expanded="false">
-                                    <span>How does GNEP distinguish immediate outputs from long-term outcomes?</span>
-                                    <span class="cn-faq-icon">+</span>
-                                </button>
-                                <div id="cnFaq3" class="collapse">
-                                    <div class="cn-faq-body">
-                                        Direct outputs (such as <strong>150 economic tree seedlings planted</strong>, <strong>20 CSO representatives trained</strong>, and <strong>17 publications released</strong>) are reported with exact dates and partner credits, while medium-term outcomes (seedling survival rates and legislative uptake) are tracked through 90-day and annual follow-up audits.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cn-faq-item">
-                                <button class="cn-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cnFaq4" aria-expanded="false">
-                                    <span>Why are planned initiatives like UMFI and KELCM listed separately?</span>
-                                    <span class="cn-faq-icon">+</span>
-                                </button>
-                                <div id="cnFaq4" class="collapse">
-                                    <div class="cn-faq-body">
-                                        In compliance with GNEP's public accountability standards, initiatives in active design or partner mobilisation (such as the Umaru Musa Fellowship Initiative and the Katsina Economic Linkage &amp; Capability Model) are explicitly badged as <strong>Planned / Future Initiatives</strong> until field operations formally commence.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5-Stage Results Chain Reference Table -->
-                <div class="table-responsive mt-5 pt-2">
-                    <table class="table table-bordered align-middle small mb-0">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Results Chain Stage</th>
-                                <th>Institutional Definition</th>
-                                <th>GNEP Africa Verified Example</th>
-                                <th>Verification Standard</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="fw-bold">1. Inputs</td>
-                                <td>Human, technical, partner, and material resources committed to an intervention.</td>
-                                <td>Facilitator expertise, nursery seedlings, training manuals, co-host venue with AYINET &amp; The Green Minds Space.</td>
-                                <td>Internal programme records &amp; partner agreements.</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">2. Activities</td>
-                                <td>Actions and field operations directly executed by GNEP or co-hosts.</td>
-                                <td>Conducting field planting drives, convening CSO policy brief drafting sessions, publishing policy analyses.</td>
-                                <td>Dated event logs &amp; authenticated field photography.</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-success">3. Outputs</td>
-                                <td>Direct, countable products and immediate deliverables of an activity.</td>
-                                <td><strong>150 economic tree seedlings planted</strong>; <strong>20 CSO representatives trained</strong>; <strong>17 publications released</strong>.</td>
-                                <td>Attendance sheets, seedling counts, and repository DOIs/codes.</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">4. Outcomes</td>
-                                <td>Medium-term changes in participant behaviour, institutional practice, or seedling survival.</td>
-                                <td>Trained CSOs submitting evidence-based briefs to state ministries; planted seedlings surviving dry-season stress.</td>
-                                <td>Follow-up surveys and 90-day / annual field monitoring.</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">5. Long-Term Impact</td>
-                                <td>Durable ecological restoration, climate resilience, or statutory policy compliance.</td>
-                                <td>Micro-climate stabilization, improved sub-national budget transparency, and reduced community vulnerability.</td>
-                                <td>Requires multi-year longitudinal data and independent counterfactuals.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- 8. DARK INSTITUTIONAL FOOTER + GOLDEN TICKER STRIP (Matching Bottom-Right of Reference Image) -->
-    <footer class="gnep-footer" id="contact" aria-label="Institutional Footer and Accountability Navigation" style="background: #0D110E;">
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-between align-items-center pb-4 mb-4 border-bottom border-secondary border-opacity-25 gap-3">
-                <div class="d-flex align-items-center gap-3">
-                    <img src="assets/real/gnep-logo.webp" alt="GNEP Logo" class="bg-white p-1 rounded" width="120" height="38" style="object-fit: contain;">
-                    <div>
-                        <div class="fw-bold text-white">Global Nature &amp; Environmental Partnership (GNEP Africa)</div>
-                        <div class="small" style="color: #9EBAAB;">Empowering Communities, Research &amp; Nature Across Africa</div>
-                    </div>
-                </div>
-                <a href="contact.html" class="cn-pill-cta">
-                    <span>Contact Us</span>
-                    <span class="cn-pill-cta-arrow"><i class="fas fa-arrow-up" aria-hidden="true"></i></span>
-                </a>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <p class="small text-light-50 mb-3" style="color: #BFD3C7;">
-                        Global Nature and Environmental Partnership (GNEP Africa) connects environmental research, climate policy, and community-led action to advance resilience across Africa.
-                    </p>
-                    <div class="small mb-2" style="color: #9EBAAB;">
-                        <div><strong>Founded:</strong> 2025 &bull; <strong>Status:</strong> Independent Youth-Led Initiative</div>
-                        <div><strong>Base:</strong> Katsina State, Nigeria &bull; <strong>Outlook:</strong> Africa</div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>About &amp; Governance</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="about.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Mandate &amp; Vision</a></li>
-                        <li><a href="founder.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Leadership &amp; Founder</a></li>
-                        <li><a href="accountability.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Accountability Centre</a></li>
-                        <li><a href="accountability.html#research-standards"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Research Standards</a></li>
-                        <li><a href="accountability.html#safeguarding"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Safeguarding &amp; Conduct</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>Programmes &amp; Impact</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="programmes.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Project Portfolio</a></li>
-                        <li><a href="umaru-musa-fellowship-initiative.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>UMFI Fellowship</a></li>
-                        <li><a href="katsina-economic-linkage-capability-model.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>KELCM Economic Model</a></li>
-                        <li><a href="gallery.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Field Gallery (28)</a></li>
-                        <li><a href="contact.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Partner With GNEP</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4>Knowledge &amp; Data</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="knowledge-hub.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Knowledge Hub (17)</a></li>
-                        <li><a href="knowledge-hub.html?type=Policy+briefs"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Briefs</a></li>
-                        <li><a href="climate-intelligence.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Climate Intelligence</a></li>
-                        <li><a href="climate-intelligence.html#policy-observatory"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Policy Observatory</a></li>
-                        <li><a href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html"><i class="fas fa-angle-right me-2 text-success" aria-hidden="true"></i>Hausa Advisories</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4>Connect &amp; Inquiries</h4>
-                    <div class="mb-3 small" style="color: #E2E8F0; line-height: 1.8;">
-                        <div><a href="tel:+2347065885070" class="text-white text-decoration-none">+234 706 588 5070</a></div>
-                        <div><a href="mailto:gnep.partnership@gmail.com" class="text-white text-decoration-none">gnep.partnership@gmail.com</a></div>
-                        <div>Katsina State, Nigeria</div>
-                    </div>
-                    <div class="mt-3 pt-2 border-top border-secondary">
-                        <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light me-2"><i class="fab fa-linkedin me-1" aria-hidden="true"></i> LinkedIn</a>
-                        <a href="contact.html" class="btn btn-sm btn-success"><i class="fas fa-handshake me-1" aria-hidden="true"></i> Partner</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-top border-secondary small" style="color: #9EBAAB; font-size: 0.78rem;">
-                <strong>Institutional Independence &amp; Evidence Notice:</strong> GNEP Africa is an independent African environmental initiative and is not an agency of, nor officially endorsed by, the United Nations, UNDP, UNFCCC, IPCC, WHO, FAO, GIZ, or the Green Climate Fund. All cited multilateral datasets and policy records remain the property of their respective issuing institutions.
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/real/gnep-logo.png" type="image/png">
+        <link rel="canonical" href="https://gnep-africa.pages.dev/programmes.html">
+        <title>Programmes & Impact Observatory | GNEP Africa</title>
+        <meta name="description" content="Explore GNEP Africa structured project portfolio, verified field outputs, partner classifications, and flagship future initiatives.">
+        <link rel="stylesheet" href="css/design-tokens.css?v=20261127-np2">
+        <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vender/icofont/icofont.min.css">
+        <link rel="stylesheet" href="vender/aos/dist/aos.css">
+        <link rel="stylesheet" href="vender/remixicon/remixicon.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link rel="stylesheet" href="css/nonprofitx.css?v=20261127-np2">
+        <link rel="stylesheet" href="css/common.css?v=20261127-np2">
+        
+    </head>
+    <body>
+        <a class="skip-to-content" href="#main-content">Skip to main content</a>
+        <div class="page-loading active">
+            <div class="page-loading-inner">
+                <div class="page-spinner"></div>
+                <span>Loading...</span>
             </div>
         </div>
-    </footer>
-
-    <div class="gnep-legal-bar" aria-label="Legal and Copyright">
-        <div class="container">
-            <div class="row align-items-center gy-2">
-                <div class="col-md-6 text-center text-md-start">
-                    &copy; 2026 Global Nature and Environmental Partnership (GNEP Africa). All rights reserved.
+        <main id="main-content">
+        <div class="bg-project" style="background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.62)), url('assets/real/gallery/gnep-schools-05-full.webp'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+            <nav class="navbar osahan-main-nav navbar-expand charity-nav p-0 border-bottom border-white border-opacity-25 py-4 py-lg-0 w-100">
+                <div class="container">
+                    <div class="position-relative d-flex align-items-center gap-2 site-brand">
+                        <img src="assets/real/gnep-logo.webp" alt="GNEP Africa Logo" class="bg-white rounded-2 p-1" style="height: 38px; width: auto;">
+                        <div class="lh-1">
+                            <h5 class="fw-bold m-0 text-white">GNEP Africa</h5>
+                            <small class="text-white-50">Nature &amp; Environment</small>
+                        </div>
+                        <a class="stretched-link" href="index.html" aria-label="GNEP Africa Home"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-none d-lg-block ms-auto">
+                            <ul class="navbar-nav ms-auto gap-3 me-4">
+                                <li class="nav-item">
+                                    <a class="nav-link py-4" href="index.html"><i class="ri-apps-2-line"></i> Home</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link py-4" href="about.html">About</a></li>
+                                <li class="nav-item"><a class="nav-link active py-4" href="programmes.html">Programmes</a></li>
+                                <li class="nav-item"><a class="nav-link py-4" href="knowledge-hub.html">Knowledge Hub</a></li>
+                                <li class="nav-item dropdown osahan-mega-menu position-static">
+                                    <a class="nav-link dropdown-toggle py-4" href="knowledge-hub.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Research &amp; Briefs </a>
+                                    <ul class="dropdown-menu w-100 m-0 border-opacity-10 border-dark border-top border-bottom p-0 start-0 end-0 rounded-0 shadow">
+                                        <li>
+                                            <div class="dropdown-mega-content container">
+                                                <div class="row g-0">
+                                                    <div class="col-lg-3 p-5 border-end border-start border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Continental Policy Briefs</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="africa-by-2063-assessing-progress-priorities.html">Africa by 2063: Progress &amp; Priorities</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="permanent-seat-for-africa-un-security-council.html">A Permanent Seat for Africa (UNSC)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="addressing-structural-gaps-african-climate-education.html">African Climate Education Gaps</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="rethinking-climate-finance-africa.html">Rethinking Climate Finance for Africa</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="turning-research-into-action.html">Turning Climate Research into Action</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Nigeria &amp; Sahel Studies</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="katsina-economic-linkage-capability-model.html">Katsina Economic Linkage Model (KELCM)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="alau-dam-flood-maiduguri-nature-based-solutions.html">Alau Dam Flood &amp; Nature-Based Solutions</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="subsidy-removal-public-accountability-policy-brief.html">Subsidy Removal &amp; Accountability</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="adapting-rotterdam-sponge-city-lagos.html">Rotterdam Sponge City Model for Lagos</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="nigeria-heat-emergency-policy-brief.html">31,400 Lives at Risk? Heat Emergency</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Field Reports &amp; Hausa</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="umaru-musa-fellowship-initiative.html">Umaru Musa Fellowship (UMFI) Proposal</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="lingua-franca-hausa-into-climate.html">Lingua Franca: Hausa into Climate</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="el-nino-me-ya-kamata-kowane-dan-najeriya-ya-sani.html">El Ni&ntilde;o (Hausa Public Advisory)</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="tree-planting-150-seedlings.html">150 Economic Tree Seedlings Report</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="cso-policy-workshop.html">20 CSO Leaders Policy Workshop</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="communicating-environmental-issues.html">Storytelling &amp; Communication Toolkit</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-3 dropdown-mega-sub-content-block d-none d-lg-block bg-light p-5 osahan-dropdown-box border-end border-opacity-10 border-dark">
+                                                        <img src="assets/real/gnep-logo.webp" class="img-fluid content-block-image osahan-dropdown-box-logo" alt="GNEP Logo" width="110">
+                                                        <h5 class="text-dark mt-4 mb-2">Open-Access</h5>
+                                                        <h2 class="text-success fw-bold h3">17 Indexed Policy &amp; Research Works</h2>
+                                                        <p class="lead mb-4 small">
+                                                            Full-text HTML essays and downloadable typeset PDFs advancing African climate resilience.
+                                                        </p>
+                                                        <a class="btn btn-warning px-4 py-2 fw-bold" href="knowledge-hub.html">OPEN KNOWLEDGE HUB</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown osahan-mega-menu position-static">
+                                    <a class="nav-link dropdown-toggle py-4" href="climate-intelligence.html" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Observatories </a>
+                                    <ul class="dropdown-menu w-100 m-0 border-opacity-10 border-dark border-top border-bottom p-0 start-0 end-0 rounded-0 shadow">
+                                        <li>
+                                            <div class="dropdown-mega-content container">
+                                                <div class="row g-0">
+                                                    <div class="col-lg-4 p-5 border-end border-start border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Geospatial &amp; Policy Data</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="climate-intelligence.html">Climate Intelligence Hub</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="climate-intelligence.html#policy-observatory">African Climate Policy Observatory</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="programmes.html">Programmes &amp; Impact Observatory</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="programmes.html#results-chain">Results-Chain Methodology</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Activities &amp; Visual Archive</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="events.html">Events &amp; Workshops</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="gallery.html">28-Photo Verified Field Gallery</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="youth-environmental-action.html">School Climate Clubs</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="founder.html">Founder &amp; Leadership Profile</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-4 p-5 border-end border-opacity-10 border-dark">
+                                                        <h6 class="dropdown-mega-sub-title mb-3 fw-bold">Institutional Governance</h6>
+                                                        <ul class="dropdown-mega-sub-nav list-unstyled">
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="accountability.html">Governance &amp; Accountability Centre</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="privacy.html">Privacy &amp; Data Protection</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="terms.html">Terms of Use &amp; Open Access</a></li>
+                                                            <li><a class="dropdown-item px-0 py-1 bg-transparent" href="accessibility.html">Accessibility Statement</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link py-4" href="events.html">Events</a></li>
+                                <li class="nav-item"><a class="nav-link py-4" href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 me-4 ms-1">
+                            <a href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" class="link-light" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="mailto:gnep.partnership@gmail.com" class="link-light" aria-label="Email GNEP"><i class="ri-mail-fill"></i></a>
+                            <a href="tel:+2347065885070" class="link-light" aria-label="Call GNEP"><i class="ri-phone-fill"></i></a>
+                        </div>
+                        <a href="contact.html" class="btn btn-warning rounded-0 d-none d-lg-block py-4 px-5 ms-2"> <span class="py-1 d-inline-block text-uppercase fw-bold">Partner With Us</span> </a>
+                        <a href="#sidebar" class="link-light d-lg-none ms-auto" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open menu"><i class="ri-menu-3-line ri-lg"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <span class="me-3 text-white-50">Photography &copy; GNEP &amp; AYINET</span>
-                    <a href="accountability.html" class="text-decoration-none text-white-50 me-2">Accountability</a>&bull;
-                    <a href="privacy.html" class="text-decoration-none text-white-50 mx-2">Privacy</a>&bull;
-                    <a href="terms.html" class="text-decoration-none text-white-50 mx-2">Terms</a>&bull;
-                    <a href="accessibility.html" class="text-decoration-none text-white-50 ms-2">Accessibility</a>
+            </nav>
+            <!-- body -->
+            <div class="py-5">
+                <div class="container py-5">
+                    <div class="row justify-content-center pb-5">
+                        <div class="col-xl-9 col-lg-10 col-12">
+                            <div class="text-center text-white" data-aos="fade-up" data-aos-duration="1500">
+                                <h1 class="fw-bold display-3">Programmes &amp; Portfolio</h1>
+                                <nav class="d-flex align-items-center justify-content-center small mt-3">
+                                    <ol class="breadcrumb gap-1 mb-0">
+                                        <li class="breadcrumb-item"><a href="index.html" class="text-warning">HOME</a></li>
+                                        <li><i class="ri-arrow-right-s-line"></i></li>
+                                        <li class="breadcrumb-item text-uppercase" aria-current="page">PROGRAMMES</li>
+                                    </ol>
+                                </nav>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Signature Golden Bottom Ticker Strip (Matching Bottom-Right of Uploaded Reference Image) -->
-    <div class="cn-gold-ticker" aria-label="Mission Pillars Banner">
-        <div class="container">
-            Climate Education &nbsp;/&nbsp; Restore Dryland Ecosystems &nbsp;/&nbsp; Empower Youth Leaders &nbsp;/&nbsp; Evidence-Based Policy &nbsp;/&nbsp; Partner With GNEP Africa
+        <!-- We Work Together 4-Column Stats (Exact Nonprofitx bg-warning-subtle section) -->
+        <div class="bg-warning-subtle py-5" id="impact-snapshot">
+            <div class="container py-5">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-xl-7 col-lg-8 col-md-9 col-12">
+                        <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1500">
+                            <h2 class="fw-bold display-4">Verified Activity &amp; Output Snapshot</h2>
+                            <p class="lead text-muted">Governed by GNEP Africa's five-stage results chain separating direct outputs from long-term ecological outcomes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="img/work-together/work-1.svg" alt="Seedlings" class="img-fluid work-img">
+                            <div class="pt-3">
+                                <h2 class="fw-bold display-2 mb-0">150</h2>
+                                <h3 class="mb-0">Economic Trees</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="img/work-together/work-2.svg" alt="CSO Leaders" class="img-fluid work-img">
+                            <div class="pt-3">
+                                <h2 class="fw-bold display-2 mb-0">20</h2>
+                                <h3 class="mb-0">CSO Leaders Trained</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="img/work-together/work-3.svg" alt="Publications" class="img-fluid work-img">
+                            <div class="pt-3">
+                                <h2 class="fw-bold display-2 mb-0">17</h2>
+                                <h3 class="mb-0">Published Works</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                            <img src="img/work-together/work-4.svg" alt="Portfolio Records" class="img-fluid work-img">
+                            <div class="pt-3">
+                                <h2 class="fw-bold display-2 mb-0">11</h2>
+                                <h3 class="mb-0">Portfolio Initiatives</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <a href="#main-content" class="btn btn-primary btn-md-square back-to-top" aria-label="Back to top of page"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-    document.querySelectorAll('.prog-filter-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            document.querySelectorAll('.prog-filter-btn').forEach(function(b) {
-                b.classList.remove('active');
-            });
-            this.classList.add('active');
-            var status = this.getAttribute('data-prog-filter');
-            document.querySelectorAll('.prog-card-item').forEach(function(card) {
-                if (status === 'all' || card.getAttribute('data-prog-status') === status) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+        <!-- Project & Activity Registry Grid (Exact Nonprofitx projects.html 3-Column Card Grid) -->
+        <div class="py-5" id="portfolio">
+            <div class="container py-5">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h2 class="fw-bold display-4">Project &amp; Activity Registry</h2>
+                            <p class="lead text-muted mb-4">Filter by lifecycle status: Completed, Active / Ongoing, or Planned Future Initiatives</p>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <button type="button" class="btn btn-warning btn-lg prog-filter-btn active" data-prog-filter="all">All Records (11)</button>
+                                <button type="button" class="btn btn-dark btn-lg prog-filter-btn" data-prog-filter="completed">Completed (3)</button>
+                                <button type="button" class="btn btn-dark btn-lg prog-filter-btn" data-prog-filter="active">Active / Ongoing (2)</button>
+                                <button type="button" class="btn btn-dark btn-lg prog-filter-btn" data-prog-filter="planned">Planned / Future (6)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5" id="projectPortfolioGrid">
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="completed">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="cso-policy-workshop.html">
+                                    <img src="assets/real/cso-workshop-policy-2026.webp" class="card-img-top rounded-4 np-card-img" alt="Policy Brief, Proposal Development & Elevator Pitch Workshop">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-2026-001</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Completed • Verified</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Environmental Governance</div>
+                                <h4 class="card-title pb-2"><a href="cso-policy-workshop.html">Policy Brief, Proposal Development & Elevator Pitch Workshop</a></h4>
+                                <p class="card-text text-muted small mb-3">Intensive capacity-building training for 20 civil society representatives in Katsina State on translating grassroots environmental evidence into legislative policy briefs, competitive funding proposals, 60-second pitches, and ethical AI research workflows.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State, Nigeria • 2026</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Workshop Co-Host: The Green Minds Space</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> 20 civil society representatives trained across 4 technical modules</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="cso-policy-workshop.html" class="btn btn-warning btn-lg px-4">View Project Report</a>
+                                <a href="assets/publications/cso-policy-brief-workshop.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="completed">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="tree-planting-150-seedlings.html">
+                                    <img src="assets/real/tree-planting-action.webp" class="card-img-top rounded-4 np-card-img" alt="150 Economic Tree Seedlings Restoration Drive in Katsina State">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-2025-002</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Completed • Monitoring Active</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Ecosystem Restoration</div>
+                                <h4 class="card-title pb-2"><a href="tree-planting-150-seedlings.html">150 Economic Tree Seedlings Restoration Drive in Katsina State</a></h4>
+                                <p class="card-text text-muted small mb-3">Joint community and school tree-planting drive establishing 150 economic and indigenous tree seedlings in semi-arid Katsina State to counter land degradation, restore soil vitality, and support local micro-climates.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State, Nigeria • 2025 / 2026</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Implementation Partner: African Youth Initiative Network (AYINET)</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> 150 economic tree seedlings planted with community & youth stewardship</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="tree-planting-150-seedlings.html" class="btn btn-warning btn-lg px-4">Read Restoration Story</a>
+                                <a href="assets/publications/sahelian-tree-planting-field-report.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="completed">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="communicating-environmental-issues.html">
+                                    <img src="assets/real/storytelling-speaker.webp" class="card-img-top rounded-4 np-card-img" alt="Storytelling & Persuasive Communication Workshop for CSOs">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-2025-003</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Completed • Verified</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Capacity Development</div>
+                                <h4 class="card-title pb-2"><a href="communicating-environmental-issues.html">Storytelling & Persuasive Communication Workshop for CSOs</a></h4>
+                                <p class="card-text text-muted small mb-3">One-day capacity-building workshop equipping civil society organisations in Katsina State with narrative frameworks, evidence translation techniques, and persuasive communication tools for environmental advocacy.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State, Nigeria • 2025</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Lead Unit: GNEP Communications Unit (Maryam Dauda)</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> One-day CSO workshop delivered + published Storytelling Toolkit</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="communicating-environmental-issues.html" class="btn btn-warning btn-lg px-4">Read Event Summary</a>
+                                <a href="assets/publications/communicating-environmental-issues.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="active">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="youth-environmental-action.html">
+                                    <img src="assets/real/gallery/gnep-schools-05-full.webp" class="card-img-top rounded-4 np-card-img" alt="Climate Clubs in Secondary Schools — Katsina State">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-2025-004</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Active • Ongoing Rollout</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Youth Leadership & Schools</div>
+                                <h4 class="card-title pb-2"><a href="youth-environmental-action.html">Climate Clubs in Secondary Schools — Katsina State</a></h4>
+                                <p class="card-text text-muted small mb-3">Ongoing programme establishing student-led Climate Clubs in secondary schools across Katsina State to build early environmental awareness, practical climate literacy, and campus tree-nursery stewardship.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State, Nigeria • Ongoing (2025–Present)</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Target Group: Secondary school students & teacher mentors</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Active school climate club chapters & campus seedling stewardship</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="youth-environmental-action.html" class="btn btn-warning btn-lg px-4">Explore Programme</a>
+                                <a href="assets/publications/youth-led-environmental-action.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="active">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="lingua-franca-hausa-into-climate.html">
+                                    <img src="assets/real/lingua-franca-hausa-classroom.webp" class="card-img-top rounded-4 np-card-img" alt="Community Climate Literacy & Vernacular Hausa Advisory Programme">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-2026-005</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Active • Ongoing Programme</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Climate Education & Hausa Science</div>
+                                <h4 class="card-title pb-2"><a href="lingua-franca-hausa-into-climate.html">Community Climate Literacy & Vernacular Hausa Advisory Programme</a></h4>
+                                <p class="card-text text-muted small mb-3">Ongoing community climate and clean-energy awareness effort across Northern Nigeria, translating meteorological warnings, Super El Niño advisories, and adaptation strategies into accessible Hausa.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State & Northern Nigeria • Ongoing</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Lead Unit: GNEP Linguistic Inclusion & Climate Advisory Desk</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Hausa Super El Niño Public Advisory & Lingua Franca Policy Brief</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="lingua-franca-hausa-into-climate.html" class="btn btn-warning btn-lg px-4">Read Policy Brief</a>
+                                <a href="assets/publications/lingua-franca-hausa-into-climate.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="umaru-musa-fellowship-initiative.html">
+                                    <img src="assets/real/umfi-youth-fellows-cohort.webp" class="card-img-top rounded-4 np-card-img" alt="Umaru Musa Fellowship Initiative (UMFI) — Empower. Innovate. Transform.">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-UMFI</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned Future Initiative</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Education & Decent Jobs</div>
+                                <h4 class="card-title pb-2"><a href="umaru-musa-fellowship-initiative.html">Umaru Musa Fellowship Initiative (UMFI) — Empower. Innovate. Transform.</a></h4>
+                                <p class="card-text text-muted small mb-3">A flagship future youth leadership, mentorship, and civic-innovation fellowship programme we hope to spearhead in honour of late President Umaru Musa Yar'Adua—equipping 45 emerging leaders (ages 20–35) per cohort over eight intensive weeks.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State & National Scaling Horizon</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Target Partners: Universities, State Ministries & Foundations</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Full 16-stage curriculum blueprint & 45-fellow pilot specification ready</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="umaru-musa-fellowship-initiative.html" class="btn btn-warning btn-lg px-4">Read Initiative Dossier</a>
+                                <a href="assets/publications/umaru-musa-fellowship-initiative-proposal.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="katsina-economic-linkage-capability-model.html">
+                                    <img src="assets/real/kelcm-agroforestry-nursery.webp" class="card-img-top rounded-4 np-card-img" alt="Katsina Economic Linkage & Capability Model (KELCM)">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-KELCM</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned Strategic Model</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Sub-National Economic Linkages</div>
+                                <h4 class="card-title pb-2"><a href="katsina-economic-linkage-capability-model.html">Katsina Economic Linkage & Capability Model (KELCM)</a></h4>
+                                <p class="card-text text-muted small mb-3">Sub-national development framework synthesizing Amartya Sen's Capability Approach, Albert Hirschman's Economic Linkages, and Jeffrey Sachs' SDG Strategy across Human Capital, Agro-Processing Clusters, Clean Energy, and Infrastructure in Katsina State.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> All 34 LGAs of Katsina State, Nigeria</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Framework Scope: State Ministries, Private Sector (PPPs) & CSOs</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Published 3-pillar working paper & 6-sector SDG action matrix</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="katsina-economic-linkage-capability-model.html" class="btn btn-warning btn-lg px-4">Read Working Paper</a>
+                                <a href="assets/publications/katsina-economic-linkage-capability-model.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="alau-dam-flood-maiduguri-nature-based-solutions.html">
+                                    <img src="assets/real/alau-dam-maiduguri-aerial-inundation.webp" class="card-img-top rounded-4 np-card-img" alt="WEFE Nexus & Watershed Resilience Strategic Framework">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-006</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned • In Development</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Water-Energy-Food-Ecosystems</div>
+                                <h4 class="card-title pb-2"><a href="alau-dam-flood-maiduguri-nature-based-solutions.html">WEFE Nexus & Watershed Resilience Strategic Framework</a></h4>
+                                <p class="card-text text-muted small mb-3">Integrated Water, Energy, Food, and Ecosystem (WEFE) resilience programming combining upstream watershed restoration, wetland protection, Vetiver bioengineering, and solar-powered irrigation across northern Nigeria.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Northern Nigeria & Sahelian River Basins</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Status: Concept & Nature-Based Solutions Dossier Published</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Alau Dam NbS Disaster Risk Reduction Brief & Lagos Sponge City Study</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="alau-dam-flood-maiduguri-nature-based-solutions.html" class="btn btn-warning btn-lg px-4">Read NbS Flood Brief</a>
+                                <a href="assets/publications/alau-dam-flood-maiduguri-nature-based-solutions.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="addressing-structural-gaps-african-climate-education.html">
+                                    <img src="assets/real/climate-ed-schoolgirls-tree-planting.webp" class="card-img-top rounded-4 np-card-img" alt="Green Schools & Climate-Ready Curriculum Initiative">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-007</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned • In Development</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Climate-Resilient Education</div>
+                                <h4 class="card-title pb-2"><a href="addressing-structural-gaps-african-climate-education.html">Green Schools & Climate-Ready Curriculum Initiative</a></h4>
+                                <p class="card-text text-muted small mb-3">Programmatic framework to close structural gaps in African climate education by pairing localized climate curricula and pre/in-service teacher training with climate-resilient school infrastructure and schoolyard nurseries.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State & African Partner Schools</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Aligned With: UNESCO Greening Education Partnership Benchmarks</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Published 5-Gap African Climate Education Policy Brief (GNEP-PB-2026-016)</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="addressing-structural-gaps-african-climate-education.html" class="btn btn-warning btn-lg px-4">Read Education Brief</a>
+                                <a href="assets/publications/addressing-structural-gaps-african-climate-education.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="africa-by-2063-assessing-progress-priorities.html">
+                                    <img src="assets/real/agenda2063-light-rail-cover.webp" class="card-img-top rounded-4 np-card-img" alt="Research & Policy Fellowship on African Multilateral Governance">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-008</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned • In Development</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Continental Policy & Diplomacy</div>
+                                <h4 class="card-title pb-2"><a href="africa-by-2063-assessing-progress-priorities.html">Research & Policy Fellowship on African Multilateral Governance</a></h4>
+                                <p class="card-text text-muted small mb-3">Collaborative research fellowship tracking Africa's Second Ten-Year Implementation Plan of Agenda 2063 (2024–2033), UN Security Council reform, and grant-equivalent adaptation finance delivery.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Pan-African Research Network</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Lead Authors: Mohammed Labaran Sani, Mahamat H. Mahamat & Amina Baala</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Published Flagship Briefs on Agenda 2063, UNSC Reform & Climate Finance</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="africa-by-2063-assessing-progress-priorities.html" class="btn btn-warning btn-lg px-4">Read Agenda 2063 Brief</a>
+                                <a href="assets/publications/africa-by-2063-assessing-progress-priorities.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 prog-card-item" data-prog-status="planned">
+                        <div class="card border-0 rounded-0 text-center h-100" data-aos="zoom-in-up" data-aos-duration="1000">
+                            <div class="position-relative">
+                                <a href="rethinking-climate-finance-africa.html">
+                                    <img src="assets/real/climate-finance-undp-solar.webp" class="card-img-top rounded-4 np-card-img" alt="Green Skills & Decentralized Clean Energy Livelihood Initiative">
+                                </a>
+                                <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-3 px-3 py-2 fw-bold rounded-pill">GNEP-PRJ-PLAN-009</span>
+                                <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-2 fw-bold rounded-pill">Planned • In Development</span>
+                            </div>
+                            <div class="card-body px-2 pt-4">
+                                <div class="small fw-bold text-warning text-uppercase mb-1">Clean Energy & Green Jobs</div>
+                                <h4 class="card-title pb-2"><a href="rethinking-climate-finance-africa.html">Green Skills & Decentralized Clean Energy Livelihood Initiative</a></h4>
+                                <p class="card-text text-muted small mb-3">Practical vocational training and clean-energy entrepreneurship programme preparing young people and women in northern Nigeria for solar mini-grid maintenance, clean cooking transitions, and climate-smart agribusiness.</p>
+                                <div class="bg-warning-subtle rounded-4 p-3 text-start small">
+                                    <div class="mb-1"><strong>Location:</strong> Katsina State & Northern Nigeria</div>
+                                    <div class="mb-1"><strong>Partner / Lead:</strong> Status: Framework Design & Partner Mobilisation</div>
+                                    <div class="mb-0"><strong>Verified Output:</strong> Aligned with Nigeria Electricity Act 2023 & Rethinking Climate Finance Brief</div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-center gap-2 flex-wrap">
+                                <a href="rethinking-climate-finance-africa.html" class="btn btn-warning btn-lg px-4">Read Climate Finance Brief</a>
+                                <a href="assets/publications/rethinking-climate-finance-africa.pdf" download class="btn btn-dark btn-lg px-3" title="Download PDF"><i class="ri-file-pdf-line"></i> PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results-Chain Methodology (Exact Nonprofitx bg-light section) -->
+        <div class="bg-light py-5" id="results-chain">
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2 class="fw-bold display-5">Five-Stage Results-Chain Governance</h2>
+                        <p class="lead text-muted">How GNEP Africa distinguishes direct activity outputs from long-term ecological outcomes</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-5 shadow p-4 p-lg-5">
+                    <div class="table-responsive">
+                        <table class="policy-data-table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Results Chain Stage</th>
+                                    <th>Institutional Definition</th>
+                                    <th>GNEP Africa Verified Example</th>
+                                    <th>Verification Standard</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">1. Inputs</td>
+                                    <td>Human, technical, partner, and material resources committed to an intervention.</td>
+                                    <td>Facilitator expertise, nursery seedlings, training manuals, co-host venue with AYINET &amp; The Green Minds Space.</td>
+                                    <td>Internal programme records &amp; partner agreements.</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">2. Activities</td>
+                                    <td>Actions and field operations directly executed by GNEP or co-hosts.</td>
+                                    <td>Conducting field planting drives, convening CSO policy brief drafting sessions, publishing policy analyses.</td>
+                                    <td>Dated event logs &amp; authenticated field photography.</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">3. Outputs</td>
+                                    <td>Direct, countable products and immediate deliverables of an activity.</td>
+                                    <td><strong>150 economic tree seedlings planted</strong>; <strong>20 CSO representatives trained</strong>; <strong>17 publications released</strong>.</td>
+                                    <td>Attendance sheets, seedling counts, and repository codes.</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">4. Outcomes</td>
+                                    <td>Medium-term changes in participant behaviour, institutional practice, or seedling survival.</td>
+                                    <td>Trained CSOs submitting evidence-based briefs to state ministries; planted seedlings surviving dry-season stress.</td>
+                                    <td>Follow-up surveys and 90-day / annual field monitoring.</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">5. Long-Term Impact</td>
+                                    <td>Durable ecological restoration, climate resilience, or statutory policy compliance.</td>
+                                    <td>Micro-climate stabilization, improved sub-national budget transparency, and reduced community vulnerability.</td>
+                                    <td>Multi-year longitudinal data and independent counterfactuals.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- volunteer -->
+        <div class="bg-volunteer py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-12">
+                        <div class="text-white" data-aos="fade-left" data-aos-duration="1500">
+                            <p class="fw-bold">Partner or Collaborate With GNEP Africa</p>
+                            <div class="progress rounded-pill w-15" role="progressbar" aria-label="Progress bar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 4px;">
+                                <div class="progress-bar bg-warning" style="width: 100%;"></div>
+                            </div>
+                            <div class="mt-4 mb-5">
+                                <h2 class="fw-bold display-4 pb-2">Join us to build a resilient and sustainable Africa</h2>
+                                <p class="lead">Connect with our research, policy, and field operations teams in Katsina State to collaborate on environmental action.</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-warning btn-lg px-4">Partner With Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <!-- footer -->
+        <footer class="footer bg-dark text-white" id="contact">
+            <!-- footer-top -->
+            <div class="footer-top py-5">
+                <div class="container py-4">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="me-lg-5 pe-lg-5">
+                                <h5 class="fw-bold pb-2">About GNEP Africa</h5>
+                                <p class="text-white-50">Global Nature and Environmental Partnership (GNEP Africa) — Founded in January 2025 in Katsina State, Nigeria.</p>
+                                <p class="text-white-50 m-0">We empower people and communities with the knowledge, partnerships, and opportunities needed to respond to climate and environmental challenges and build a resilient, sustainable Africa where people and nature thrive together.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="fw-bold pb-2">Useful Links</h5>
+                            <ul class="list-unstyled d-grid gap-2">
+                                <li><a href="index.html">Home &amp; Introduction</a></li>
+                                <li><a href="about.html">About GNEP Africa</a></li>
+                                <li><a href="programmes.html">Programmes &amp; Portfolio</a></li>
+                                <li><a href="knowledge-hub.html">Knowledge Hub (17)</a></li>
+                                <li><a href="climate-intelligence.html">Climate Intelligence</a></li>
+                                <li><a href="events.html">Events &amp; Workshops</a></li>
+                                <li><a href="gallery.html">28-Photo Field Gallery</a></li>
+                                <li><a href="contact.html">Contact &amp; Partner</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3">
+                            <h5 class="fw-bold pb-2">Governance &amp; Flagships</h5>
+                            <ul class="list-unstyled d-grid gap-2">
+                                <li><a href="accountability.html">Accountability Centre</a></li>
+                                <li><a href="founder.html">Founder &amp; Leadership</a></li>
+                                <li><a href="umaru-musa-fellowship-initiative.html">Umaru Musa Fellowship (UMFI)</a></li>
+                                <li><a href="katsina-economic-linkage-capability-model.html">Katsina Economic Model (KELCM)</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom -->
+            <div class="footer-bottom bg-black pt-5 pb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                                <!-- Address -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-map-pin-2-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Address:</p>
+                                        <p class="small mb-0 text-white-50">Katsina State, Nigeria</p>
+                                    </div>
+                                </div>
+                                <!-- Phone -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-phone-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Phone:</p>
+                                        <a href="tel:+2347065885070" class="small text-white-50">+234 706 588 5070</a>
+                                    </div>
+                                </div>
+                                <!-- Founded -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-Global-line ri-earth-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Founded:</p>
+                                        <a href="about.html" class="small text-white-50">January 2025 &bull; Africa-Wide</a>
+                                    </div>
+                                </div>
+                                <!-- Knowledge Hub -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-book-open-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Publications:</p>
+                                        <a href="knowledge-hub.html" class="small text-white-50">17 Open-Access Briefs</a>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="border rounded-circle footer-icon">
+                                        <i class="ri-mail-line ri-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold mb-0">Email:</p>
+                                        <a href="mailto:gnep.partnership@gmail.com" class="small text-white-50">gnep.partnership@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-end -->
+            <div class="footer-end py-5 bg-dark">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between gy-3">
+                        <div class="col-auto">
+                            <p class="text-center m-0 text-white-50">Copyright &copy; <a href="index.html" class="text-white">Global Nature and Environmental Partnership (GNEP Africa)</a> 2026</p>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-4">
+                                <a class="text-white" href="https://www.linkedin.com/company/global-nature-environmental-partnership/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-fill ri-lg"></i></a>
+                                <a class="text-white" href="mailto:gnep.partnership@gmail.com" aria-label="Email"><i class="ri-mail-fill ri-lg"></i></a>
+                                <a class="text-white" href="tel:+2347065885070" aria-label="Phone"><i class="ri-phone-fill ri-lg"></i></a>
+                                <a class="text-white" href="knowledge-hub.html" aria-label="Knowledge Hub"><i class="ri-book-2-fill ri-lg"></i></a>
+                                <a class="text-white" href="gallery.html" aria-label="Field Gallery"><i class="ri-image-2-fill ri-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Sidebar Offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="sidebar">
+            <div class="offcanvas-header d-flex justify-content-between">
+                <div class="position-relative d-flex align-items-center gap-2 site-brand">
+                    <img src="assets/real/gnep-logo.webp" alt="GNEP Africa Logo" style="height: 34px; width: auto;">
+                    <div class="lh-1">
+                        <h5 class="fw-bold m-0">GNEP Africa</h5>
+                        <small>Nature &amp; Environment</small>
+                    </div>
+                    <a class="stretched-link" href="index.html"></a>
+                </div>
+                <a href="#sidebar" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ri-close-line ri-lg"></i></a>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar-nav">
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+                        <li class="nav-item"><a class="nav-link active py-3" href="index.html"><i class="ri-apps-2-line"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="about.html">About GNEP</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="programmes.html">Programmes &amp; Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="knowledge-hub.html">Knowledge Hub (17)</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="climate-intelligence.html">Climate Intelligence</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="events.html">Events &amp; Workshops</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="gallery.html">28-Photo Field Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="founder.html">Founder &amp; Leadership</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="accountability.html">Governance &amp; Accountability</a></li>
+                        <li class="nav-item"><a class="nav-link py-3" href="contact.html">Contact &amp; Partner</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vender/jquery/jquery-3.6.4.min.js"></script>
+        <script src="vender/aos/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+        document.querySelectorAll('.prog-filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.prog-filter-btn').forEach(function(b) {
+                    b.classList.remove('btn-warning', 'active');
+                    b.classList.add('btn-dark');
+                });
+                this.classList.remove('btn-dark');
+                this.classList.add('btn-warning', 'active');
+                var status = this.getAttribute('data-prog-filter');
+                document.querySelectorAll('.prog-card-item').forEach(function(card) {
+                    if (status === 'all' || card.getAttribute('data-prog-status') === status) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
             });
         });
-    });
-    document.querySelectorAll('.cn-faq-item .collapse').forEach(function(col) {
-        col.addEventListener('show.bs.collapse', function() {
-            var icon = this.parentElement.querySelector('.cn-faq-icon');
-            if (icon) icon.innerHTML = '&minus;';
-        });
-        col.addEventListener('hide.bs.collapse', function() {
-            var icon = this.parentElement.querySelector('.cn-faq-icon');
-            if (icon) icon.innerHTML = '+';
-        });
-    });
-    </script>
-    <script src="js/page-hero.js?v=20261127-v1"></script>
-</body>
+        </script>
+    </body>
 </html>
