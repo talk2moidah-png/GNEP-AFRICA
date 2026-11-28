@@ -27,7 +27,7 @@
     "newsroom-and-events": "assets/africa/uganda-rwanda-virunga-highland-lake.webp",
     "field-gallery": "assets/real/gallery/gnep-tree-planting-24-full.webp",
     "partners": "assets/real/field-restoration.webp",
-    "leadership": "assets/real/cso-workshop-speaker-action.webp",
+    "leadership": "assets/real/policy-brief-research.webp",
     "accountability-centre": "assets/africa/congo-basin-dzanga-forest-elephants.webp",
     "safeguarding": "assets/real/lingua-franca-hausa-classroom.webp",
     "contact": "assets/africa/african-tropical-waterfall-rainbow-canopy.webp"
@@ -72,7 +72,7 @@
     "founder.html": {
       "page": "founder.html",
       "archetype": "leadership",
-      "heroImage": "assets/real/cso-workshop-speaker-action.webp",
+      "heroImage": "assets/real/policy-brief-research.webp",
       "imagePosition": "center 28%",
       "imageAlt": "Mohammed Labaran Sani facilitating the 2026 Civil Society Policy and Advocacy Workshop in Katsina State",
       "isGnepFieldPhoto": true,
