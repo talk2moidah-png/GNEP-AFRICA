@@ -1,0 +1,17 @@
+/* Education for All page custom styles */
+.pillar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.pillar-card {
+    flex: 1 1 calc(50% - 1rem);
+    background:#f8f9fa;
+    padding:1rem;
+    border-radius:0.5rem;
+    text-align:center;
+}
+@media (max-width: 768px) {
+    .pillar-card { flex: 1 1 100%; }
+}
